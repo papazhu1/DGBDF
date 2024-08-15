@@ -20,7 +20,7 @@ model_dict["be"] = "BalancedEnsembleClassifier"
 def get_config():
     config = {}
     config["enhancement_vector_method"] = "class_proba_vector"
-    config["random_state"] = 0
+    config["random_state"] = np.random.randint(0, 10000)
     config["max_layers"] = 5
 
     config["early_stop_rounds"] = 1
@@ -46,7 +46,7 @@ if __name__ == "__main__":
     X = np.load("../dataset/drug_cell_feature.npy", allow_pickle=True)
     y = np.load("../dataset/drug_cell_label.npy", allow_pickle=True)
 
-    skf = StratifiedKFold(n_splits=5, random_state=3, shuffle=True)
+    skf = StratifiedKFold(n_splits=5, shuffle=True)
 
     DGBDF_weighted_layers_acc_list = []
     DGBDF_weighted_layers_auc_list = []
