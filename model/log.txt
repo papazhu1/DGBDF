@@ -1472,3 +1472,940 @@ use f1_macro as training evaluation - 2024-11-05 11:27:47,561 - DualGranularBala
 stacking: True, save model: False - 2024-11-05 11:27:47,561 - DualGranularBalancedDeepForest
 -----------------------------------------layer-0-------------------------------------------- - 2024-11-05 11:27:47,562 - DualGranularBalancedDeepForest
 The shape of x_train is (45796, 1222) - 2024-11-05 11:27:47,562 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 13:14:49,265 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 13:14:49,266 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 13:14:49,266 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 13:14:49,266 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 13:14:49,267 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:14:49,267 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 13:26:51,058 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 13:26:51,059 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 13:26:51,059 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 13:26:51,059 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 13:26:51,059 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:26:51,059 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 13:29:25,199 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 13:29:25,199 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 13:29:25,199 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 13:29:25,199 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 13:29:25,199 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:29:25,199 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 13:31:19,433 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 13:31:19,433 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 13:31:19,433 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 13:31:19,433 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 13:31:19,434 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:31:19,434 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 13:41:14,784 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 13:41:14,785 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 13:41:14,785 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 13:41:14,785 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 13:41:14,786 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:41:14,786 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 13:43:46,325 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 13:43:46,325 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 13:43:46,325 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 13:43:46,325 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 13:43:46,326 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:43:46,326 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 13:46:58,147 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 13:46:58,147 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 13:46:58,147 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 13:46:58,147 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 13:46:58,148 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:46:58,148 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 13:48:43,000 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 13:48:43,000 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 13:48:43,001 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 13:48:43,001 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 13:48:43,001 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:48:43,001 - DualGranularBalancedDeepForest
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8177, f1_score=0.5628, auc=0.8594, gmean=0.7632, sen=0.7086, spe=0.8220, aupr=0.2261 - 2024-11-05 13:49:20,565 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8293, f1_score=0.5798, auc=0.8762, gmean=0.8006, sen=0.7708, spe=0.8317, aupr=0.2308 - 2024-11-05 13:49:20,575 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8150, f1_score=0.5682, auc=0.8637, gmean=0.7949, sen=0.7736, spe=0.8167, aupr=0.2283 - 2024-11-05 13:49:20,585 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8160, f1_score=0.5680, auc=0.8716, gmean=0.7911, sen=0.7650, spe=0.8180, aupr=0.2325 - 2024-11-05 13:49:20,595 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8122, f1_score=0.5702, auc=0.8853, gmean=0.8116, sen=0.8109, spe=0.8123, aupr=0.2678 - 2024-11-05 13:49:20,609 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8181, f1_score=0.5698, auc=0.8712, gmean=0.7925, sen=0.7658, spe=0.8201, aupr=0.2356 - 2024-11-05 13:49:20,658 - KFoldWrapper
+---------- - 2024-11-05 13:49:20,658 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8247, f1_score=0.5734, auc=0.8662, gmean=0.7871, sen=0.7486, spe=0.8277, aupr=0.2214 - 2024-11-05 13:49:56,616 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8242, f1_score=0.5772, auc=0.8793, gmean=0.8052, sen=0.7851, spe=0.8258, aupr=0.2367 - 2024-11-05 13:49:56,627 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8213, f1_score=0.5709, auc=0.8633, gmean=0.7880, sen=0.7536, spe=0.8240, aupr=0.2360 - 2024-11-05 13:49:56,637 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8137, f1_score=0.5675, auc=0.8808, gmean=0.7956, sen=0.7765, spe=0.8152, aupr=0.2553 - 2024-11-05 13:49:56,646 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8129, f1_score=0.5684, auc=0.8831, gmean=0.8022, sen=0.7908, spe=0.8137, aupr=0.2693 - 2024-11-05 13:49:56,655 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8194, f1_score=0.5715, auc=0.8743, gmean=0.7957, sen=0.7709, spe=0.8213, aupr=0.2418 - 2024-11-05 13:49:56,698 - KFoldWrapper
+---------- - 2024-11-05 13:49:56,698 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8110, f1_score=0.5676, auc=0.8756, gmean=0.8029, sen=0.7943, spe=0.8117, aupr=0.2863 - 2024-11-05 13:50:29,187 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8204, f1_score=0.5736, auc=0.8667, gmean=0.8018, sen=0.7822, spe=0.8219, aupr=0.2562 - 2024-11-05 13:50:29,197 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8188, f1_score=0.5630, auc=0.8516, gmean=0.7618, sen=0.7049, spe=0.8233, aupr=0.1892 - 2024-11-05 13:50:29,206 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8198, f1_score=0.5721, auc=0.8664, gmean=0.7973, sen=0.7736, spe=0.8217, aupr=0.2362 - 2024-11-05 13:50:29,215 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8194, f1_score=0.5745, auc=0.8827, gmean=0.8084, sen=0.7966, spe=0.8203, aupr=0.2616 - 2024-11-05 13:50:29,224 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8179, f1_score=0.5702, auc=0.8684, gmean=0.7947, sen=0.7703, spe=0.8198, aupr=0.2414 - 2024-11-05 13:50:29,265 - KFoldWrapper
+---------- - 2024-11-05 13:50:29,265 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8148, f1_score=0.5680, auc=0.8790, gmean=0.7937, sen=0.7714, spe=0.8166, aupr=0.2576 - 2024-11-05 13:51:01,594 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8265, f1_score=0.5725, auc=0.8616, gmean=0.7789, sen=0.7307, spe=0.8303, aupr=0.2389 - 2024-11-05 13:51:01,604 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8172, f1_score=0.5683, auc=0.8705, gmean=0.7888, sen=0.7593, spe=0.8195, aupr=0.2188 - 2024-11-05 13:51:01,614 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8123, f1_score=0.5647, auc=0.8756, gmean=0.7878, sen=0.7622, spe=0.8143, aupr=0.2263 - 2024-11-05 13:51:01,623 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8171, f1_score=0.5644, auc=0.8590, gmean=0.7728, sen=0.7278, spe=0.8207, aupr=0.2059 - 2024-11-05 13:51:01,633 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8176, f1_score=0.5676, auc=0.8690, gmean=0.7845, sen=0.7503, spe=0.8203, aupr=0.2280 - 2024-11-05 13:51:01,678 - KFoldWrapper
+---------- - 2024-11-05 13:51:01,678 - KFoldWrapper
+The evaluation[f1_macro] of layer_0 is 0.5757 - 2024-11-05 13:51:01,731 - DualGranularBalancedDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2024-11-05 13:51:01,732 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:51:01,732 - DualGranularBalancedDeepForest
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8556, f1_score=0.5713, auc=0.8349, gmean=0.6847, sen=0.5400, spe=0.8681, aupr=0.1821 - 2024-11-05 13:51:31,563 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8595, f1_score=0.5749, auc=0.8331, gmean=0.6872, sen=0.5415, spe=0.8721, aupr=0.1773 - 2024-11-05 13:51:31,575 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8599, f1_score=0.5720, auc=0.8291, gmean=0.6749, sen=0.5215, spe=0.8733, aupr=0.1891 - 2024-11-05 13:51:31,586 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8518, f1_score=0.5698, auc=0.8314, gmean=0.6911, sen=0.5530, spe=0.8637, aupr=0.1927 - 2024-11-05 13:51:31,596 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8649, f1_score=0.5837, auc=0.8398, gmean=0.7035, sen=0.5645, spe=0.8768, aupr=0.1888 - 2024-11-05 13:51:31,606 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8584, f1_score=0.5743, auc=0.8335, gmean=0.6883, sen=0.5441, spe=0.8708, aupr=0.1847 - 2024-11-05 13:51:31,650 - KFoldWrapper
+---------- - 2024-11-05 13:51:31,651 - KFoldWrapper
+Begin to train.... - 2024-11-05 13:51:40,168 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 13:51:40,169 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 13:51:40,169 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 13:51:40,169 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 13:51:40,169 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:51:40,169 - DualGranularBalancedDeepForest
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8147, f1_score=0.5676, auc=0.8744, gmean=0.7922, sen=0.7686, spe=0.8166, aupr=0.2409 - 2024-11-05 13:52:14,411 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8148, f1_score=0.5697, auc=0.8796, gmean=0.8018, sen=0.7880, spe=0.8159, aupr=0.2630 - 2024-11-05 13:52:14,422 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8153, f1_score=0.5643, auc=0.8676, gmean=0.7778, sen=0.7393, spe=0.8183, aupr=0.2260 - 2024-11-05 13:52:14,432 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8165, f1_score=0.5670, auc=0.8737, gmean=0.7856, sen=0.7536, spe=0.8190, aupr=0.2303 - 2024-11-05 13:52:14,442 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8182, f1_score=0.5704, auc=0.8778, gmean=0.7950, sen=0.7708, spe=0.8201, aupr=0.2582 - 2024-11-05 13:52:14,452 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8159, f1_score=0.5678, auc=0.8746, gmean=0.7905, sen=0.7640, spe=0.8180, aupr=0.2424 - 2024-11-05 13:52:14,498 - KFoldWrapper
+---------- - 2024-11-05 13:52:14,498 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8209, f1_score=0.5726, auc=0.8762, gmean=0.7953, sen=0.7686, spe=0.8229, aupr=0.2753 - 2024-11-05 13:52:46,526 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8215, f1_score=0.5748, auc=0.8867, gmean=0.8038, sen=0.7851, spe=0.8229, aupr=0.2688 - 2024-11-05 13:52:46,537 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8216, f1_score=0.5705, auc=0.8603, gmean=0.7852, sen=0.7479, spe=0.8245, aupr=0.2228 - 2024-11-05 13:52:46,547 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8233, f1_score=0.5794, auc=0.8903, gmean=0.8173, sen=0.8109, spe=0.8238, aupr=0.2515 - 2024-11-05 13:52:46,557 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8156, f1_score=0.5653, auc=0.8703, gmean=0.7808, sen=0.7450, spe=0.8184, aupr=0.2198 - 2024-11-05 13:52:46,567 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8206, f1_score=0.5725, auc=0.8767, gmean=0.7966, sen=0.7715, spe=0.8225, aupr=0.2451 - 2024-11-05 13:52:46,615 - KFoldWrapper
+---------- - 2024-11-05 13:52:46,615 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8193, f1_score=0.5697, auc=0.8687, gmean=0.7874, sen=0.7543, spe=0.8219, aupr=0.2400 - 2024-11-05 13:53:19,067 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8153, f1_score=0.5670, auc=0.8632, gmean=0.7893, sen=0.7622, spe=0.8174, aupr=0.2348 - 2024-11-05 13:53:19,078 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8278, f1_score=0.5816, auc=0.8886, gmean=0.8126, sen=0.7966, spe=0.8291, aupr=0.2421 - 2024-11-05 13:53:19,088 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8260, f1_score=0.5797, auc=0.8779, gmean=0.8103, sen=0.7937, spe=0.8272, aupr=0.2438 - 2024-11-05 13:53:19,098 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8226, f1_score=0.5791, auc=0.8845, gmean=0.8183, sen=0.8138, spe=0.8229, aupr=0.2593 - 2024-11-05 13:53:19,108 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8222, f1_score=0.5754, auc=0.8765, gmean=0.8036, sen=0.7841, spe=0.8237, aupr=0.2435 - 2024-11-05 13:53:19,148 - KFoldWrapper
+---------- - 2024-11-05 13:53:19,148 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8223, f1_score=0.5721, auc=0.8734, gmean=0.7888, sen=0.7543, spe=0.8250, aupr=0.2410 - 2024-11-05 13:53:50,855 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8263, f1_score=0.5709, auc=0.8629, gmean=0.7729, sen=0.7192, spe=0.8305, aupr=0.2306 - 2024-11-05 13:53:50,866 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8096, f1_score=0.5625, auc=0.8603, gmean=0.7864, sen=0.7622, spe=0.8115, aupr=0.2169 - 2024-11-05 13:53:50,875 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8161, f1_score=0.5779, auc=0.9009, gmean=0.8327, sen=0.8510, spe=0.8148, aupr=0.2920 - 2024-11-05 13:53:50,885 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8235, f1_score=0.5731, auc=0.8747, gmean=0.7905, sen=0.7564, spe=0.8261, aupr=0.2492 - 2024-11-05 13:53:50,895 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8195, f1_score=0.5713, auc=0.8742, gmean=0.7946, sen=0.7686, spe=0.8216, aupr=0.2440 - 2024-11-05 13:53:50,940 - KFoldWrapper
+---------- - 2024-11-05 13:53:50,940 - KFoldWrapper
+The evaluation[f1_macro] of layer_0 is 0.5784 - 2024-11-05 13:53:50,995 - DualGranularBalancedDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2024-11-05 13:53:50,995 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:53:50,995 - DualGranularBalancedDeepForest
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8381, f1_score=0.5623, auc=0.8202, gmean=0.7015, sen=0.5800, spe=0.8484, aupr=0.1680 - 2024-11-05 13:54:19,396 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8502, f1_score=0.5757, auc=0.8493, gmean=0.7194, sen=0.6017, spe=0.8600, aupr=0.2075 - 2024-11-05 13:54:19,406 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8612, f1_score=0.5846, auc=0.8579, gmean=0.7191, sen=0.5931, spe=0.8719, aupr=0.2321 - 2024-11-05 13:54:19,416 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8516, f1_score=0.5786, auc=0.8522, gmean=0.7266, sen=0.6132, spe=0.8611, aupr=0.2230 - 2024-11-05 13:54:19,426 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8568, f1_score=0.5696, auc=0.8250, gmean=0.6754, sen=0.5244, spe=0.8699, aupr=0.1960 - 2024-11-05 13:54:19,436 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8516, f1_score=0.5741, auc=0.8406, gmean=0.7087, sen=0.5825, spe=0.8622, aupr=0.2038 - 2024-11-05 13:54:19,475 - KFoldWrapper
+---------- - 2024-11-05 13:54:19,475 - KFoldWrapper
+Begin to train.... - 2024-11-05 13:54:37,747 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 13:54:37,747 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 13:54:37,747 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 13:54:37,747 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 13:54:37,748 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:54:37,748 - DualGranularBalancedDeepForest
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.7995, f1_score=0.5579, auc=0.8701, gmean=0.7942, sen=0.7886, spe=0.7999, aupr=0.2343 - 2024-11-05 13:55:12,971 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8093, f1_score=0.5603, auc=0.8618, gmean=0.7777, sen=0.7450, spe=0.8118, aupr=0.2149 - 2024-11-05 13:55:12,981 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8176, f1_score=0.5706, auc=0.8782, gmean=0.7976, sen=0.7765, spe=0.8192, aupr=0.2603 - 2024-11-05 13:55:12,991 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8173, f1_score=0.5629, auc=0.8605, gmean=0.7656, sen=0.7135, spe=0.8215, aupr=0.2343 - 2024-11-05 13:55:13,002 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8174, f1_score=0.5664, auc=0.8653, gmean=0.7803, sen=0.7421, spe=0.8204, aupr=0.2173 - 2024-11-05 13:55:13,013 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8122, f1_score=0.5636, auc=0.8670, gmean=0.7832, sen=0.7532, spe=0.8146, aupr=0.2307 - 2024-11-05 13:55:13,062 - KFoldWrapper
+---------- - 2024-11-05 13:55:13,062 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8116, f1_score=0.5644, auc=0.8561, gmean=0.7878, sen=0.7629, spe=0.8135, aupr=0.2337 - 2024-11-05 13:55:45,715 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8174, f1_score=0.5705, auc=0.8814, gmean=0.7975, sen=0.7765, spe=0.8191, aupr=0.2266 - 2024-11-05 13:55:45,724 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8057, f1_score=0.5636, auc=0.8784, gmean=0.8027, sen=0.7994, spe=0.8059, aupr=0.2463 - 2024-11-05 13:55:45,733 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8162, f1_score=0.5627, auc=0.8537, gmean=0.7680, sen=0.7192, spe=0.8201, aupr=0.2005 - 2024-11-05 13:55:45,743 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8261, f1_score=0.5760, auc=0.8756, gmean=0.7947, sen=0.7622, spe=0.8286, aupr=0.2379 - 2024-11-05 13:55:45,752 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8154, f1_score=0.5674, auc=0.8688, gmean=0.7903, sen=0.7640, spe=0.8174, aupr=0.2270 - 2024-11-05 13:55:45,798 - KFoldWrapper
+---------- - 2024-11-05 13:55:45,798 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8060, f1_score=0.5597, auc=0.8610, gmean=0.7836, sen=0.7600, spe=0.8078, aupr=0.2415 - 2024-11-05 13:56:18,317 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8169, f1_score=0.5677, auc=0.8658, gmean=0.7872, sen=0.7564, spe=0.8193, aupr=0.2292 - 2024-11-05 13:56:18,327 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8098, f1_score=0.5653, auc=0.8733, gmean=0.7978, sen=0.7851, spe=0.8108, aupr=0.2347 - 2024-11-05 13:56:18,338 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8129, f1_score=0.5638, auc=0.8603, gmean=0.7824, sen=0.7507, spe=0.8153, aupr=0.2324 - 2024-11-05 13:56:18,348 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8181, f1_score=0.5697, auc=0.8644, gmean=0.7921, sen=0.7650, spe=0.8202, aupr=0.2068 - 2024-11-05 13:56:18,359 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8127, f1_score=0.5652, auc=0.8649, gmean=0.7887, sen=0.7635, spe=0.8147, aupr=0.2277 - 2024-11-05 13:56:18,407 - KFoldWrapper
+---------- - 2024-11-05 13:56:18,407 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8179, f1_score=0.5725, auc=0.8800, gmean=0.8037, sen=0.7886, spe=0.8191, aupr=0.2451 - 2024-11-05 13:56:51,421 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8051, f1_score=0.5603, auc=0.8702, gmean=0.7898, sen=0.7736, spe=0.8064, aupr=0.2309 - 2024-11-05 13:56:51,431 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8154, f1_score=0.5678, auc=0.8676, gmean=0.7922, sen=0.7679, spe=0.8173, aupr=0.2286 - 2024-11-05 13:56:51,441 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8078, f1_score=0.5605, auc=0.8655, gmean=0.7827, sen=0.7564, spe=0.8099, aupr=0.2127 - 2024-11-05 13:56:51,450 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8212, f1_score=0.5739, auc=0.8729, gmean=0.8008, sen=0.7794, spe=0.8228, aupr=0.2546 - 2024-11-05 13:56:51,459 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8135, f1_score=0.5669, auc=0.8713, gmean=0.7939, sen=0.7732, spe=0.8151, aupr=0.2325 - 2024-11-05 13:56:51,504 - KFoldWrapper
+---------- - 2024-11-05 13:56:51,504 - KFoldWrapper
+The evaluation[f1_macro] of layer_0 is 0.5680 - 2024-11-05 13:56:51,558 - DualGranularBalancedDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2024-11-05 13:56:51,558 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:56:51,559 - DualGranularBalancedDeepForest
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8650, f1_score=0.5805, auc=0.8405, gmean=0.6903, sen=0.5429, spe=0.8778, aupr=0.1786 - 2024-11-05 13:57:17,904 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8498, f1_score=0.5684, auc=0.8285, gmean=0.6920, sen=0.5559, spe=0.8614, aupr=0.1862 - 2024-11-05 13:57:17,921 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8593, f1_score=0.5819, auc=0.8382, gmean=0.7149, sen=0.5874, spe=0.8700, aupr=0.1907 - 2024-11-05 13:57:17,937 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8466, f1_score=0.5648, auc=0.8267, gmean=0.6872, sen=0.5501, spe=0.8583, aupr=0.1633 - 2024-11-05 13:57:17,952 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8526, f1_score=0.5804, auc=0.8518, gmean=0.7304, sen=0.6189, spe=0.8619, aupr=0.2030 - 2024-11-05 13:57:17,972 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8546, f1_score=0.5751, auc=0.8369, gmean=0.7032, sen=0.5710, spe=0.8659, aupr=0.1836 - 2024-11-05 13:57:18,017 - KFoldWrapper
+---------- - 2024-11-05 13:57:18,017 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8546, f1_score=0.5727, auc=0.8369, gmean=0.6930, sen=0.5543, spe=0.8665, aupr=0.2014 - 2024-11-05 13:57:44,844 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8467, f1_score=0.5636, auc=0.8251, gmean=0.6820, sen=0.5415, spe=0.8588, aupr=0.1802 - 2024-11-05 13:57:44,855 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8531, f1_score=0.5740, auc=0.8368, gmean=0.7038, sen=0.5731, spe=0.8642, aupr=0.1922 - 2024-11-05 13:57:44,864 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8509, f1_score=0.5663, auc=0.8170, gmean=0.6801, sen=0.5358, spe=0.8633, aupr=0.1660 - 2024-11-05 13:57:44,874 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8655, f1_score=0.5810, auc=0.8418, gmean=0.6915, sen=0.5444, spe=0.8782, aupr=0.1642 - 2024-11-05 13:57:44,885 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8542, f1_score=0.5714, auc=0.8314, gmean=0.6901, sen=0.5498, spe=0.8662, aupr=0.1793 - 2024-11-05 13:57:44,930 - KFoldWrapper
+---------- - 2024-11-05 13:57:44,931 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8544, f1_score=0.5734, auc=0.8340, gmean=0.6964, sen=0.5600, spe=0.8661, aupr=0.1951 - 2024-11-05 13:58:11,782 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8575, f1_score=0.5846, auc=0.8475, gmean=0.7309, sen=0.6160, spe=0.8671, aupr=0.2294 - 2024-11-05 13:58:11,792 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8485, f1_score=0.5660, auc=0.8308, gmean=0.6862, sen=0.5473, spe=0.8604, aupr=0.1806 - 2024-11-05 13:58:11,803 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8478, f1_score=0.5680, auc=0.8296, gmean=0.6963, sen=0.5645, spe=0.8590, aupr=0.1815 - 2024-11-05 13:58:11,814 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8528, f1_score=0.5698, auc=0.8308, gmean=0.6880, sen=0.5473, spe=0.8649, aupr=0.1876 - 2024-11-05 13:58:11,825 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8522, f1_score=0.5723, auc=0.8346, gmean=0.6997, sen=0.5670, spe=0.8635, aupr=0.1938 - 2024-11-05 13:58:11,869 - KFoldWrapper
+---------- - 2024-11-05 13:58:11,869 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8479, f1_score=0.5566, auc=0.8275, gmean=0.6490, sen=0.4886, spe=0.8622, aupr=0.1811 - 2024-11-05 13:58:38,670 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8423, f1_score=0.5680, auc=0.8345, gmean=0.7126, sen=0.5960, spe=0.8521, aupr=0.1652 - 2024-11-05 13:58:38,680 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8588, f1_score=0.5701, auc=0.8322, gmean=0.6708, sen=0.5158, spe=0.8724, aupr=0.1929 - 2024-11-05 13:58:38,691 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8562, f1_score=0.5799, auc=0.8368, gmean=0.7170, sen=0.5931, spe=0.8666, aupr=0.2278 - 2024-11-05 13:58:38,701 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8539, f1_score=0.5799, auc=0.8424, gmean=0.7243, sen=0.6074, spe=0.8637, aupr=0.1841 - 2024-11-05 13:58:38,710 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8518, f1_score=0.5709, auc=0.8345, gmean=0.6954, sen=0.5601, spe=0.8634, aupr=0.1858 - 2024-11-05 13:58:38,754 - KFoldWrapper
+---------- - 2024-11-05 13:58:38,754 - KFoldWrapper
+The evaluation[f1_macro] of layer_1 is 0.6015 - 2024-11-05 13:58:38,872 - DualGranularBalancedDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2024-11-05 13:58:38,878 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 13:58:38,878 - DualGranularBalancedDeepForest
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8664, f1_score=0.5833, auc=0.8370, gmean=0.6962, sen=0.5514, spe=0.8789, aupr=0.1851 - 2024-11-05 13:59:05,964 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8651, f1_score=0.5870, auc=0.8478, gmean=0.7156, sen=0.5845, spe=0.8762, aupr=0.2267 - 2024-11-05 13:59:05,974 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8527, f1_score=0.5701, auc=0.8304, gmean=0.6897, sen=0.5501, spe=0.8647, aupr=0.2057 - 2024-11-05 13:59:05,984 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8586, f1_score=0.5666, auc=0.8190, gmean=0.6578, sen=0.4957, spe=0.8730, aupr=0.1640 - 2024-11-05 13:59:05,993 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8547, f1_score=0.5705, auc=0.8249, gmean=0.6852, sen=0.5415, spe=0.8671, aupr=0.2071 - 2024-11-05 13:59:06,003 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8595, f1_score=0.5754, auc=0.8318, gmean=0.6892, sen=0.5447, spe=0.8720, aupr=0.1959 - 2024-11-05 13:59:06,047 - KFoldWrapper
+---------- - 2024-11-05 13:59:06,047 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8621, f1_score=0.5773, auc=0.8341, gmean=0.6874, sen=0.5400, spe=0.8749, aupr=0.1937 - 2024-11-05 13:59:32,938 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8693, f1_score=0.5714, auc=0.8215, gmean=0.6430, sen=0.4670, spe=0.8852, aupr=0.1836 - 2024-11-05 13:59:32,949 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8488, f1_score=0.5706, auc=0.8431, gmean=0.7036, sen=0.5759, spe=0.8596, aupr=0.1857 - 2024-11-05 13:59:32,959 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8563, f1_score=0.5706, auc=0.8317, gmean=0.6806, sen=0.5330, spe=0.8691, aupr=0.1723 - 2024-11-05 13:59:32,968 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8414, f1_score=0.5630, auc=0.8297, gmean=0.6953, sen=0.5673, spe=0.8522, aupr=0.1893 - 2024-11-05 13:59:32,977 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8556, f1_score=0.5706, auc=0.8319, gmean=0.6826, sen=0.5367, spe=0.8682, aupr=0.1838 - 2024-11-05 13:59:33,021 - KFoldWrapper
+---------- - 2024-11-05 13:59:33,022 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8538, f1_score=0.5661, auc=0.8164, gmean=0.6697, sen=0.5171, spe=0.8672, aupr=0.1827 - 2024-11-05 13:59:59,691 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8689, f1_score=0.5755, auc=0.8198, gmean=0.6600, sen=0.4928, spe=0.8838, aupr=0.1900 - 2024-11-05 13:59:59,702 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8506, f1_score=0.5629, auc=0.8247, gmean=0.6675, sen=0.5158, spe=0.8639, aupr=0.1778 - 2024-11-05 13:59:59,711 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8563, f1_score=0.5636, auc=0.8230, gmean=0.6532, sen=0.4900, spe=0.8708, aupr=0.1762 - 2024-11-05 13:59:59,721 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8398, f1_score=0.5553, auc=0.8178, gmean=0.6685, sen=0.5244, spe=0.8523, aupr=0.1652 - 2024-11-05 13:59:59,731 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8539, f1_score=0.5645, auc=0.8203, gmean=0.6639, sen=0.5080, spe=0.8676, aupr=0.1771 - 2024-11-05 13:59:59,775 - KFoldWrapper
+---------- - 2024-11-05 13:59:59,775 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8475, f1_score=0.5625, auc=0.8355, gmean=0.6743, sen=0.5286, spe=0.8602, aupr=0.1569 - 2024-11-05 14:00:26,620 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8521, f1_score=0.5691, auc=0.8342, gmean=0.6877, sen=0.5473, spe=0.8641, aupr=0.1968 - 2024-11-05 14:00:26,631 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8668, f1_score=0.5883, auc=0.8448, gmean=0.7147, sen=0.5817, spe=0.8781, aupr=0.2082 - 2024-11-05 14:00:26,642 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8659, f1_score=0.5742, auc=0.8234, gmean=0.6644, sen=0.5014, spe=0.8804, aupr=0.1833 - 2024-11-05 14:00:26,653 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8599, f1_score=0.5744, auc=0.8309, gmean=0.6838, sen=0.5358, spe=0.8728, aupr=0.1954 - 2024-11-05 14:00:26,662 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8584, f1_score=0.5735, auc=0.8339, gmean=0.6852, sen=0.5389, spe=0.8711, aupr=0.1860 - 2024-11-05 14:00:26,706 - KFoldWrapper
+---------- - 2024-11-05 14:00:26,706 - KFoldWrapper
+The evaluation[f1_macro] of layer_2 is 0.6000 - 2024-11-05 14:00:26,831 - DualGranularBalancedDeepForest
+best_layer: 1, current_layer:2, save layers: 2 - 2024-11-05 14:00:26,831 - DualGranularBalancedDeepForest
+training finish... - 2024-11-05 14:00:26,831 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 14:01:17,011 - DualGranularBalancedDeepForest
+the shape of training samples: (45797, 1222) - 2024-11-05 14:01:17,011 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 14:01:17,011 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 14:01:17,011 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 14:01:17,012 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:01:17,012 - DualGranularBalancedDeepForest
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8144, f1_score=0.5670, auc=0.8749, gmean=0.7906, sen=0.7657, spe=0.8163, aupr=0.2633 - 2024-11-05 14:01:54,330 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8261, f1_score=0.5756, auc=0.8718, gmean=0.7922, sen=0.7571, spe=0.8288, aupr=0.2536 - 2024-11-05 14:01:54,341 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8177, f1_score=0.5703, auc=0.8666, gmean=0.7962, sen=0.7736, spe=0.8194, aupr=0.2372 - 2024-11-05 14:01:54,351 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8152, f1_score=0.5690, auc=0.8770, gmean=0.7978, sen=0.7794, spe=0.8166, aupr=0.2439 - 2024-11-05 14:01:54,363 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8196, f1_score=0.5713, auc=0.8816, gmean=0.7943, sen=0.7679, spe=0.8217, aupr=0.2270 - 2024-11-05 14:01:54,376 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8186, f1_score=0.5706, auc=0.8743, gmean=0.7942, sen=0.7687, spe=0.8206, aupr=0.2433 - 2024-11-05 14:01:54,431 - KFoldWrapper
+---------- - 2024-11-05 14:01:54,431 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8194, f1_score=0.5684, auc=0.8639, gmean=0.7817, sen=0.7429, spe=0.8225, aupr=0.2251 - 2024-11-05 14:02:31,378 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8117, f1_score=0.5713, auc=0.8842, gmean=0.8170, sen=0.8229, spe=0.8112, aupr=0.2325 - 2024-11-05 14:02:31,389 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8236, f1_score=0.5739, auc=0.8887, gmean=0.7934, sen=0.7622, spe=0.8260, aupr=0.2739 - 2024-11-05 14:02:31,399 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8182, f1_score=0.5667, auc=0.8586, gmean=0.7792, sen=0.7393, spe=0.8213, aupr=0.2473 - 2024-11-05 14:02:31,409 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8208, f1_score=0.5706, auc=0.8757, gmean=0.7878, sen=0.7536, spe=0.8235, aupr=0.2219 - 2024-11-05 14:02:31,419 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8187, f1_score=0.5702, auc=0.8741, gmean=0.7920, sen=0.7642, spe=0.8209, aupr=0.2388 - 2024-11-05 14:02:31,470 - KFoldWrapper
+---------- - 2024-11-05 14:02:31,470 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8103, f1_score=0.5689, auc=0.8884, gmean=0.8108, sen=0.8114, spe=0.8102, aupr=0.2744 - 2024-11-05 14:03:05,364 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8164, f1_score=0.5723, auc=0.8825, gmean=0.8071, sen=0.7971, spe=0.8171, aupr=0.2354 - 2024-11-05 14:03:05,375 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8240, f1_score=0.5732, auc=0.8746, gmean=0.7893, sen=0.7536, spe=0.8268, aupr=0.2256 - 2024-11-05 14:03:05,385 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8107, f1_score=0.5654, auc=0.8698, gmean=0.7955, sen=0.7794, spe=0.8119, aupr=0.2619 - 2024-11-05 14:03:05,395 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8266, f1_score=0.5737, auc=0.8702, gmean=0.7834, sen=0.7393, spe=0.8301, aupr=0.2422 - 2024-11-05 14:03:05,406 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8176, f1_score=0.5707, auc=0.8768, gmean=0.7974, sen=0.7762, spe=0.8192, aupr=0.2459 - 2024-11-05 14:03:05,458 - KFoldWrapper
+---------- - 2024-11-05 14:03:05,458 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8201, f1_score=0.5716, auc=0.8722, gmean=0.7935, sen=0.7657, spe=0.8222, aupr=0.2241 - 2024-11-05 14:03:38,381 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8160, f1_score=0.5697, auc=0.8668, gmean=0.7971, sen=0.7771, spe=0.8176, aupr=0.2136 - 2024-11-05 14:03:38,391 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8223, f1_score=0.5741, auc=0.8786, gmean=0.7985, sen=0.7736, spe=0.8242, aupr=0.2397 - 2024-11-05 14:03:38,401 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8209, f1_score=0.5737, auc=0.8706, gmean=0.8007, sen=0.7794, spe=0.8226, aupr=0.2293 - 2024-11-05 14:03:38,411 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8221, f1_score=0.5761, auc=0.8945, gmean=0.8069, sen=0.7908, spe=0.8234, aupr=0.2819 - 2024-11-05 14:03:38,421 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8203, f1_score=0.5730, auc=0.8764, gmean=0.7994, sen=0.7773, spe=0.8220, aupr=0.2357 - 2024-11-05 14:03:38,470 - KFoldWrapper
+---------- - 2024-11-05 14:03:38,470 - KFoldWrapper
+The evaluation[f1_macro] of layer_0 is 0.5753 - 2024-11-05 14:03:38,522 - DualGranularBalancedDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2024-11-05 14:03:38,523 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:03:38,523 - DualGranularBalancedDeepForest
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8537, f1_score=0.5745, auc=0.8358, gmean=0.7030, sen=0.5714, spe=0.8649, aupr=0.1949 - 2024-11-05 14:04:04,675 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8473, f1_score=0.5663, auc=0.8339, gmean=0.6900, sen=0.5543, spe=0.8589, aupr=0.1776 - 2024-11-05 14:04:04,686 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8733, f1_score=0.5983, auc=0.8516, gmean=0.7294, sen=0.6017, spe=0.8841, aupr=0.2387 - 2024-11-05 14:04:04,696 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8625, f1_score=0.5814, auc=0.8358, gmean=0.7025, sen=0.5645, spe=0.8743, aupr=0.2056 - 2024-11-05 14:04:04,706 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8572, f1_score=0.5768, auc=0.8383, gmean=0.7020, sen=0.5673, spe=0.8687, aupr=0.1982 - 2024-11-05 14:04:04,720 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8588, f1_score=0.5791, auc=0.8392, gmean=0.7054, sen=0.5718, spe=0.8702, aupr=0.2014 - 2024-11-05 14:04:04,765 - KFoldWrapper
+---------- - 2024-11-05 14:04:04,765 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8572, f1_score=0.5750, auc=0.8239, gmean=0.6941, sen=0.5543, spe=0.8692, aupr=0.1976 - 2024-11-05 14:04:30,794 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8528, f1_score=0.5720, auc=0.8360, gmean=0.6958, sen=0.5600, spe=0.8645, aupr=0.2407 - 2024-11-05 14:04:30,804 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8655, f1_score=0.5819, auc=0.8379, gmean=0.6950, sen=0.5501, spe=0.8780, aupr=0.1965 - 2024-11-05 14:04:30,813 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8753, f1_score=0.5947, auc=0.8546, gmean=0.7096, sen=0.5673, spe=0.8875, aupr=0.2295 - 2024-11-05 14:04:30,823 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8611, f1_score=0.5778, auc=0.8365, gmean=0.6932, sen=0.5501, spe=0.8734, aupr=0.2024 - 2024-11-05 14:04:30,832 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8624, f1_score=0.5801, auc=0.8374, gmean=0.6975, sen=0.5564, spe=0.8745, aupr=0.2117 - 2024-11-05 14:04:30,872 - KFoldWrapper
+---------- - 2024-11-05 14:04:30,872 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8691, f1_score=0.5883, auc=0.8374, gmean=0.7060, sen=0.5657, spe=0.8812, aupr=0.1995 - 2024-11-05 14:04:56,719 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8668, f1_score=0.5950, auc=0.8561, gmean=0.7389, sen=0.6229, spe=0.8765, aupr=0.2357 - 2024-11-05 14:04:56,732 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8558, f1_score=0.5710, auc=0.8283, gmean=0.6839, sen=0.5387, spe=0.8683, aupr=0.2336 - 2024-11-05 14:04:56,743 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8548, f1_score=0.5790, auc=0.8445, gmean=0.7180, sen=0.5960, spe=0.8650, aupr=0.1976 - 2024-11-05 14:04:56,753 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8692, f1_score=0.5966, auc=0.8395, gmean=0.7376, sen=0.6189, spe=0.8791, aupr=0.2096 - 2024-11-05 14:04:56,764 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8631, f1_score=0.5859, auc=0.8410, gmean=0.7172, sen=0.5884, spe=0.8740, aupr=0.2137 - 2024-11-05 14:04:56,811 - KFoldWrapper
+---------- - 2024-11-05 14:04:56,811 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8449, f1_score=0.5710, auc=0.8363, gmean=0.7161, sen=0.6000, spe=0.8546, aupr=0.2114 - 2024-11-05 14:05:23,469 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8687, f1_score=0.5860, auc=0.8413, gmean=0.6989, sen=0.5543, spe=0.8812, aupr=0.2186 - 2024-11-05 14:05:23,480 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8554, f1_score=0.5770, auc=0.8395, gmean=0.7081, sen=0.5788, spe=0.8664, aupr=0.2286 - 2024-11-05 14:05:23,490 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8726, f1_score=0.5919, auc=0.8348, gmean=0.7085, sen=0.5673, spe=0.8847, aupr=0.2430 - 2024-11-05 14:05:23,500 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8651, f1_score=0.5768, auc=0.8403, gmean=0.6769, sen=0.5215, spe=0.8787, aupr=0.2146 - 2024-11-05 14:05:23,510 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8613, f1_score=0.5803, auc=0.8385, gmean=0.7020, sen=0.5644, spe=0.8731, aupr=0.2221 - 2024-11-05 14:05:23,549 - KFoldWrapper
+---------- - 2024-11-05 14:05:23,549 - KFoldWrapper
+The evaluation[f1_macro] of layer_1 is 0.6153 - 2024-11-05 14:05:23,678 - DualGranularBalancedDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2024-11-05 14:05:23,685 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:05:23,685 - DualGranularBalancedDeepForest
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8709, f1_score=0.5938, auc=0.8607, gmean=0.7205, sen=0.5886, spe=0.8821, aupr=0.2594 - 2024-11-05 14:05:50,092 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8592, f1_score=0.5746, auc=0.8302, gmean=0.6861, sen=0.5400, spe=0.8719, aupr=0.1797 - 2024-11-05 14:05:50,104 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8678, f1_score=0.5907, auc=0.8540, gmean=0.7202, sen=0.5903, spe=0.8788, aupr=0.2571 - 2024-11-05 14:05:50,113 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8705, f1_score=0.5869, auc=0.8433, gmean=0.6971, sen=0.5501, spe=0.8832, aupr=0.1964 - 2024-11-05 14:05:50,123 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8630, f1_score=0.5758, auc=0.8251, gmean=0.6797, sen=0.5272, spe=0.8763, aupr=0.1927 - 2024-11-05 14:05:50,132 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8663, f1_score=0.5843, auc=0.8424, gmean=0.7009, sen=0.5592, spe=0.8784, aupr=0.2141 - 2024-11-05 14:05:50,176 - KFoldWrapper
+---------- - 2024-11-05 14:05:50,177 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8545, f1_score=0.5735, auc=0.8436, gmean=0.6965, sen=0.5600, spe=0.8662, aupr=0.1851 - 2024-11-05 14:06:16,533 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8606, f1_score=0.5773, auc=0.8401, gmean=0.6920, sen=0.5486, spe=0.8730, aupr=0.2052 - 2024-11-05 14:06:16,544 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8701, f1_score=0.5939, auc=0.8424, gmean=0.7246, sen=0.5960, spe=0.8809, aupr=0.2435 - 2024-11-05 14:06:16,553 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8693, f1_score=0.5843, auc=0.8343, gmean=0.6912, sen=0.5415, spe=0.8823, aupr=0.1960 - 2024-11-05 14:06:16,562 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8497, f1_score=0.5670, auc=0.8272, gmean=0.6867, sen=0.5473, spe=0.8616, aupr=0.1842 - 2024-11-05 14:06:16,571 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8608, f1_score=0.5789, auc=0.8376, gmean=0.6983, sen=0.5587, spe=0.8728, aupr=0.2023 - 2024-11-05 14:06:16,612 - KFoldWrapper
+---------- - 2024-11-05 14:06:16,612 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8743, f1_score=0.5893, auc=0.8382, gmean=0.6923, sen=0.5400, spe=0.8876, aupr=0.2260 - 2024-11-05 14:06:43,464 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8670, f1_score=0.5903, auc=0.8416, gmean=0.7206, sen=0.5914, spe=0.8780, aupr=0.2344 - 2024-11-05 14:06:43,477 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8723, f1_score=0.5891, auc=0.8446, gmean=0.6995, sen=0.5530, spe=0.8849, aupr=0.2158 - 2024-11-05 14:06:43,487 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8677, f1_score=0.5859, auc=0.8413, gmean=0.7029, sen=0.5616, spe=0.8798, aupr=0.2251 - 2024-11-05 14:06:43,496 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8658, f1_score=0.5841, auc=0.8426, gmean=0.7021, sen=0.5616, spe=0.8779, aupr=0.2055 - 2024-11-05 14:06:43,505 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8694, f1_score=0.5878, auc=0.8415, gmean=0.7036, sen=0.5615, spe=0.8816, aupr=0.2194 - 2024-11-05 14:06:43,548 - KFoldWrapper
+---------- - 2024-11-05 14:06:43,548 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8626, f1_score=0.5725, auc=0.8253, gmean=0.6677, sen=0.5086, spe=0.8766, aupr=0.1850 - 2024-11-05 14:07:10,835 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8608, f1_score=0.5666, auc=0.8260, gmean=0.6503, sen=0.4829, spe=0.8758, aupr=0.1785 - 2024-11-05 14:07:10,845 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8552, f1_score=0.5687, auc=0.8302, gmean=0.6766, sen=0.5272, spe=0.8682, aupr=0.1742 - 2024-11-05 14:07:10,855 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8694, f1_score=0.5820, auc=0.8262, gmean=0.6823, sen=0.5272, spe=0.8830, aupr=0.2081 - 2024-11-05 14:07:10,865 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8747, f1_score=0.5837, auc=0.8266, gmean=0.6715, sen=0.5072, spe=0.8892, aupr=0.2163 - 2024-11-05 14:07:10,875 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8645, f1_score=0.5746, auc=0.8270, gmean=0.6698, sen=0.5106, spe=0.8786, aupr=0.1918 - 2024-11-05 14:07:10,918 - KFoldWrapper
+---------- - 2024-11-05 14:07:10,919 - KFoldWrapper
+The evaluation[f1_macro] of layer_2 is 0.6156 - 2024-11-05 14:07:10,975 - DualGranularBalancedDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2024-11-05 14:07:10,982 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:07:10,982 - DualGranularBalancedDeepForest
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8805, f1_score=0.5933, auc=0.8528, gmean=0.6858, sen=0.5257, spe=0.8946, aupr=0.2488 - 2024-11-05 14:07:40,896 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8716, f1_score=0.5987, auc=0.8645, gmean=0.7360, sen=0.6143, spe=0.8818, aupr=0.2772 - 2024-11-05 14:07:40,908 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8774, f1_score=0.5935, auc=0.8433, gmean=0.6981, sen=0.5473, spe=0.8905, aupr=0.2302 - 2024-11-05 14:07:40,918 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8926, f1_score=0.6165, auc=0.8696, gmean=0.7237, sen=0.5788, spe=0.9050, aupr=0.2736 - 2024-11-05 14:07:40,928 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8820, f1_score=0.6068, auc=0.8603, gmean=0.7297, sen=0.5960, spe=0.8933, aupr=0.2817 - 2024-11-05 14:07:40,938 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8808, f1_score=0.6016, auc=0.8580, gmean=0.7150, sen=0.5724, spe=0.8930, aupr=0.2606 - 2024-11-05 14:07:40,979 - KFoldWrapper
+---------- - 2024-11-05 14:07:40,979 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8747, f1_score=0.5921, auc=0.8477, gmean=0.7013, sen=0.5543, spe=0.8874, aupr=0.2581 - 2024-11-05 14:08:09,568 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8795, f1_score=0.6002, auc=0.8514, gmean=0.7138, sen=0.5714, spe=0.8917, aupr=0.2502 - 2024-11-05 14:08:09,579 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8861, f1_score=0.6047, auc=0.8521, gmean=0.7070, sen=0.5559, spe=0.8992, aupr=0.2680 - 2024-11-05 14:08:09,589 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8707, f1_score=0.5890, auc=0.8418, gmean=0.7042, sen=0.5616, spe=0.8830, aupr=0.2708 - 2024-11-05 14:08:09,599 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8726, f1_score=0.5880, auc=0.8344, gmean=0.6944, sen=0.5444, spe=0.8856, aupr=0.1952 - 2024-11-05 14:08:09,610 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8767, f1_score=0.5947, auc=0.8454, gmean=0.7042, sen=0.5575, spe=0.8894, aupr=0.2467 - 2024-11-05 14:08:09,655 - KFoldWrapper
+---------- - 2024-11-05 14:08:09,655 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8809, f1_score=0.6041, auc=0.8562, gmean=0.7231, sen=0.5857, spe=0.8926, aupr=0.2591 - 2024-11-05 14:08:39,335 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8705, f1_score=0.5874, auc=0.8430, gmean=0.6979, sen=0.5514, spe=0.8832, aupr=0.2247 - 2024-11-05 14:08:39,347 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8759, f1_score=0.5919, auc=0.8478, gmean=0.6975, sen=0.5473, spe=0.8889, aupr=0.2123 - 2024-11-05 14:08:39,357 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8818, f1_score=0.5932, auc=0.8482, gmean=0.6817, sen=0.5186, spe=0.8961, aupr=0.2564 - 2024-11-05 14:08:39,366 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8740, f1_score=0.5836, auc=0.8398, gmean=0.6731, sen=0.5100, spe=0.8884, aupr=0.2361 - 2024-11-05 14:08:39,376 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8766, f1_score=0.5920, auc=0.8470, gmean=0.6949, sen=0.5426, spe=0.8899, aupr=0.2368 - 2024-11-05 14:08:39,419 - KFoldWrapper
+---------- - 2024-11-05 14:08:39,419 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8760, f1_score=0.5973, auc=0.8496, gmean=0.7158, sen=0.5771, spe=0.8879, aupr=0.2280 - 2024-11-05 14:09:07,798 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8751, f1_score=0.5852, auc=0.8428, gmean=0.6745, sen=0.5114, spe=0.8896, aupr=0.2099 - 2024-11-05 14:09:07,810 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8787, f1_score=0.5988, auc=0.8530, gmean=0.7127, sen=0.5702, spe=0.8909, aupr=0.2468 - 2024-11-05 14:09:07,819 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8820, f1_score=0.5929, auc=0.8428, gmean=0.6800, sen=0.5158, spe=0.8965, aupr=0.2084 - 2024-11-05 14:09:07,829 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8738, f1_score=0.5868, auc=0.8374, gmean=0.6859, sen=0.5301, spe=0.8874, aupr=0.2192 - 2024-11-05 14:09:07,838 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8771, f1_score=0.5922, auc=0.8449, gmean=0.6940, sen=0.5409, spe=0.8904, aupr=0.2192 - 2024-11-05 14:09:07,877 - KFoldWrapper
+---------- - 2024-11-05 14:09:07,877 - KFoldWrapper
+The evaluation[f1_macro] of layer_3 is 0.6317 - 2024-11-05 14:09:07,936 - DualGranularBalancedDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2024-11-05 14:09:07,943 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:09:07,943 - DualGranularBalancedDeepForest
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.9020, f1_score=0.6207, auc=0.8667, gmean=0.6998, sen=0.5343, spe=0.9166, aupr=0.2524 - 2024-11-05 14:09:38,072 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8830, f1_score=0.6011, auc=0.8595, gmean=0.7047, sen=0.5543, spe=0.8960, aupr=0.2509 - 2024-11-05 14:09:38,084 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8902, f1_score=0.6155, auc=0.8769, gmean=0.7297, sen=0.5903, spe=0.9020, aupr=0.2650 - 2024-11-05 14:09:38,094 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8813, f1_score=0.6012, auc=0.8567, gmean=0.7121, sen=0.5673, spe=0.8938, aupr=0.2488 - 2024-11-05 14:09:38,104 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8925, f1_score=0.6101, auc=0.8503, gmean=0.7024, sen=0.5444, spe=0.9062, aupr=0.2764 - 2024-11-05 14:09:38,115 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8898, f1_score=0.6095, auc=0.8620, gmean=0.7099, sen=0.5581, spe=0.9029, aupr=0.2574 - 2024-11-05 14:09:38,161 - KFoldWrapper
+---------- - 2024-11-05 14:09:38,161 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.9032, f1_score=0.6341, auc=0.8742, gmean=0.7393, sen=0.5971, spe=0.9153, aupr=0.3017 - 2024-11-05 14:10:11,396 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8859, f1_score=0.6049, auc=0.8595, gmean=0.7077, sen=0.5571, spe=0.8990, aupr=0.2549 - 2024-11-05 14:10:11,409 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8839, f1_score=0.5997, auc=0.8485, gmean=0.6972, sen=0.5415, spe=0.8975, aupr=0.2353 - 2024-11-05 14:10:11,418 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8728, f1_score=0.5887, auc=0.8563, gmean=0.6962, sen=0.5473, spe=0.8857, aupr=0.2088 - 2024-11-05 14:10:11,428 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8886, f1_score=0.6009, auc=0.8425, gmean=0.6844, sen=0.5186, spe=0.9033, aupr=0.2361 - 2024-11-05 14:10:11,438 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8869, f1_score=0.6051, auc=0.8562, gmean=0.7051, sen=0.5524, spe=0.9002, aupr=0.2456 - 2024-11-05 14:10:11,483 - KFoldWrapper
+---------- - 2024-11-05 14:10:11,483 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8760, f1_score=0.6020, auc=0.8712, gmean=0.7329, sen=0.6057, spe=0.8867, aupr=0.2849 - 2024-11-05 14:10:42,453 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8905, f1_score=0.6046, auc=0.8679, gmean=0.6898, sen=0.5257, spe=0.9050, aupr=0.2278 - 2024-11-05 14:10:42,463 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8813, f1_score=0.5998, auc=0.8543, gmean=0.7068, sen=0.5587, spe=0.8941, aupr=0.2664 - 2024-11-05 14:10:42,475 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8907, f1_score=0.6033, auc=0.8543, gmean=0.6853, sen=0.5186, spe=0.9054, aupr=0.2412 - 2024-11-05 14:10:42,487 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8896, f1_score=0.6052, auc=0.8555, gmean=0.6958, sen=0.5358, spe=0.9036, aupr=0.2623 - 2024-11-05 14:10:42,499 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8856, f1_score=0.6030, auc=0.8603, gmean=0.7025, sen=0.5489, spe=0.8990, aupr=0.2539 - 2024-11-05 14:10:42,539 - KFoldWrapper
+---------- - 2024-11-05 14:10:42,539 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8930, f1_score=0.6139, auc=0.8441, gmean=0.7124, sen=0.5600, spe=0.9062, aupr=0.2462 - 2024-11-05 14:11:13,078 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8757, f1_score=0.5902, auc=0.8585, gmean=0.6911, sen=0.5371, spe=0.8891, aupr=0.2274 - 2024-11-05 14:11:13,089 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8768, f1_score=0.5854, auc=0.8406, gmean=0.6705, sen=0.5043, spe=0.8916, aupr=0.2043 - 2024-11-05 14:11:13,101 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8944, f1_score=0.6055, auc=0.8672, gmean=0.6793, sen=0.5072, spe=0.9098, aupr=0.2690 - 2024-11-05 14:11:13,112 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8902, f1_score=0.6089, auc=0.8639, gmean=0.7069, sen=0.5530, spe=0.9035, aupr=0.2719 - 2024-11-05 14:11:13,121 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8860, f1_score=0.6005, auc=0.8546, gmean=0.6922, sen=0.5323, spe=0.9000, aupr=0.2373 - 2024-11-05 14:11:13,162 - KFoldWrapper
+---------- - 2024-11-05 14:11:13,162 - KFoldWrapper
+The evaluation[f1_macro] of layer_4 is 0.6445 - 2024-11-05 14:11:13,313 - DualGranularBalancedDeepForest
+training finish... - 2024-11-05 14:11:13,313 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 14:13:49,189 - DualGranularBalancedDeepForest
+the shape of training samples: (45797, 1222) - 2024-11-05 14:13:49,190 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 14:13:49,190 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 14:13:49,190 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 14:13:49,191 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:13:49,191 - DualGranularBalancedDeepForest
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8114, f1_score=0.5669, auc=0.8741, gmean=0.7989, sen=0.7857, spe=0.8124, aupr=0.2455 - 2024-11-05 14:14:26,840 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8153, f1_score=0.5630, auc=0.8627, gmean=0.7709, sen=0.7257, spe=0.8188, aupr=0.2384 - 2024-11-05 14:14:26,852 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8154, f1_score=0.5648, auc=0.8539, gmean=0.7793, sen=0.7421, spe=0.8183, aupr=0.2202 - 2024-11-05 14:14:26,862 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8145, f1_score=0.5681, auc=0.8732, gmean=0.7960, sen=0.7765, spe=0.8160, aupr=0.2391 - 2024-11-05 14:14:26,873 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8169, f1_score=0.5694, auc=0.8670, gmean=0.7944, sen=0.7708, spe=0.8187, aupr=0.2216 - 2024-11-05 14:14:26,883 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8147, f1_score=0.5664, auc=0.8660, gmean=0.7880, sen=0.7602, spe=0.8168, aupr=0.2321 - 2024-11-05 14:14:26,940 - KFoldWrapper
+---------- - 2024-11-05 14:14:26,941 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8130, f1_score=0.5642, auc=0.8681, gmean=0.7828, sen=0.7514, spe=0.8154, aupr=0.2320 - 2024-11-05 14:15:02,822 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8135, f1_score=0.5663, auc=0.8800, gmean=0.7902, sen=0.7657, spe=0.8154, aupr=0.2351 - 2024-11-05 14:15:02,833 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8150, f1_score=0.5659, auc=0.8644, gmean=0.7849, sen=0.7536, spe=0.8175, aupr=0.2147 - 2024-11-05 14:15:02,844 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8186, f1_score=0.5681, auc=0.8682, gmean=0.7838, sen=0.7479, spe=0.8215, aupr=0.2431 - 2024-11-05 14:15:02,854 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8166, f1_score=0.5647, auc=0.8575, gmean=0.7755, sen=0.7335, spe=0.8199, aupr=0.2232 - 2024-11-05 14:15:02,865 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8154, f1_score=0.5658, auc=0.8677, gmean=0.7835, sen=0.7504, spe=0.8179, aupr=0.2289 - 2024-11-05 14:15:02,915 - KFoldWrapper
+---------- - 2024-11-05 14:15:02,915 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8171, f1_score=0.5712, auc=0.8798, gmean=0.8005, sen=0.7829, spe=0.8185, aupr=0.2413 - 2024-11-05 14:15:38,301 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8109, f1_score=0.5629, auc=0.8710, gmean=0.7832, sen=0.7543, spe=0.8132, aupr=0.2385 - 2024-11-05 14:15:38,312 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8149, f1_score=0.5651, auc=0.8559, gmean=0.7819, sen=0.7479, spe=0.8176, aupr=0.2330 - 2024-11-05 14:15:38,322 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8200, f1_score=0.5681, auc=0.8658, gmean=0.7801, sen=0.7393, spe=0.8232, aupr=0.2404 - 2024-11-05 14:15:38,333 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8182, f1_score=0.5653, auc=0.8535, gmean=0.7734, sen=0.7278, spe=0.8218, aupr=0.2239 - 2024-11-05 14:15:38,344 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8162, f1_score=0.5665, auc=0.8653, gmean=0.7839, sen=0.7504, spe=0.8188, aupr=0.2346 - 2024-11-05 14:15:38,399 - KFoldWrapper
+---------- - 2024-11-05 14:15:38,399 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8168, f1_score=0.5656, auc=0.8625, gmean=0.7775, sen=0.7371, spe=0.8200, aupr=0.2098 - 2024-11-05 14:16:13,916 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8166, f1_score=0.5734, auc=0.8841, gmean=0.8114, sen=0.8057, spe=0.8170, aupr=0.2488 - 2024-11-05 14:16:13,928 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8133, f1_score=0.5671, auc=0.8673, gmean=0.7954, sen=0.7765, spe=0.8148, aupr=0.2337 - 2024-11-05 14:16:13,938 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8121, f1_score=0.5648, auc=0.8659, gmean=0.7891, sen=0.7650, spe=0.8140, aupr=0.2383 - 2024-11-05 14:16:13,950 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8197, f1_score=0.5627, auc=0.8575, gmean=0.7577, sen=0.6963, spe=0.8246, aupr=0.2474 - 2024-11-05 14:16:13,960 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8157, f1_score=0.5668, auc=0.8672, gmean=0.7865, sen=0.7562, spe=0.8181, aupr=0.2332 - 2024-11-05 14:16:14,011 - KFoldWrapper
+---------- - 2024-11-05 14:16:14,011 - KFoldWrapper
+The evaluation[f1_macro] of layer_0 is 0.5709 - 2024-11-05 14:16:14,067 - DualGranularBalancedDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2024-11-05 14:16:14,068 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:16:14,068 - DualGranularBalancedDeepForest
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8404, f1_score=0.5743, auc=0.8578, gmean=0.7432, sen=0.6514, spe=0.8479, aupr=0.2215 - 2024-11-05 14:16:39,963 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8447, f1_score=0.5632, auc=0.8324, gmean=0.6854, sen=0.5486, spe=0.8564, aupr=0.1720 - 2024-11-05 14:16:39,986 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8616, f1_score=0.5791, auc=0.8199, gmean=0.6969, sen=0.5559, spe=0.8737, aupr=0.1841 - 2024-11-05 14:16:39,997 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8546, f1_score=0.5704, auc=0.8336, gmean=0.6852, sen=0.5415, spe=0.8670, aupr=0.1764 - 2024-11-05 14:16:40,007 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8623, f1_score=0.5756, auc=0.8341, gmean=0.6812, sen=0.5301, spe=0.8755, aupr=0.2085 - 2024-11-05 14:16:40,021 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8527, f1_score=0.5726, auc=0.8353, gmean=0.6991, sen=0.5655, spe=0.8641, aupr=0.1905 - 2024-11-05 14:16:40,073 - KFoldWrapper
+---------- - 2024-11-05 14:16:40,073 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8481, f1_score=0.5717, auc=0.8384, gmean=0.7091, sen=0.5857, spe=0.8586, aupr=0.2244 - 2024-11-05 14:17:07,262 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8623, f1_score=0.5853, auc=0.8455, gmean=0.7169, sen=0.5886, spe=0.8732, aupr=0.2291 - 2024-11-05 14:17:07,273 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8530, f1_score=0.5659, auc=0.8286, gmean=0.6721, sen=0.5215, spe=0.8662, aupr=0.1845 - 2024-11-05 14:17:07,283 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8540, f1_score=0.5731, auc=0.8440, gmean=0.6972, sen=0.5616, spe=0.8656, aupr=0.1871 - 2024-11-05 14:17:07,297 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8613, f1_score=0.5743, auc=0.8288, gmean=0.6790, sen=0.5272, spe=0.8746, aupr=0.1802 - 2024-11-05 14:17:07,307 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8558, f1_score=0.5740, auc=0.8370, gmean=0.6951, sen=0.5570, spe=0.8676, aupr=0.2009 - 2024-11-05 14:17:07,357 - KFoldWrapper
+---------- - 2024-11-05 14:17:07,357 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8461, f1_score=0.5737, auc=0.8442, gmean=0.7232, sen=0.6114, spe=0.8554, aupr=0.2382 - 2024-11-05 14:17:33,601 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8628, f1_score=0.5834, auc=0.8412, gmean=0.7086, sen=0.5743, spe=0.8742, aupr=0.2105 - 2024-11-05 14:17:33,614 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8644, f1_score=0.5818, auc=0.8349, gmean=0.6981, sen=0.5559, spe=0.8766, aupr=0.2126 - 2024-11-05 14:17:33,626 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8700, f1_score=0.5854, auc=0.8349, gmean=0.6933, sen=0.5444, spe=0.8829, aupr=0.2258 - 2024-11-05 14:17:33,636 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8616, f1_score=0.5745, auc=0.8240, gmean=0.6791, sen=0.5272, spe=0.8748, aupr=0.1761 - 2024-11-05 14:17:33,647 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8610, f1_score=0.5797, auc=0.8358, gmean=0.7008, sen=0.5627, spe=0.8728, aupr=0.2111 - 2024-11-05 14:17:33,695 - KFoldWrapper
+---------- - 2024-11-05 14:17:33,695 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8620, f1_score=0.5831, auc=0.8396, gmean=0.7100, sen=0.5771, spe=0.8733, aupr=0.2251 - 2024-11-05 14:18:00,764 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8563, f1_score=0.5782, auc=0.8508, gmean=0.7093, sen=0.5800, spe=0.8673, aupr=0.2394 - 2024-11-05 14:18:00,776 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8667, f1_score=0.5886, auc=0.8508, gmean=0.7163, sen=0.5845, spe=0.8779, aupr=0.2250 - 2024-11-05 14:18:00,787 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8557, f1_score=0.5781, auc=0.8352, gmean=0.7116, sen=0.5845, spe=0.8664, aupr=0.2099 - 2024-11-05 14:18:00,797 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8635, f1_score=0.5768, auc=0.8340, gmean=0.6817, sen=0.5301, spe=0.8767, aupr=0.2080 - 2024-11-05 14:18:00,806 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8608, f1_score=0.5810, auc=0.8420, gmean=0.7059, sen=0.5713, spe=0.8723, aupr=0.2211 - 2024-11-05 14:18:00,856 - KFoldWrapper
+---------- - 2024-11-05 14:18:00,856 - KFoldWrapper
+The evaluation[f1_macro] of layer_1 is 0.6100 - 2024-11-05 14:18:00,913 - DualGranularBalancedDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2024-11-05 14:18:00,919 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:18:00,919 - DualGranularBalancedDeepForest
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8603, f1_score=0.5760, auc=0.8358, gmean=0.6884, sen=0.5429, spe=0.8729, aupr=0.1877 - 2024-11-05 14:18:27,868 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8609, f1_score=0.5843, auc=0.8429, gmean=0.7180, sen=0.5914, spe=0.8716, aupr=0.1757 - 2024-11-05 14:18:27,879 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8605, f1_score=0.5790, auc=0.8405, gmean=0.6999, sen=0.5616, spe=0.8723, aupr=0.1812 - 2024-11-05 14:18:27,889 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8540, f1_score=0.5631, auc=0.8133, gmean=0.6579, sen=0.4986, spe=0.8681, aupr=0.1884 - 2024-11-05 14:18:27,900 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8534, f1_score=0.5711, auc=0.8340, gmean=0.6917, sen=0.5530, spe=0.8653, aupr=0.1919 - 2024-11-05 14:18:27,909 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8578, f1_score=0.5747, auc=0.8331, gmean=0.6914, sen=0.5495, spe=0.8700, aupr=0.1824 - 2024-11-05 14:18:27,950 - KFoldWrapper
+---------- - 2024-11-05 14:18:27,950 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8578, f1_score=0.5782, auc=0.8382, gmean=0.7047, sen=0.5714, spe=0.8691, aupr=0.2140 - 2024-11-05 14:18:55,145 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8636, f1_score=0.5731, auc=0.8200, gmean=0.6663, sen=0.5057, spe=0.8779, aupr=0.1768 - 2024-11-05 14:18:55,182 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8538, f1_score=0.5742, auc=0.8207, gmean=0.7023, sen=0.5702, spe=0.8650, aupr=0.2047 - 2024-11-05 14:18:55,194 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8677, f1_score=0.5845, auc=0.8448, gmean=0.6977, sen=0.5530, spe=0.8801, aupr=0.2481 - 2024-11-05 14:18:55,211 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8707, f1_score=0.5813, auc=0.8389, gmean=0.6755, sen=0.5158, spe=0.8848, aupr=0.2022 - 2024-11-05 14:18:55,221 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8627, f1_score=0.5783, auc=0.8322, gmean=0.6896, sen=0.5432, spe=0.8754, aupr=0.2076 - 2024-11-05 14:18:55,282 - KFoldWrapper
+---------- - 2024-11-05 14:18:55,282 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8487, f1_score=0.5688, auc=0.8275, gmean=0.6958, sen=0.5629, spe=0.8600, aupr=0.1839 - 2024-11-05 14:19:21,771 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8396, f1_score=0.5582, auc=0.8246, gmean=0.6799, sen=0.5429, spe=0.8514, aupr=0.1571 - 2024-11-05 14:19:21,783 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8612, f1_score=0.5783, auc=0.8384, gmean=0.6950, sen=0.5530, spe=0.8734, aupr=0.2082 - 2024-11-05 14:19:21,793 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8666, f1_score=0.5890, auc=0.8428, gmean=0.7180, sen=0.5874, spe=0.8776, aupr=0.2344 - 2024-11-05 14:19:21,804 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8574, f1_score=0.5739, auc=0.8323, gmean=0.6899, sen=0.5473, spe=0.8697, aupr=0.1967 - 2024-11-05 14:19:21,814 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8547, f1_score=0.5733, auc=0.8329, gmean=0.6957, sen=0.5587, spe=0.8664, aupr=0.1949 - 2024-11-05 14:19:21,860 - KFoldWrapper
+---------- - 2024-11-05 14:19:21,860 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8600, f1_score=0.5758, auc=0.8314, gmean=0.6883, sen=0.5429, spe=0.8726, aupr=0.2060 - 2024-11-05 14:19:48,671 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8587, f1_score=0.5800, auc=0.8356, gmean=0.7086, sen=0.5771, spe=0.8699, aupr=0.1781 - 2024-11-05 14:19:48,683 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8657, f1_score=0.5863, auc=0.8396, gmean=0.7108, sen=0.5759, spe=0.8772, aupr=0.1930 - 2024-11-05 14:19:48,694 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8515, f1_score=0.5708, auc=0.8201, gmean=0.6962, sen=0.5616, spe=0.8630, aupr=0.1793 - 2024-11-05 14:19:48,703 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8676, f1_score=0.5821, auc=0.8491, gmean=0.6887, sen=0.5387, spe=0.8806, aupr=0.1970 - 2024-11-05 14:19:48,712 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8607, f1_score=0.5789, auc=0.8348, gmean=0.6986, sen=0.5592, spe=0.8727, aupr=0.1888 - 2024-11-05 14:19:48,753 - KFoldWrapper
+---------- - 2024-11-05 14:19:48,753 - KFoldWrapper
+The evaluation[f1_macro] of layer_2 is 0.6105 - 2024-11-05 14:19:48,874 - DualGranularBalancedDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2024-11-05 14:19:48,880 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:19:48,880 - DualGranularBalancedDeepForest
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8709, f1_score=0.5809, auc=0.8280, gmean=0.6728, sen=0.5114, spe=0.8851, aupr=0.1781 - 2024-11-05 14:20:20,525 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8688, f1_score=0.5894, auc=0.8489, gmean=0.7111, sen=0.5743, spe=0.8805, aupr=0.2242 - 2024-11-05 14:20:20,534 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8752, f1_score=0.6012, auc=0.8535, gmean=0.7335, sen=0.6074, spe=0.8858, aupr=0.2480 - 2024-11-05 14:20:20,544 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8630, f1_score=0.5818, auc=0.8325, gmean=0.7027, sen=0.5645, spe=0.8748, aupr=0.1904 - 2024-11-05 14:20:20,556 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8632, f1_score=0.5807, auc=0.8342, gmean=0.6976, sen=0.5559, spe=0.8754, aupr=0.2247 - 2024-11-05 14:20:20,566 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8682, f1_score=0.5867, auc=0.8396, gmean=0.7038, sen=0.5627, spe=0.8803, aupr=0.2095 - 2024-11-05 14:20:20,608 - KFoldWrapper
+---------- - 2024-11-05 14:20:20,608 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8597, f1_score=0.5751, auc=0.8323, gmean=0.6864, sen=0.5400, spe=0.8724, aupr=0.2024 - 2024-11-05 14:20:50,194 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8588, f1_score=0.5766, auc=0.8353, gmean=0.6948, sen=0.5543, spe=0.8709, aupr=0.2004 - 2024-11-05 14:20:50,213 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8652, f1_score=0.5825, auc=0.8377, gmean=0.6984, sen=0.5559, spe=0.8774, aupr=0.2106 - 2024-11-05 14:20:50,225 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8795, f1_score=0.5861, auc=0.8361, gmean=0.6641, sen=0.4928, spe=0.8948, aupr=0.1988 - 2024-11-05 14:20:50,239 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8740, f1_score=0.5836, auc=0.8334, gmean=0.6731, sen=0.5100, spe=0.8884, aupr=0.2056 - 2024-11-05 14:20:50,252 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8674, f1_score=0.5807, auc=0.8350, gmean=0.6836, sen=0.5306, spe=0.8808, aupr=0.2011 - 2024-11-05 14:20:50,299 - KFoldWrapper
+---------- - 2024-11-05 14:20:50,299 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8836, f1_score=0.5862, auc=0.8367, gmean=0.6494, sen=0.4686, spe=0.9001, aupr=0.1940 - 2024-11-05 14:21:21,550 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8722, f1_score=0.5881, auc=0.8440, gmean=0.6950, sen=0.5457, spe=0.8851, aupr=0.2390 - 2024-11-05 14:21:21,559 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8640, f1_score=0.5781, auc=0.8366, gmean=0.6855, sen=0.5358, spe=0.8770, aupr=0.2002 - 2024-11-05 14:21:21,570 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8764, f1_score=0.5935, auc=0.8512, gmean=0.7012, sen=0.5530, spe=0.8892, aupr=0.2619 - 2024-11-05 14:21:21,579 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8670, f1_score=0.5844, auc=0.8396, gmean=0.6991, sen=0.5559, spe=0.8793, aupr=0.2107 - 2024-11-05 14:21:21,589 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8726, f1_score=0.5860, auc=0.8415, gmean=0.6865, sen=0.5318, spe=0.8862, aupr=0.2187 - 2024-11-05 14:21:21,639 - KFoldWrapper
+---------- - 2024-11-05 14:21:21,639 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8808, f1_score=0.6001, auc=0.8549, gmean=0.7091, sen=0.5629, spe=0.8934, aupr=0.2548 - 2024-11-05 14:21:53,332 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8828, f1_score=0.5978, auc=0.8478, gmean=0.6939, sen=0.5371, spe=0.8965, aupr=0.2346 - 2024-11-05 14:21:53,342 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8691, f1_score=0.5850, auc=0.8434, gmean=0.6947, sen=0.5473, spe=0.8818, aupr=0.2361 - 2024-11-05 14:21:53,351 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8697, f1_score=0.5793, auc=0.8329, gmean=0.6715, sen=0.5100, spe=0.8840, aupr=0.2198 - 2024-11-05 14:21:53,360 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8714, f1_score=0.5749, auc=0.8315, gmean=0.6496, sen=0.4756, spe=0.8871, aupr=0.2227 - 2024-11-05 14:21:53,369 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8748, f1_score=0.5873, auc=0.8420, gmean=0.6841, sen=0.5266, spe=0.8886, aupr=0.2320 - 2024-11-05 14:21:53,408 - KFoldWrapper
+---------- - 2024-11-05 14:21:53,408 - KFoldWrapper
+The evaluation[f1_macro] of layer_3 is 0.6201 - 2024-11-05 14:21:53,542 - DualGranularBalancedDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2024-11-05 14:21:53,568 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:21:53,568 - DualGranularBalancedDeepForest
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8816, f1_score=0.5980, auc=0.8580, gmean=0.6988, sen=0.5457, spe=0.8949, aupr=0.2552 - 2024-11-05 14:22:24,464 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8808, f1_score=0.6011, auc=0.8513, gmean=0.7126, sen=0.5686, spe=0.8932, aupr=0.2555 - 2024-11-05 14:22:24,478 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8714, f1_score=0.5916, auc=0.8489, gmean=0.7114, sen=0.5731, spe=0.8832, aupr=0.2376 - 2024-11-05 14:22:24,507 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8792, f1_score=0.6093, auc=0.8555, gmean=0.7486, sen=0.6304, spe=0.8891, aupr=0.2596 - 2024-11-05 14:22:24,520 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8840, f1_score=0.5972, auc=0.8460, gmean=0.6881, sen=0.5272, spe=0.8982, aupr=0.2611 - 2024-11-05 14:22:24,536 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8794, f1_score=0.5995, auc=0.8518, gmean=0.7123, sen=0.5690, spe=0.8917, aupr=0.2516 - 2024-11-05 14:22:24,588 - KFoldWrapper
+---------- - 2024-11-05 14:22:24,588 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8664, f1_score=0.5842, auc=0.8430, gmean=0.6997, sen=0.5571, spe=0.8787, aupr=0.2034 - 2024-11-05 14:22:53,547 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8806, f1_score=0.5903, auc=0.8455, gmean=0.6748, sen=0.5086, spe=0.8953, aupr=0.2221 - 2024-11-05 14:22:53,558 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8879, f1_score=0.5984, auc=0.8525, gmean=0.6786, sen=0.5100, spe=0.9028, aupr=0.2479 - 2024-11-05 14:22:53,568 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8747, f1_score=0.5832, auc=0.8421, gmean=0.6697, sen=0.5043, spe=0.8893, aupr=0.1981 - 2024-11-05 14:22:53,578 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8881, f1_score=0.6034, auc=0.8393, gmean=0.6952, sen=0.5358, spe=0.9020, aupr=0.2280 - 2024-11-05 14:22:53,588 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8795, f1_score=0.5917, auc=0.8446, gmean=0.6838, sen=0.5232, spe=0.8936, aupr=0.2184 - 2024-11-05 14:22:53,627 - KFoldWrapper
+---------- - 2024-11-05 14:22:53,628 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8814, f1_score=0.5855, auc=0.8353, gmean=0.6544, sen=0.4771, spe=0.8975, aupr=0.2186 - 2024-11-05 14:23:24,598 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8730, f1_score=0.5918, auc=0.8582, gmean=0.7059, sen=0.5629, spe=0.8854, aupr=0.2439 - 2024-11-05 14:23:24,608 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8843, f1_score=0.5896, auc=0.8432, gmean=0.6602, sen=0.4842, spe=0.9001, aupr=0.2366 - 2024-11-05 14:23:24,618 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8753, f1_score=0.5854, auc=0.8341, gmean=0.6755, sen=0.5129, spe=0.8897, aupr=0.1796 - 2024-11-05 14:23:24,627 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8780, f1_score=0.5917, auc=0.8438, gmean=0.6894, sen=0.5330, spe=0.8917, aupr=0.2225 - 2024-11-05 14:23:24,635 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8784, f1_score=0.5889, auc=0.8426, gmean=0.6775, sen=0.5140, spe=0.8929, aupr=0.2187 - 2024-11-05 14:23:24,674 - KFoldWrapper
+---------- - 2024-11-05 14:23:24,674 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8823, f1_score=0.5994, auc=0.8542, gmean=0.7009, sen=0.5486, spe=0.8956, aupr=0.2354 - 2024-11-05 14:23:54,636 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8904, f1_score=0.5997, auc=0.8469, gmean=0.6730, sen=0.5000, spe=0.9059, aupr=0.2198 - 2024-11-05 14:23:54,647 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8703, f1_score=0.5852, auc=0.8396, gmean=0.6916, sen=0.5415, spe=0.8833, aupr=0.2026 - 2024-11-05 14:23:54,657 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8877, f1_score=0.6065, auc=0.8585, gmean=0.7076, sen=0.5559, spe=0.9008, aupr=0.2535 - 2024-11-05 14:23:54,667 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8809, f1_score=0.5907, auc=0.8460, gmean=0.6758, sen=0.5100, spe=0.8956, aupr=0.2196 - 2024-11-05 14:23:54,677 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8823, f1_score=0.5961, auc=0.8490, gmean=0.6900, sen=0.5312, spe=0.8962, aupr=0.2232 - 2024-11-05 14:23:54,722 - KFoldWrapper
+---------- - 2024-11-05 14:23:54,723 - KFoldWrapper
+The evaluation[f1_macro] of layer_4 is 0.6278 - 2024-11-05 14:23:54,780 - DualGranularBalancedDeepForest
+training finish... - 2024-11-05 14:23:54,780 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 14:26:22,138 - DualGranularBalancedDeepForest
+the shape of training samples: (45797, 1222) - 2024-11-05 14:26:22,139 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 14:26:22,139 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 14:26:22,139 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 14:26:22,140 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:26:22,140 - DualGranularBalancedDeepForest
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8126, f1_score=0.5655, auc=0.8661, gmean=0.7908, sen=0.7679, spe=0.8143, aupr=0.2438 - 2024-11-05 14:26:57,676 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8134, f1_score=0.5652, auc=0.8668, gmean=0.7859, sen=0.7571, spe=0.8157, aupr=0.2568 - 2024-11-05 14:26:57,687 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8130, f1_score=0.5665, auc=0.8654, gmean=0.7938, sen=0.7736, spe=0.8145, aupr=0.2166 - 2024-11-05 14:26:57,697 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8174, f1_score=0.5691, auc=0.8645, gmean=0.7918, sen=0.7650, spe=0.8195, aupr=0.2132 - 2024-11-05 14:26:57,708 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8148, f1_score=0.5693, auc=0.8707, gmean=0.8004, sen=0.7851, spe=0.8160, aupr=0.2269 - 2024-11-05 14:26:57,719 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8142, f1_score=0.5671, auc=0.8666, gmean=0.7925, sen=0.7698, spe=0.8160, aupr=0.2293 - 2024-11-05 14:26:57,768 - KFoldWrapper
+---------- - 2024-11-05 14:26:57,769 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8257, f1_score=0.5753, auc=0.8773, gmean=0.7930, sen=0.7593, spe=0.8283, aupr=0.2367 - 2024-11-05 14:27:34,400 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8138, f1_score=0.5668, auc=0.8702, gmean=0.7917, sen=0.7686, spe=0.8156, aupr=0.2320 - 2024-11-05 14:27:34,411 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8196, f1_score=0.5696, auc=0.8671, gmean=0.7872, sen=0.7536, spe=0.8222, aupr=0.2357 - 2024-11-05 14:27:34,421 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8192, f1_score=0.5713, auc=0.8685, gmean=0.7955, sen=0.7708, spe=0.8211, aupr=0.2303 - 2024-11-05 14:27:34,432 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8133, f1_score=0.5631, auc=0.8611, gmean=0.7782, sen=0.7421, spe=0.8161, aupr=0.2348 - 2024-11-05 14:27:34,443 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8183, f1_score=0.5692, auc=0.8689, gmean=0.7892, sen=0.7589, spe=0.8207, aupr=0.2335 - 2024-11-05 14:27:34,495 - KFoldWrapper
+---------- - 2024-11-05 14:27:34,495 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8153, f1_score=0.5647, auc=0.8581, gmean=0.7792, sen=0.7421, spe=0.8182, aupr=0.2551 - 2024-11-05 14:28:09,027 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8097, f1_score=0.5678, auc=0.8799, gmean=0.8078, sen=0.8057, spe=0.8099, aupr=0.2663 - 2024-11-05 14:28:09,062 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8184, f1_score=0.5638, auc=0.8512, gmean=0.7661, sen=0.7135, spe=0.8226, aupr=0.1904 - 2024-11-05 14:28:09,072 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8213, f1_score=0.5720, auc=0.8810, gmean=0.7923, sen=0.7622, spe=0.8236, aupr=0.2501 - 2024-11-05 14:28:09,090 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8132, f1_score=0.5674, auc=0.8739, gmean=0.7968, sen=0.7794, spe=0.8145, aupr=0.2263 - 2024-11-05 14:28:09,100 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8156, f1_score=0.5672, auc=0.8686, gmean=0.7887, sen=0.7606, spe=0.8178, aupr=0.2342 - 2024-11-05 14:28:09,181 - KFoldWrapper
+---------- - 2024-11-05 14:28:09,181 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8152, f1_score=0.5612, auc=0.8540, gmean=0.7645, sen=0.7135, spe=0.8192, aupr=0.2126 - 2024-11-05 14:28:43,657 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8178, f1_score=0.5694, auc=0.8672, gmean=0.7909, sen=0.7629, spe=0.8200, aupr=0.2446 - 2024-11-05 14:28:43,667 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8098, f1_score=0.5624, auc=0.8714, gmean=0.7851, sen=0.7593, spe=0.8118, aupr=0.2196 - 2024-11-05 14:28:43,677 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8166, f1_score=0.5714, auc=0.8809, gmean=0.8041, sen=0.7908, spe=0.8176, aupr=0.2368 - 2024-11-05 14:28:43,689 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8177, f1_score=0.5713, auc=0.8810, gmean=0.8004, sen=0.7822, spe=0.8191, aupr=0.2401 - 2024-11-05 14:28:43,701 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8154, f1_score=0.5671, auc=0.8708, gmean=0.7891, sen=0.7617, spe=0.8175, aupr=0.2289 - 2024-11-05 14:28:43,748 - KFoldWrapper
+---------- - 2024-11-05 14:28:43,748 - KFoldWrapper
+The evaluation[f1_macro] of layer_0 is 0.5733 - 2024-11-05 14:28:43,801 - DualGranularBalancedDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2024-11-05 14:28:43,802 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:28:43,802 - DualGranularBalancedDeepForest
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8606, f1_score=0.5773, auc=0.8208, gmean=0.6930, sen=0.5501, spe=0.8729, aupr=0.1765 - 2024-11-05 14:29:11,251 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8616, f1_score=0.5845, auc=0.8413, gmean=0.7166, sen=0.5886, spe=0.8724, aupr=0.2193 - 2024-11-05 14:29:11,265 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8471, f1_score=0.5649, auc=0.8229, gmean=0.6857, sen=0.5473, spe=0.8590, aupr=0.1553 - 2024-11-05 14:29:11,279 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8563, f1_score=0.5706, auc=0.8133, gmean=0.6806, sen=0.5330, spe=0.8691, aupr=0.1627 - 2024-11-05 14:29:11,289 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8629, f1_score=0.5785, auc=0.8431, gmean=0.6904, sen=0.5444, spe=0.8755, aupr=0.2249 - 2024-11-05 14:29:11,300 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8577, f1_score=0.5751, auc=0.8282, gmean=0.6933, sen=0.5527, spe=0.8698, aupr=0.1853 - 2024-11-05 14:29:11,345 - KFoldWrapper
+---------- - 2024-11-05 14:29:11,345 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8604, f1_score=0.5793, auc=0.8360, gmean=0.7016, sen=0.5645, spe=0.8721, aupr=0.2169 - 2024-11-05 14:29:38,710 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8624, f1_score=0.5849, auc=0.8445, gmean=0.7153, sen=0.5857, spe=0.8734, aupr=0.2306 - 2024-11-05 14:29:38,720 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8493, f1_score=0.5672, auc=0.8302, gmean=0.6883, sen=0.5501, spe=0.8612, aupr=0.2219 - 2024-11-05 14:29:38,730 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8547, f1_score=0.5710, auc=0.8395, gmean=0.6870, sen=0.5444, spe=0.8670, aupr=0.2043 - 2024-11-05 14:29:38,740 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8469, f1_score=0.5748, auc=0.8377, gmean=0.7262, sen=0.6160, spe=0.8561, aupr=0.2044 - 2024-11-05 14:29:38,750 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8548, f1_score=0.5754, auc=0.8373, gmean=0.7039, sen=0.5722, spe=0.8660, aupr=0.2136 - 2024-11-05 14:29:38,794 - KFoldWrapper
+---------- - 2024-11-05 14:29:38,794 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8546, f1_score=0.5831, auc=0.8533, gmean=0.7345, sen=0.6246, spe=0.8637, aupr=0.2117 - 2024-11-05 14:30:07,200 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8551, f1_score=0.5763, auc=0.8353, gmean=0.7053, sen=0.5743, spe=0.8663, aupr=0.2088 - 2024-11-05 14:30:07,212 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8638, f1_score=0.5694, auc=0.8189, gmean=0.6524, sen=0.4842, spe=0.8789, aupr=0.1907 - 2024-11-05 14:30:07,222 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8658, f1_score=0.5789, auc=0.8383, gmean=0.6826, sen=0.5301, spe=0.8791, aupr=0.1937 - 2024-11-05 14:30:07,234 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8609, f1_score=0.5808, auc=0.8303, gmean=0.7053, sen=0.5702, spe=0.8724, aupr=0.2193 - 2024-11-05 14:30:07,248 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8601, f1_score=0.5779, auc=0.8351, gmean=0.6968, sen=0.5567, spe=0.8721, aupr=0.2037 - 2024-11-05 14:30:07,294 - KFoldWrapper
+---------- - 2024-11-05 14:30:07,294 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8539, f1_score=0.5707, auc=0.8380, gmean=0.6885, sen=0.5473, spe=0.8661, aupr=0.1930 - 2024-11-05 14:30:34,590 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8529, f1_score=0.5782, auc=0.8335, gmean=0.7196, sen=0.6000, spe=0.8630, aupr=0.2173 - 2024-11-05 14:30:34,600 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8514, f1_score=0.5729, auc=0.8297, gmean=0.7047, sen=0.5759, spe=0.8623, aupr=0.1977 - 2024-11-05 14:30:34,610 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8524, f1_score=0.5777, auc=0.8412, gmean=0.7203, sen=0.6017, spe=0.8623, aupr=0.1981 - 2024-11-05 14:30:34,621 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8540, f1_score=0.5726, auc=0.8197, gmean=0.6955, sen=0.5587, spe=0.8657, aupr=0.1873 - 2024-11-05 14:30:34,631 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8529, f1_score=0.5745, auc=0.8324, gmean=0.7059, sen=0.5767, spe=0.8639, aupr=0.1972 - 2024-11-05 14:30:34,677 - KFoldWrapper
+---------- - 2024-11-05 14:30:34,678 - KFoldWrapper
+The evaluation[f1_macro] of layer_1 is 0.6081 - 2024-11-05 14:30:34,737 - DualGranularBalancedDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2024-11-05 14:30:34,755 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:30:34,756 - DualGranularBalancedDeepForest
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8671, f1_score=0.5840, auc=0.8263, gmean=0.6974, sen=0.5530, spe=0.8796, aupr=0.2136 - 2024-11-05 14:31:02,510 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8639, f1_score=0.5831, auc=0.8372, gmean=0.7038, sen=0.5657, spe=0.8757, aupr=0.1767 - 2024-11-05 14:31:02,522 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8620, f1_score=0.5822, auc=0.8253, gmean=0.7075, sen=0.5731, spe=0.8734, aupr=0.2089 - 2024-11-05 14:31:02,532 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8598, f1_score=0.5811, auc=0.8399, gmean=0.7100, sen=0.5788, spe=0.8709, aupr=0.2213 - 2024-11-05 14:31:02,543 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8572, f1_score=0.5777, auc=0.8463, gmean=0.7055, sen=0.5731, spe=0.8684, aupr=0.1785 - 2024-11-05 14:31:02,553 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8620, f1_score=0.5816, auc=0.8348, gmean=0.7049, sen=0.5687, spe=0.8736, aupr=0.1987 - 2024-11-05 14:31:02,600 - KFoldWrapper
+---------- - 2024-11-05 14:31:02,600 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8548, f1_score=0.5647, auc=0.8186, gmean=0.6619, sen=0.5043, spe=0.8687, aupr=0.1761 - 2024-11-05 14:31:29,618 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8664, f1_score=0.5804, auc=0.8290, gmean=0.6855, sen=0.5343, spe=0.8796, aupr=0.1787 - 2024-11-05 14:31:29,630 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8523, f1_score=0.5733, auc=0.8306, gmean=0.7034, sen=0.5731, spe=0.8633, aupr=0.1941 - 2024-11-05 14:31:29,640 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8557, f1_score=0.5776, auc=0.8429, gmean=0.7099, sen=0.5817, spe=0.8665, aupr=0.2147 - 2024-11-05 14:31:29,651 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8646, f1_score=0.5802, auc=0.8378, gmean=0.6911, sen=0.5444, spe=0.8773, aupr=0.1992 - 2024-11-05 14:31:29,662 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8587, f1_score=0.5752, auc=0.8317, gmean=0.6906, sen=0.5475, spe=0.8711, aupr=0.1909 - 2024-11-05 14:31:29,706 - KFoldWrapper
+---------- - 2024-11-05 14:31:29,706 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8558, f1_score=0.5755, auc=0.8340, gmean=0.7014, sen=0.5673, spe=0.8672, aupr=0.2093 - 2024-11-05 14:31:58,740 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8651, f1_score=0.5843, auc=0.8228, gmean=0.7043, sen=0.5657, spe=0.8770, aupr=0.1971 - 2024-11-05 14:31:58,749 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8633, f1_score=0.5871, auc=0.8551, gmean=0.7217, sen=0.5960, spe=0.8739, aupr=0.2062 - 2024-11-05 14:31:58,759 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8641, f1_score=0.5759, auc=0.8368, gmean=0.6765, sen=0.5215, spe=0.8776, aupr=0.1974 - 2024-11-05 14:31:58,769 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8527, f1_score=0.5582, auc=0.8100, gmean=0.6424, sen=0.4756, spe=0.8677, aupr=0.1501 - 2024-11-05 14:31:58,781 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8602, f1_score=0.5762, auc=0.8319, gmean=0.6898, sen=0.5452, spe=0.8727, aupr=0.1911 - 2024-11-05 14:31:58,826 - KFoldWrapper
+---------- - 2024-11-05 14:31:58,827 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8632, f1_score=0.5760, auc=0.8354, gmean=0.6798, sen=0.5272, spe=0.8765, aupr=0.1922 - 2024-11-05 14:32:27,520 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8581, f1_score=0.5754, auc=0.8328, gmean=0.6927, sen=0.5514, spe=0.8703, aupr=0.2221 - 2024-11-05 14:32:27,531 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8549, f1_score=0.5716, auc=0.8203, gmean=0.6889, sen=0.5473, spe=0.8671, aupr=0.1783 - 2024-11-05 14:32:27,542 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8640, f1_score=0.5781, auc=0.8389, gmean=0.6855, sen=0.5358, spe=0.8770, aupr=0.2130 - 2024-11-05 14:32:27,553 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8762, f1_score=0.5858, auc=0.8251, gmean=0.6740, sen=0.5100, spe=0.8907, aupr=0.1850 - 2024-11-05 14:32:27,564 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8633, f1_score=0.5773, auc=0.8306, gmean=0.6843, sen=0.5344, spe=0.8763, aupr=0.1946 - 2024-11-05 14:32:27,612 - KFoldWrapper
+---------- - 2024-11-05 14:32:27,612 - KFoldWrapper
+The evaluation[f1_macro] of layer_2 is 0.6119 - 2024-11-05 14:32:27,740 - DualGranularBalancedDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2024-11-05 14:32:27,764 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:32:27,764 - DualGranularBalancedDeepForest
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8713, f1_score=0.5872, auc=0.8312, gmean=0.6956, sen=0.5473, spe=0.8841, aupr=0.2272 - 2024-11-05 14:32:57,736 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8698, f1_score=0.5847, auc=0.8413, gmean=0.6905, sen=0.5400, spe=0.8829, aupr=0.2333 - 2024-11-05 14:32:57,747 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8800, f1_score=0.5958, auc=0.8392, gmean=0.6974, sen=0.5444, spe=0.8933, aupr=0.2212 - 2024-11-05 14:32:57,757 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8717, f1_score=0.5876, auc=0.8393, gmean=0.6958, sen=0.5473, spe=0.8846, aupr=0.1799 - 2024-11-05 14:32:57,768 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8584, f1_score=0.5752, auc=0.8355, gmean=0.6921, sen=0.5501, spe=0.8706, aupr=0.2084 - 2024-11-05 14:32:57,781 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8702, f1_score=0.5859, auc=0.8373, gmean=0.6943, sen=0.5458, spe=0.8831, aupr=0.2088 - 2024-11-05 14:32:57,845 - KFoldWrapper
+---------- - 2024-11-05 14:32:57,846 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8704, f1_score=0.5858, auc=0.8347, gmean=0.6935, sen=0.5444, spe=0.8833, aupr=0.1960 - 2024-11-05 14:33:29,071 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8742, f1_score=0.5868, auc=0.8313, gmean=0.6833, sen=0.5257, spe=0.8881, aupr=0.2267 - 2024-11-05 14:33:29,082 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8745, f1_score=0.5915, auc=0.8490, gmean=0.7005, sen=0.5530, spe=0.8873, aupr=0.2428 - 2024-11-05 14:33:29,093 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8594, f1_score=0.5739, auc=0.8317, gmean=0.6836, sen=0.5358, spe=0.8722, aupr=0.2449 - 2024-11-05 14:33:29,103 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8680, f1_score=0.5762, auc=0.8344, gmean=0.6652, sen=0.5014, spe=0.8825, aupr=0.2188 - 2024-11-05 14:33:29,114 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8693, f1_score=0.5827, auc=0.8362, gmean=0.6853, sen=0.5321, spe=0.8827, aupr=0.2250 - 2024-11-05 14:33:29,166 - KFoldWrapper
+---------- - 2024-11-05 14:33:29,166 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8678, f1_score=0.5851, auc=0.8339, gmean=0.6995, sen=0.5559, spe=0.8801, aupr=0.2057 - 2024-11-05 14:34:00,250 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8677, f1_score=0.5831, auc=0.8151, gmean=0.6914, sen=0.5429, spe=0.8806, aupr=0.2234 - 2024-11-05 14:34:00,261 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8704, f1_score=0.5873, auc=0.8466, gmean=0.6988, sen=0.5530, spe=0.8830, aupr=0.2239 - 2024-11-05 14:34:00,275 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8666, f1_score=0.5839, auc=0.8407, gmean=0.6990, sen=0.5559, spe=0.8789, aupr=0.2116 - 2024-11-05 14:34:00,287 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8818, f1_score=0.6007, auc=0.8581, gmean=0.7087, sen=0.5616, spe=0.8944, aupr=0.2417 - 2024-11-05 14:34:00,296 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8708, f1_score=0.5879, auc=0.8387, gmean=0.6995, sen=0.5538, spe=0.8834, aupr=0.2196 - 2024-11-05 14:34:00,342 - KFoldWrapper
+---------- - 2024-11-05 14:34:00,342 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8904, f1_score=0.6061, auc=0.8569, gmean=0.6961, sen=0.5358, spe=0.9044, aupr=0.2679 - 2024-11-05 14:34:30,731 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8755, f1_score=0.5856, auc=0.8287, gmean=0.6747, sen=0.5114, spe=0.8900, aupr=0.2355 - 2024-11-05 14:34:30,742 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8739, f1_score=0.5864, auc=0.8317, gmean=0.6841, sen=0.5272, spe=0.8876, aupr=0.1935 - 2024-11-05 14:34:30,753 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8754, f1_score=0.5924, auc=0.8417, gmean=0.7008, sen=0.5530, spe=0.8882, aupr=0.2171 - 2024-11-05 14:34:30,763 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8790, f1_score=0.5872, auc=0.8257, gmean=0.6695, sen=0.5014, spe=0.8940, aupr=0.1903 - 2024-11-05 14:34:30,773 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8789, f1_score=0.5914, auc=0.8370, gmean=0.6852, sen=0.5258, spe=0.8929, aupr=0.2193 - 2024-11-05 14:34:30,817 - KFoldWrapper
+---------- - 2024-11-05 14:34:30,817 - KFoldWrapper
+The evaluation[f1_macro] of layer_3 is 0.6223 - 2024-11-05 14:34:30,954 - DualGranularBalancedDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2024-11-05 14:34:30,980 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:34:30,980 - DualGranularBalancedDeepForest
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8738, f1_score=0.5926, auc=0.8431, gmean=0.7072, sen=0.5645, spe=0.8861, aupr=0.2456 - 2024-11-05 14:35:02,368 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8787, f1_score=0.5873, auc=0.8374, gmean=0.6704, sen=0.5029, spe=0.8936, aupr=0.2185 - 2024-11-05 14:35:02,380 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8794, f1_score=0.5956, auc=0.8418, gmean=0.6989, sen=0.5473, spe=0.8925, aupr=0.2545 - 2024-11-05 14:35:02,390 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8872, f1_score=0.6024, auc=0.8590, gmean=0.6949, sen=0.5358, spe=0.9011, aupr=0.2269 - 2024-11-05 14:35:02,400 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8846, f1_score=0.6029, auc=0.8570, gmean=0.7064, sen=0.5559, spe=0.8976, aupr=0.2691 - 2024-11-05 14:35:02,410 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8807, f1_score=0.5961, auc=0.8474, gmean=0.6957, sen=0.5412, spe=0.8942, aupr=0.2422 - 2024-11-05 14:35:02,451 - KFoldWrapper
+---------- - 2024-11-05 14:35:02,451 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8777, f1_score=0.5958, auc=0.8537, gmean=0.7053, sen=0.5587, spe=0.8904, aupr=0.2266 - 2024-11-05 14:35:34,309 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8803, f1_score=0.5972, auc=0.8461, gmean=0.7001, sen=0.5486, spe=0.8935, aupr=0.2324 - 2024-11-05 14:35:34,320 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8836, f1_score=0.6013, auc=0.8423, gmean=0.7042, sen=0.5530, spe=0.8967, aupr=0.2155 - 2024-11-05 14:35:34,329 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8838, f1_score=0.5939, auc=0.8354, gmean=0.6770, sen=0.5100, spe=0.8986, aupr=0.2222 - 2024-11-05 14:35:34,338 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8738, f1_score=0.5873, auc=0.8501, gmean=0.6877, sen=0.5330, spe=0.8873, aupr=0.2599 - 2024-11-05 14:35:34,348 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8799, f1_score=0.5951, auc=0.8454, gmean=0.6950, sen=0.5407, spe=0.8933, aupr=0.2291 - 2024-11-05 14:35:34,391 - KFoldWrapper
+---------- - 2024-11-05 14:35:34,392 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8752, f1_score=0.5878, auc=0.8392, gmean=0.6846, sen=0.5272, spe=0.8890, aupr=0.2155 - 2024-11-05 14:36:05,814 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8772, f1_score=0.5868, auc=0.8410, gmean=0.6735, sen=0.5086, spe=0.8918, aupr=0.2100 - 2024-11-05 14:36:05,824 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8851, f1_score=0.6114, auc=0.8649, gmean=0.7344, sen=0.6017, spe=0.8964, aupr=0.2724 - 2024-11-05 14:36:05,834 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8787, f1_score=0.5914, auc=0.8360, gmean=0.6860, sen=0.5272, spe=0.8926, aupr=0.2088 - 2024-11-05 14:36:05,843 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8750, f1_score=0.5875, auc=0.8324, gmean=0.6845, sen=0.5272, spe=0.8888, aupr=0.2392 - 2024-11-05 14:36:05,852 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8782, f1_score=0.5929, auc=0.8426, gmean=0.6929, sen=0.5384, spe=0.8917, aupr=0.2262 - 2024-11-05 14:36:05,896 - KFoldWrapper
+---------- - 2024-11-05 14:36:05,896 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8700, f1_score=0.5859, auc=0.8488, gmean=0.6951, sen=0.5473, spe=0.8828, aupr=0.2679 - 2024-11-05 14:36:36,211 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8757, f1_score=0.5867, auc=0.8422, gmean=0.6784, sen=0.5171, spe=0.8899, aupr=0.1997 - 2024-11-05 14:36:36,224 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8824, f1_score=0.5980, auc=0.8463, gmean=0.6965, sen=0.5415, spe=0.8959, aupr=0.2403 - 2024-11-05 14:36:36,234 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8768, f1_score=0.5802, auc=0.8338, gmean=0.6516, sen=0.4756, spe=0.8927, aupr=0.2017 - 2024-11-05 14:36:36,244 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8745, f1_score=0.5925, auc=0.8514, gmean=0.7040, sen=0.5587, spe=0.8871, aupr=0.2589 - 2024-11-05 14:36:36,255 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8759, f1_score=0.5887, auc=0.8445, gmean=0.6854, sen=0.5281, spe=0.8897, aupr=0.2314 - 2024-11-05 14:36:36,294 - KFoldWrapper
+---------- - 2024-11-05 14:36:36,294 - KFoldWrapper
+The evaluation[f1_macro] of layer_4 is 0.6296 - 2024-11-05 14:36:36,351 - DualGranularBalancedDeepForest
+training finish... - 2024-11-05 14:36:36,351 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 14:39:07,024 - DualGranularBalancedDeepForest
+the shape of training samples: (45797, 1222) - 2024-11-05 14:39:07,025 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 14:39:07,025 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 14:39:07,025 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 14:39:07,026 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:39:07,026 - DualGranularBalancedDeepForest
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8128, f1_score=0.5660, auc=0.8724, gmean=0.7923, sen=0.7708, spe=0.8144, aupr=0.2526 - 2024-11-05 14:39:42,173 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8124, f1_score=0.5607, auc=0.8505, gmean=0.7695, sen=0.7257, spe=0.8159, aupr=0.2058 - 2024-11-05 14:39:42,184 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8259, f1_score=0.5772, auc=0.8721, gmean=0.8003, sen=0.7736, spe=0.8279, aupr=0.2402 - 2024-11-05 14:39:42,194 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8125, f1_score=0.5645, auc=0.8606, gmean=0.7865, sen=0.7593, spe=0.8146, aupr=0.2147 - 2024-11-05 14:39:42,206 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8083, f1_score=0.5670, auc=0.8831, gmean=0.8095, sen=0.8109, spe=0.8082, aupr=0.2376 - 2024-11-05 14:39:42,217 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8144, f1_score=0.5671, auc=0.8674, gmean=0.7918, sen=0.7680, spe=0.8162, aupr=0.2278 - 2024-11-05 14:39:42,274 - KFoldWrapper
+---------- - 2024-11-05 14:39:42,274 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8162, f1_score=0.5711, auc=0.8824, gmean=0.8039, sen=0.7908, spe=0.8172, aupr=0.2417 - 2024-11-05 14:40:16,041 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8154, f1_score=0.5671, auc=0.8698, gmean=0.7883, sen=0.7600, spe=0.8176, aupr=0.2207 - 2024-11-05 14:40:16,053 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8067, f1_score=0.5603, auc=0.8651, gmean=0.7850, sen=0.7622, spe=0.8085, aupr=0.2169 - 2024-11-05 14:40:16,063 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8322, f1_score=0.5809, auc=0.8653, gmean=0.7963, sen=0.7593, spe=0.8351, aupr=0.2288 - 2024-11-05 14:40:16,073 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8065, f1_score=0.5578, auc=0.8655, gmean=0.7749, sen=0.7421, spe=0.8091, aupr=0.2611 - 2024-11-05 14:40:16,083 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8154, f1_score=0.5673, auc=0.8696, gmean=0.7897, sen=0.7629, spe=0.8175, aupr=0.2319 - 2024-11-05 14:40:16,148 - KFoldWrapper
+---------- - 2024-11-05 14:40:16,148 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8179, f1_score=0.5709, auc=0.8764, gmean=0.7977, sen=0.7765, spe=0.8195, aupr=0.2570 - 2024-11-05 14:40:51,814 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8127, f1_score=0.5636, auc=0.8589, gmean=0.7812, sen=0.7486, spe=0.8152, aupr=0.2281 - 2024-11-05 14:40:51,829 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8118, f1_score=0.5592, auc=0.8518, gmean=0.7658, sen=0.7192, spe=0.8154, aupr=0.2308 - 2024-11-05 14:40:51,845 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8183, f1_score=0.5675, auc=0.8632, gmean=0.7822, sen=0.7450, spe=0.8212, aupr=0.1996 - 2024-11-05 14:40:51,857 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8221, f1_score=0.5727, auc=0.8717, gmean=0.7927, sen=0.7622, spe=0.8245, aupr=0.2169 - 2024-11-05 14:40:51,868 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8166, f1_score=0.5667, auc=0.8643, gmean=0.7840, sen=0.7503, spe=0.8192, aupr=0.2245 - 2024-11-05 14:40:51,924 - KFoldWrapper
+---------- - 2024-11-05 14:40:51,924 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8230, f1_score=0.5761, auc=0.8834, gmean=0.8046, sen=0.7851, spe=0.8245, aupr=0.2148 - 2024-11-05 14:41:27,320 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8179, f1_score=0.5695, auc=0.8672, gmean=0.7910, sen=0.7629, spe=0.8201, aupr=0.2187 - 2024-11-05 14:41:27,332 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8069, f1_score=0.5567, auc=0.8576, gmean=0.7692, sen=0.7307, spe=0.8099, aupr=0.2477 - 2024-11-05 14:41:27,342 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8143, f1_score=0.5676, auc=0.8691, gmean=0.7945, sen=0.7736, spe=0.8159, aupr=0.2267 - 2024-11-05 14:41:27,353 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8223, f1_score=0.5748, auc=0.8794, gmean=0.8013, sen=0.7794, spe=0.8240, aupr=0.2388 - 2024-11-05 14:41:27,363 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8169, f1_score=0.5689, auc=0.8712, gmean=0.7922, sen=0.7663, spe=0.8189, aupr=0.2279 - 2024-11-05 14:41:27,416 - KFoldWrapper
+---------- - 2024-11-05 14:41:27,416 - KFoldWrapper
+The evaluation[f1_macro] of layer_0 is 0.5746 - 2024-11-05 14:41:27,471 - DualGranularBalancedDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2024-11-05 14:41:27,472 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:41:27,472 - DualGranularBalancedDeepForest
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8461, f1_score=0.5613, auc=0.8295, gmean=0.6746, sen=0.5301, spe=0.8586, aupr=0.1956 - 2024-11-05 14:41:54,881 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8526, f1_score=0.5779, auc=0.8321, gmean=0.7194, sen=0.6000, spe=0.8627, aupr=0.1818 - 2024-11-05 14:41:54,892 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8397, f1_score=0.5565, auc=0.8204, gmean=0.6738, sen=0.5330, spe=0.8519, aupr=0.1540 - 2024-11-05 14:41:54,909 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8427, f1_score=0.5594, auc=0.8127, gmean=0.6768, sen=0.5358, spe=0.8548, aupr=0.1714 - 2024-11-05 14:41:54,923 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8664, f1_score=0.5828, auc=0.8330, gmean=0.6954, sen=0.5501, spe=0.8789, aupr=0.2145 - 2024-11-05 14:41:54,935 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8495, f1_score=0.5673, auc=0.8257, gmean=0.6882, sen=0.5498, spe=0.8614, aupr=0.1826 - 2024-11-05 14:41:54,988 - KFoldWrapper
+---------- - 2024-11-05 14:41:54,988 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8445, f1_score=0.5652, auc=0.8183, gmean=0.6950, sen=0.5645, spe=0.8556, aupr=0.1684 - 2024-11-05 14:42:22,081 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8596, f1_score=0.5641, auc=0.8170, gmean=0.6442, sen=0.4743, spe=0.8749, aupr=0.1712 - 2024-11-05 14:42:22,093 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8642, f1_score=0.5731, auc=0.8277, gmean=0.6656, sen=0.5043, spe=0.8784, aupr=0.1860 - 2024-11-05 14:42:22,103 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8574, f1_score=0.5757, auc=0.8215, gmean=0.6969, sen=0.5587, spe=0.8692, aupr=0.1733 - 2024-11-05 14:42:22,114 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8566, f1_score=0.5705, auc=0.8255, gmean=0.6789, sen=0.5301, spe=0.8696, aupr=0.1625 - 2024-11-05 14:42:22,129 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8565, f1_score=0.5698, auc=0.8220, gmean=0.6765, sen=0.5263, spe=0.8696, aupr=0.1707 - 2024-11-05 14:42:22,180 - KFoldWrapper
+---------- - 2024-11-05 14:42:22,180 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8515, f1_score=0.5619, auc=0.8176, gmean=0.6606, sen=0.5043, spe=0.8653, aupr=0.1659 - 2024-11-05 14:42:49,051 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8515, f1_score=0.5700, auc=0.8216, gmean=0.6918, sen=0.5543, spe=0.8633, aupr=0.1932 - 2024-11-05 14:42:49,062 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8569, f1_score=0.5716, auc=0.8121, gmean=0.6826, sen=0.5358, spe=0.8696, aupr=0.1641 - 2024-11-05 14:42:49,072 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8546, f1_score=0.5659, auc=0.8344, gmean=0.6673, sen=0.5129, spe=0.8681, aupr=0.1647 - 2024-11-05 14:42:49,081 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8624, f1_score=0.5753, auc=0.8219, gmean=0.6795, sen=0.5272, spe=0.8757, aupr=0.1747 - 2024-11-05 14:42:49,091 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8554, f1_score=0.5689, auc=0.8216, gmean=0.6764, sen=0.5269, spe=0.8684, aupr=0.1709 - 2024-11-05 14:42:49,129 - KFoldWrapper
+---------- - 2024-11-05 14:42:49,129 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8646, f1_score=0.5848, auc=0.8482, gmean=0.7086, sen=0.5731, spe=0.8762, aupr=0.1988 - 2024-11-05 14:43:19,417 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8555, f1_score=0.5766, auc=0.8225, gmean=0.7055, sen=0.5743, spe=0.8666, aupr=0.1745 - 2024-11-05 14:43:19,428 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8504, f1_score=0.5672, auc=0.8181, gmean=0.6853, sen=0.5444, spe=0.8625, aupr=0.1793 - 2024-11-05 14:43:19,447 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8446, f1_score=0.5699, auc=0.8322, gmean=0.7136, sen=0.5960, spe=0.8545, aupr=0.1795 - 2024-11-05 14:43:19,464 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8713, f1_score=0.5970, auc=0.8522, gmean=0.7318, sen=0.6074, spe=0.8817, aupr=0.2469 - 2024-11-05 14:43:19,484 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8573, f1_score=0.5788, auc=0.8343, gmean=0.7091, sen=0.5790, spe=0.8683, aupr=0.1928 - 2024-11-05 14:43:19,553 - KFoldWrapper
+---------- - 2024-11-05 14:43:19,558 - KFoldWrapper
+The evaluation[f1_macro] of layer_1 is 0.6046 - 2024-11-05 14:43:19,617 - DualGranularBalancedDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2024-11-05 14:43:19,639 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:43:19,639 - DualGranularBalancedDeepForest
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8478, f1_score=0.5693, auc=0.8334, gmean=0.7015, sen=0.5731, spe=0.8587, aupr=0.2171 - 2024-11-05 14:43:48,834 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8638, f1_score=0.5707, auc=0.8150, gmean=0.6571, sen=0.4914, spe=0.8785, aupr=0.1878 - 2024-11-05 14:43:48,844 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8597, f1_score=0.5737, auc=0.8317, gmean=0.6820, sen=0.5330, spe=0.8726, aupr=0.1895 - 2024-11-05 14:43:48,853 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8649, f1_score=0.5781, auc=0.8267, gmean=0.6823, sen=0.5301, spe=0.8782, aupr=0.1957 - 2024-11-05 14:43:48,863 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8672, f1_score=0.5869, auc=0.8414, gmean=0.7080, sen=0.5702, spe=0.8790, aupr=0.2187 - 2024-11-05 14:43:48,872 - KFoldWrapper
+layer_2, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8607, f1_score=0.5757, auc=0.8295, gmean=0.6865, sen=0.5395, spe=0.8734, aupr=0.2002 - 2024-11-05 14:43:48,911 - KFoldWrapper
+---------- - 2024-11-05 14:43:48,911 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8571, f1_score=0.5745, auc=0.8405, gmean=0.6933, sen=0.5530, spe=0.8691, aupr=0.2076 - 2024-11-05 14:44:17,028 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8681, f1_score=0.5812, auc=0.8299, gmean=0.6826, sen=0.5286, spe=0.8816, aupr=0.2020 - 2024-11-05 14:44:17,039 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8538, f1_score=0.5706, auc=0.8300, gmean=0.6884, sen=0.5473, spe=0.8659, aupr=0.2021 - 2024-11-05 14:44:17,050 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8635, f1_score=0.5846, auc=0.8354, gmean=0.7116, sen=0.5788, spe=0.8748, aupr=0.1974 - 2024-11-05 14:44:17,059 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8657, f1_score=0.5788, auc=0.8365, gmean=0.6826, sen=0.5301, spe=0.8790, aupr=0.1894 - 2024-11-05 14:44:17,071 - KFoldWrapper
+layer_2, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8617, f1_score=0.5779, auc=0.8343, gmean=0.6918, sen=0.5475, spe=0.8741, aupr=0.1988 - 2024-11-05 14:44:17,114 - KFoldWrapper
+---------- - 2024-11-05 14:44:17,114 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8532, f1_score=0.5660, auc=0.8229, gmean=0.6721, sen=0.5215, spe=0.8663, aupr=0.2103 - 2024-11-05 14:44:45,528 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8515, f1_score=0.5747, auc=0.8359, gmean=0.7106, sen=0.5857, spe=0.8621, aupr=0.2258 - 2024-11-05 14:44:45,540 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8654, f1_score=0.5818, auc=0.8316, gmean=0.6949, sen=0.5501, spe=0.8779, aupr=0.2030 - 2024-11-05 14:44:45,551 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8618, f1_score=0.5807, auc=0.8359, gmean=0.7022, sen=0.5645, spe=0.8736, aupr=0.1797 - 2024-11-05 14:44:45,563 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8631, f1_score=0.5730, auc=0.8240, gmean=0.6688, sen=0.5100, spe=0.8771, aupr=0.1736 - 2024-11-05 14:44:45,575 - KFoldWrapper
+layer_2, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8590, f1_score=0.5752, auc=0.8299, gmean=0.6900, sen=0.5464, spe=0.8714, aupr=0.1965 - 2024-11-05 14:44:45,618 - KFoldWrapper
+---------- - 2024-11-05 14:44:45,618 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8671, f1_score=0.5714, auc=0.8199, gmean=0.6498, sen=0.4785, spe=0.8825, aupr=0.2018 - 2024-11-05 14:45:13,852 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8616, f1_score=0.5845, auc=0.8414, gmean=0.7166, sen=0.5886, spe=0.8724, aupr=0.2138 - 2024-11-05 14:45:13,864 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8614, f1_score=0.5799, auc=0.8326, gmean=0.7003, sen=0.5616, spe=0.8733, aupr=0.2111 - 2024-11-05 14:45:13,875 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8545, f1_score=0.5730, auc=0.8319, gmean=0.6957, sen=0.5587, spe=0.8662, aupr=0.1957 - 2024-11-05 14:45:13,886 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8703, f1_score=0.5923, auc=0.8474, gmean=0.7179, sen=0.5845, spe=0.8816, aupr=0.2267 - 2024-11-05 14:45:13,897 - KFoldWrapper
+layer_2, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8630, f1_score=0.5803, auc=0.8346, gmean=0.6966, sen=0.5544, spe=0.8752, aupr=0.2088 - 2024-11-05 14:45:13,946 - KFoldWrapper
+---------- - 2024-11-05 14:45:13,946 - KFoldWrapper
+The evaluation[f1_macro] of layer_2 is 0.6116 - 2024-11-05 14:45:14,072 - DualGranularBalancedDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2024-11-05 14:45:14,094 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:45:14,094 - DualGranularBalancedDeepForest
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8629, f1_score=0.5840, auc=0.8396, gmean=0.7113, sen=0.5788, spe=0.8741, aupr=0.2099 - 2024-11-05 14:45:43,761 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8655, f1_score=0.5805, auc=0.8407, gmean=0.6887, sen=0.5400, spe=0.8784, aupr=0.1962 - 2024-11-05 14:45:43,771 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8737, f1_score=0.5872, auc=0.8311, gmean=0.6876, sen=0.5330, spe=0.8872, aupr=0.2101 - 2024-11-05 14:45:43,782 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8616, f1_score=0.5754, auc=0.8302, gmean=0.6827, sen=0.5330, spe=0.8746, aupr=0.1893 - 2024-11-05 14:45:43,792 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8659, f1_score=0.5742, auc=0.8171, gmean=0.6644, sen=0.5014, spe=0.8804, aupr=0.1826 - 2024-11-05 14:45:43,804 - KFoldWrapper
+layer_3, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8659, f1_score=0.5803, auc=0.8320, gmean=0.6872, sen=0.5372, spe=0.8789, aupr=0.1962 - 2024-11-05 14:45:43,844 - KFoldWrapper
+---------- - 2024-11-05 14:45:43,845 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8724, f1_score=0.5819, auc=0.8321, gmean=0.6725, sen=0.5100, spe=0.8867, aupr=0.2163 - 2024-11-05 14:46:13,620 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8684, f1_score=0.5936, auc=0.8574, gmean=0.7280, sen=0.6029, spe=0.8790, aupr=0.2643 - 2024-11-05 14:46:13,631 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8771, f1_score=0.5851, auc=0.8326, gmean=0.6688, sen=0.5014, spe=0.8919, aupr=0.1903 - 2024-11-05 14:46:13,640 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8693, f1_score=0.5799, auc=0.8349, gmean=0.6750, sen=0.5158, spe=0.8833, aupr=0.1985 - 2024-11-05 14:46:13,650 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8738, f1_score=0.5883, auc=0.8280, gmean=0.6913, sen=0.5387, spe=0.8871, aupr=0.2109 - 2024-11-05 14:46:13,663 - KFoldWrapper
+layer_3, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8722, f1_score=0.5859, auc=0.8365, gmean=0.6876, sen=0.5338, spe=0.8856, aupr=0.2147 - 2024-11-05 14:46:13,716 - KFoldWrapper
+---------- - 2024-11-05 14:46:13,716 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8796, f1_score=0.5877, auc=0.8372, gmean=0.6697, sen=0.5014, spe=0.8946, aupr=0.1991 - 2024-11-05 14:46:44,020 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8725, f1_score=0.5889, auc=0.8365, gmean=0.6969, sen=0.5486, spe=0.8854, aupr=0.2293 - 2024-11-05 14:46:44,030 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8624, f1_score=0.5715, auc=0.8318, gmean=0.6649, sen=0.5043, spe=0.8766, aupr=0.1762 - 2024-11-05 14:46:44,039 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8803, f1_score=0.5942, auc=0.8418, gmean=0.6903, sen=0.5330, spe=0.8941, aupr=0.2330 - 2024-11-05 14:46:44,048 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8672, f1_score=0.5817, auc=0.8418, gmean=0.6886, sen=0.5387, spe=0.8802, aupr=0.2018 - 2024-11-05 14:46:44,057 - KFoldWrapper
+layer_3, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8724, f1_score=0.5846, auc=0.8377, gmean=0.6822, sen=0.5252, spe=0.8862, aupr=0.2046 - 2024-11-05 14:46:44,096 - KFoldWrapper
+---------- - 2024-11-05 14:46:44,096 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8712, f1_score=0.5880, auc=0.8461, gmean=0.6991, sen=0.5530, spe=0.8838, aupr=0.2120 - 2024-11-05 14:47:13,670 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8767, f1_score=0.5943, auc=0.8457, gmean=0.7022, sen=0.5543, spe=0.8896, aupr=0.2376 - 2024-11-05 14:47:13,680 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8717, f1_score=0.5857, auc=0.8412, gmean=0.6886, sen=0.5358, spe=0.8850, aupr=0.2145 - 2024-11-05 14:47:13,690 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8642, f1_score=0.5797, auc=0.8323, gmean=0.6909, sen=0.5444, spe=0.8768, aupr=0.1954 - 2024-11-05 14:47:13,700 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8659, f1_score=0.5790, auc=0.8403, gmean=0.6827, sen=0.5301, spe=0.8792, aupr=0.1996 - 2024-11-05 14:47:13,709 - KFoldWrapper
+layer_3, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8699, f1_score=0.5853, auc=0.8410, gmean=0.6927, sen=0.5435, spe=0.8829, aupr=0.2085 - 2024-11-05 14:47:13,748 - KFoldWrapper
+---------- - 2024-11-05 14:47:13,748 - KFoldWrapper
+The evaluation[f1_macro] of layer_3 is 0.6195 - 2024-11-05 14:47:13,883 - DualGranularBalancedDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2024-11-05 14:47:13,911 - DualGranularBalancedDeepForest
+The shape of x_train is (45797, 1222) - 2024-11-05 14:47:13,911 - DualGranularBalancedDeepForest
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8902, f1_score=0.6074, auc=0.8516, gmean=0.7015, sen=0.5444, spe=0.9039, aupr=0.2568 - 2024-11-05 14:47:45,238 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8876, f1_score=0.6033, auc=0.8505, gmean=0.6959, sen=0.5371, spe=0.9015, aupr=0.2454 - 2024-11-05 14:47:45,250 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8825, f1_score=0.6021, auc=0.8461, gmean=0.7108, sen=0.5645, spe=0.8951, aupr=0.2340 - 2024-11-05 14:47:45,259 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8774, f1_score=0.5905, auc=0.8382, gmean=0.6873, sen=0.5301, spe=0.8911, aupr=0.1831 - 2024-11-05 14:47:45,270 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8861, f1_score=0.5964, auc=0.8504, gmean=0.6779, sen=0.5100, spe=0.9010, aupr=0.2243 - 2024-11-05 14:47:45,280 - KFoldWrapper
+layer_4, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8848, f1_score=0.5999, auc=0.8473, gmean=0.6948, sen=0.5372, spe=0.8985, aupr=0.2259 - 2024-11-05 14:47:45,336 - KFoldWrapper
+---------- - 2024-11-05 14:47:45,336 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8934, f1_score=0.6119, auc=0.8541, gmean=0.7046, sen=0.5473, spe=0.9072, aupr=0.2581 - 2024-11-05 14:48:16,112 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8825, f1_score=0.6084, auc=0.8573, gmean=0.7323, sen=0.6000, spe=0.8938, aupr=0.2422 - 2024-11-05 14:48:16,122 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8742, f1_score=0.5868, auc=0.8492, gmean=0.6842, sen=0.5272, spe=0.8880, aupr=0.2451 - 2024-11-05 14:48:16,132 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8828, f1_score=0.5944, auc=0.8398, gmean=0.6822, sen=0.5186, spe=0.8973, aupr=0.1991 - 2024-11-05 14:48:16,142 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8689, f1_score=0.5857, auc=0.8446, gmean=0.6981, sen=0.5530, spe=0.8814, aupr=0.2201 - 2024-11-05 14:48:16,152 - KFoldWrapper
+layer_4, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8804, f1_score=0.5971, auc=0.8491, gmean=0.7005, sen=0.5493, spe=0.8935, aupr=0.2320 - 2024-11-05 14:48:16,196 - KFoldWrapper
+---------- - 2024-11-05 14:48:16,196 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8849, f1_score=0.6053, auc=0.8507, gmean=0.7136, sen=0.5673, spe=0.8975, aupr=0.2516 - 2024-11-05 14:48:45,948 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8856, f1_score=0.5931, auc=0.8402, gmean=0.6674, sen=0.4943, spe=0.9011, aupr=0.1979 - 2024-11-05 14:48:45,960 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8794, f1_score=0.5870, auc=0.8313, gmean=0.6678, sen=0.4986, spe=0.8944, aupr=0.2223 - 2024-11-05 14:48:45,970 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8865, f1_score=0.5925, auc=0.8423, gmean=0.6629, sen=0.4871, spe=0.9023, aupr=0.2217 - 2024-11-05 14:48:45,980 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8784, f1_score=0.5970, auc=0.8596, gmean=0.7074, sen=0.5616, spe=0.8909, aupr=0.2548 - 2024-11-05 14:48:45,990 - KFoldWrapper
+layer_4, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8829, f1_score=0.5951, auc=0.8449, gmean=0.6842, sen=0.5218, spe=0.8973, aupr=0.2288 - 2024-11-05 14:48:46,034 - KFoldWrapper
+---------- - 2024-11-05 14:48:46,034 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8793, f1_score=0.5905, auc=0.8322, gmean=0.6807, sen=0.5186, spe=0.8935, aupr=0.2120 - 2024-11-05 14:49:17,289 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8761, f1_score=0.5965, auc=0.8382, gmean=0.7124, sen=0.5714, spe=0.8882, aupr=0.2024 - 2024-11-05 14:49:17,300 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8865, f1_score=0.6010, auc=0.8573, gmean=0.6927, sen=0.5330, spe=0.9005, aupr=0.2480 - 2024-11-05 14:49:17,310 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8735, f1_score=0.5913, auc=0.8440, gmean=0.7036, sen=0.5587, spe=0.8859, aupr=0.2151 - 2024-11-05 14:49:17,320 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8831, f1_score=0.5904, auc=0.8369, gmean=0.6673, sen=0.4957, spe=0.8984, aupr=0.2256 - 2024-11-05 14:49:17,332 - KFoldWrapper
+layer_4, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8797, f1_score=0.5940, auc=0.8419, gmean=0.6916, sen=0.5355, spe=0.8933, aupr=0.2202 - 2024-11-05 14:49:17,377 - KFoldWrapper
+---------- - 2024-11-05 14:49:17,378 - KFoldWrapper
+The evaluation[f1_macro] of layer_4 is 0.6318 - 2024-11-05 14:49:17,435 - DualGranularBalancedDeepForest
+training finish... - 2024-11-05 14:49:17,436 - DualGranularBalancedDeepForest
+Begin to train.... - 2024-11-05 17:02:12,127 - DualGranularBalancedDeepForest
+the shape of training samples: (45796, 1222) - 2024-11-05 17:02:12,127 - DualGranularBalancedDeepForest
+use f1_macro as training evaluation - 2024-11-05 17:02:12,127 - DualGranularBalancedDeepForest
+stacking: True, save model: False - 2024-11-05 17:02:12,127 - DualGranularBalancedDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2024-11-05 17:02:12,128 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 17:02:12,128 - DualGranularBalancedDeepForest
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8275, f1_score=0.5779, auc=0.8700, gmean=0.7972, sen=0.7657, spe=0.8300, aupr=0.2493 - 2024-11-05 17:02:47,300 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8158, f1_score=0.5655, auc=0.8627, gmean=0.7809, sen=0.7450, spe=0.8186, aupr=0.2176 - 2024-11-05 17:02:47,311 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8086, f1_score=0.5601, auc=0.8647, gmean=0.7788, sen=0.7479, spe=0.8110, aupr=0.2277 - 2024-11-05 17:02:47,321 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8266, f1_score=0.5792, auc=0.8833, gmean=0.8064, sen=0.7851, spe=0.8283, aupr=0.2902 - 2024-11-05 17:02:47,332 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8207, f1_score=0.5681, auc=0.8537, gmean=0.7775, sen=0.7335, spe=0.8242, aupr=0.2157 - 2024-11-05 17:02:47,343 - KFoldWrapper
+layer_0, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8199, f1_score=0.5700, auc=0.8669, gmean=0.7882, sen=0.7554, spe=0.8224, aupr=0.2368 - 2024-11-05 17:02:47,383 - KFoldWrapper
+---------- - 2024-11-05 17:02:47,383 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8120, f1_score=0.5719, auc=0.8896, gmean=0.8186, sen=0.8257, spe=0.8115, aupr=0.2568 - 2024-11-05 17:03:20,518 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8157, f1_score=0.5654, auc=0.8517, gmean=0.7809, sen=0.7450, spe=0.8185, aupr=0.2049 - 2024-11-05 17:03:20,529 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8243, f1_score=0.5749, auc=0.8751, gmean=0.7953, sen=0.7650, spe=0.8267, aupr=0.2540 - 2024-11-05 17:03:20,540 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8164, f1_score=0.5662, auc=0.8663, gmean=0.7827, sen=0.7479, spe=0.8191, aupr=0.2453 - 2024-11-05 17:03:20,549 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8230, f1_score=0.5748, auc=0.8704, gmean=0.7989, sen=0.7736, spe=0.8250, aupr=0.2307 - 2024-11-05 17:03:20,559 - KFoldWrapper
+layer_0, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8183, f1_score=0.5706, auc=0.8704, gmean=0.7954, sen=0.7715, spe=0.8201, aupr=0.2372 - 2024-11-05 17:03:20,604 - KFoldWrapper
+---------- - 2024-11-05 17:03:20,604 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8209, f1_score=0.5723, auc=0.8791, gmean=0.7939, sen=0.7657, spe=0.8230, aupr=0.2393 - 2024-11-05 17:03:53,235 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8195, f1_score=0.5749, auc=0.8833, gmean=0.8098, sen=0.7994, spe=0.8203, aupr=0.2692 - 2024-11-05 17:03:53,246 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8239, f1_score=0.5741, auc=0.8736, gmean=0.7936, sen=0.7622, spe=0.8263, aupr=0.2347 - 2024-11-05 17:03:53,255 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8213, f1_score=0.5657, auc=0.8526, gmean=0.7660, sen=0.7106, spe=0.8257, aupr=0.2107 - 2024-11-05 17:03:53,265 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8130, f1_score=0.5649, auc=0.8662, gmean=0.7867, sen=0.7593, spe=0.8151, aupr=0.2054 - 2024-11-05 17:03:53,275 - KFoldWrapper
+layer_0, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8197, f1_score=0.5704, auc=0.8709, gmean=0.7901, sen=0.7595, spe=0.8221, aupr=0.2305 - 2024-11-05 17:03:53,321 - KFoldWrapper
+---------- - 2024-11-05 17:03:53,321 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8145, f1_score=0.5658, auc=0.8664, gmean=0.7850, sen=0.7543, spe=0.8169, aupr=0.2415 - 2024-11-05 17:04:26,347 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8181, f1_score=0.5710, auc=0.8715, gmean=0.7978, sen=0.7765, spe=0.8198, aupr=0.2393 - 2024-11-05 17:04:26,360 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8124, f1_score=0.5677, auc=0.8827, gmean=0.8006, sen=0.7880, spe=0.8134, aupr=0.2661 - 2024-11-05 17:04:26,370 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8121, f1_score=0.5635, auc=0.8631, gmean=0.7834, sen=0.7536, spe=0.8144, aupr=0.2307 - 2024-11-05 17:04:26,380 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8249, f1_score=0.5725, auc=0.8629, gmean=0.7840, sen=0.7421, spe=0.8281, aupr=0.2569 - 2024-11-05 17:04:26,390 - KFoldWrapper
+layer_0, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8164, f1_score=0.5681, auc=0.8692, gmean=0.7902, sen=0.7629, spe=0.8185, aupr=0.2456 - 2024-11-05 17:04:26,439 - KFoldWrapper
+---------- - 2024-11-05 17:04:26,439 - KFoldWrapper
+The evaluation[f1_macro] of layer_0 is 0.5747 - 2024-11-05 17:04:26,492 - DualGranularBalancedDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2024-11-05 17:04:26,492 - DualGranularBalancedDeepForest
+The shape of x_train is (45796, 1222) - 2024-11-05 17:04:26,492 - DualGranularBalancedDeepForest
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.9015, f1_score=0.5739, auc=0.8190, gmean=0.5463, sen=0.3229, spe=0.9245, aupr=0.1438 - 2024-11-05 17:04:53,281 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8844, f1_score=0.5491, auc=0.7834, gmean=0.5126, sen=0.2894, spe=0.9079, aupr=0.1258 - 2024-11-05 17:04:53,291 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8905, f1_score=0.5489, auc=0.7715, gmean=0.4938, sen=0.2665, spe=0.9152, aupr=0.1333 - 2024-11-05 17:04:53,300 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8799, f1_score=0.5453, auc=0.7859, gmean=0.5113, sen=0.2894, spe=0.9033, aupr=0.1162 - 2024-11-05 17:04:53,309 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8851, f1_score=0.5484, auc=0.7958, gmean=0.5078, sen=0.2837, spe=0.9090, aupr=0.1344 - 2024-11-05 17:04:53,317 - KFoldWrapper
+layer_1, estimator_0, BalancedEnsembleClassifier, wrapper,Accuracy=0.8883, f1_score=0.5528, auc=0.7912, gmean=0.5146, sen=0.2904, spe=0.9120, aupr=0.1291 - 2024-11-05 17:04:53,355 - KFoldWrapper
+---------- - 2024-11-05 17:04:53,355 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8975, f1_score=0.5619, auc=0.7990, gmean=0.5182, sen=0.2914, spe=0.9216, aupr=0.1517 - 2024-11-05 17:05:21,233 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8941, f1_score=0.5586, auc=0.7947, gmean=0.5180, sen=0.2923, spe=0.9179, aupr=0.1359 - 2024-11-05 17:05:21,242 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8865, f1_score=0.5502, auc=0.7949, gmean=0.5107, sen=0.2865, spe=0.9102, aupr=0.1337 - 2024-11-05 17:05:21,251 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.8893, f1_score=0.5436, auc=0.7711, gmean=0.4775, sen=0.2493, spe=0.9146, aupr=0.1102 - 2024-11-05 17:05:21,263 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8970, f1_score=0.5692, auc=0.8066, gmean=0.5457, sen=0.3238, spe=0.9198, aupr=0.1537 - 2024-11-05 17:05:21,273 - KFoldWrapper
+layer_1, estimator_1, BalancedEnsembleClassifier, wrapper,Accuracy=0.8929, f1_score=0.5566, auc=0.7932, gmean=0.5144, sen=0.2887, spe=0.9168, aupr=0.1361 - 2024-11-05 17:05:21,313 - KFoldWrapper
+---------- - 2024-11-05 17:05:21,313 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8900, f1_score=0.5456, auc=0.7923, gmean=0.4824, sen=0.2543, spe=0.9152, aupr=0.1054 - 2024-11-05 17:05:50,634 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8947, f1_score=0.5648, auc=0.8095, gmean=0.5378, sen=0.3152, spe=0.9177, aupr=0.1615 - 2024-11-05 17:05:50,644 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.9011, f1_score=0.5535, auc=0.7924, gmean=0.4779, sen=0.2464, spe=0.9270, aupr=0.1424 - 2024-11-05 17:05:50,653 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.9069, f1_score=0.5850, auc=0.8065, gmean=0.5652, sen=0.3438, spe=0.9292, aupr=0.1734 - 2024-11-05 17:05:50,662 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8911, f1_score=0.5626, auc=0.8210, gmean=0.5415, sen=0.3209, spe=0.9137, aupr=0.1395 - 2024-11-05 17:05:50,672 - KFoldWrapper
+layer_1, estimator_2, BalancedEnsembleClassifier, wrapper,Accuracy=0.8968, f1_score=0.5622, auc=0.8045, gmean=0.5221, sen=0.2961, spe=0.9206, aupr=0.1428 - 2024-11-05 17:05:50,716 - KFoldWrapper
+---------- - 2024-11-05 17:05:50,716 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_0,Accuracy=0.8934, f1_score=0.5405, auc=0.7552, gmean=0.4528, sen=0.2229, spe=0.9201, aupr=0.1154 - 2024-11-05 17:06:18,848 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_1,Accuracy=0.8968, f1_score=0.5562, auc=0.7940, gmean=0.5009, sen=0.2722, spe=0.9216, aupr=0.1125 - 2024-11-05 17:06:18,858 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_2,Accuracy=0.8937, f1_score=0.5496, auc=0.7890, gmean=0.4868, sen=0.2579, spe=0.9188, aupr=0.1222 - 2024-11-05 17:06:18,868 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_3,Accuracy=0.9036, f1_score=0.5614, auc=0.8078, gmean=0.4975, sen=0.2665, spe=0.9288, aupr=0.1363 - 2024-11-05 17:06:18,878 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, n_fold_4,Accuracy=0.8987, f1_score=0.5512, auc=0.7935, gmean=0.4773, sen=0.2464, spe=0.9245, aupr=0.1367 - 2024-11-05 17:06:18,888 - KFoldWrapper
+layer_1, estimator_3, BalancedEnsembleClassifier, wrapper,Accuracy=0.8972, f1_score=0.5517, auc=0.7875, gmean=0.4833, sen=0.2532, spe=0.9228, aupr=0.1226 - 2024-11-05 17:06:18,931 - KFoldWrapper
+---------- - 2024-11-05 17:06:18,931 - KFoldWrapper
+The evaluation[f1_macro] of layer_1 is 0.5741 - 2024-11-05 17:06:19,047 - DualGranularBalancedDeepForest
+best_layer: 0, current_layer:1, save layers: 1 - 2024-11-05 17:06:19,048 - DualGranularBalancedDeepForest
+training finish... - 2024-11-05 17:06:19,048 - DualGranularBalancedDeepForest

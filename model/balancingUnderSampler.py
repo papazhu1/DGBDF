@@ -42,6 +42,8 @@ class BalancingSampler(BaseUnderSampler):
 
         if epoch == 0:
             return RandomUnderSampler().fit_resample(X, y)
+        # if epoch < 5:
+        #     return RandomUnderSampler().fit_resample(X, y)
 
         n_label = len(np.unique(y))
         capacities = calculate_bin_capacities(
@@ -104,25 +106,29 @@ class BalancingSampler(BaseUnderSampler):
                     pred_list.append(y_predict_proba_list[k][index][0])
 
                 pred_array = np.array(pred_list)
-                expanded_pred_array = np.vstack((1 - pred_array, pred_array)).T
-                # expanded_pred_array *= (self.n_estimators + 1)
-
+                # expanded_pred_array = np.vstack((1 - pred_array, pred_array)).T
+                # # expanded_pred_array *= (self.n_estimators + 1)
+                #
                 # print("expanded_pred_array[0]:", expanded_pred_array[0].reshape(1, 2))
                 # print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1, 2).shape)
+                #
+                #
+                # # 现在要对每个样本计算loss
+                # if len(expanded_pred_array) == 1:
+                #     combined_instance = expanded_pred_array[0].reshape(1, 2)
+                #     print("combined_instance:", combined_instance)
+                # else:
+                #     combined_instance = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
+                #                                                       expanded_pred_array[1].reshape(1, 2))
+                # for i in range(2, len(expanded_pred_array)):
+                #     combined_instance = DS_Combine_ensemble_for_instances(combined_instance.reshape(1, 2),
+                #                                                           expanded_pred_array[i].reshape(1, 2))
+                # loss, A, B = ce_loss(y[index], combined_instance, n_label)
+                #
+                # print("loss:", loss)
 
-                # 现在要对每个样本计算loss
-                if len(expanded_pred_array) == 1:
-                    combined_instance = expanded_pred_array[0].reshape(1, 2)
-                else:
-                    combined_instance = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
-                                                                      expanded_pred_array[1].reshape(1, 2))
-                for i in range(2, len(expanded_pred_array)):
-                    combined_instance = DS_Combine_ensemble_for_instances(combined_instance.reshape(1, 2),
-                                                                          expanded_pred_array[i].reshape(1, 2))
-                loss, A, B = ce_loss(y[index], combined_instance, n_label)
-
-                # uncertainty = np.var(pred_list)
-                uncertainty = loss
+                uncertainty = np.var(pred_list)
+                # uncertainty = loss
 
 
 
@@ -143,17 +149,30 @@ class BalancingSampler(BaseUnderSampler):
         choosed_index = []
 
         for i in range(len(per_bin_uncertainties)):
-            # probabilities = uncertainty_to_probability_by_sum(per_bin_uncertainties[i])
+            probabilities = uncertainty_to_probability_by_sum(per_bin_uncertainties[i])
 
-            # 使用 norm 对大类的 loss_instances 进行拟合
-            mu, sigma = norm.fit(per_bin_uncertainties[i])
-
-            # 计算每个大类样本的概率密度
-            weights = norm.pdf(per_bin_uncertainties[i], mu, sigma)
-
-            # 将大类的采样权重归一化
-            weights /= np.sum(weights)
-            probabilities = weights.ravel()
+            # 示例：检查 per_bin_uncertainties[i] 中的非有限值
+            # non_finite_indices = np.where(~np.isfinite(per_bin_uncertainties[i]))[0]  # 找出非有限值的索引
+            #
+            # # 输出非有限值及其索引
+            # if len(non_finite_indices) > 0:
+            #     print("Non-finite values found in per_bin_uncertainties[i]:")
+            #     for idx in non_finite_indices:
+            #         print(f"Index {idx}, Value {per_bin_uncertainties[i][idx]}")
+            #     efwfwef
+            # else:
+            #     print("No non-finite values found in per_bin_uncertainties[i].")
+            #
+            #
+            # # 使用 norm 对大类的 loss_instances 进行拟合
+            # mu, sigma = norm.fit(per_bin_uncertainties[i])
+            #
+            # # 计算每个大类样本的概率密度
+            # weights = norm.pdf(per_bin_uncertainties[i], mu, sigma)
+            #
+            # # 将大类的采样权重归一化
+            # weights /= np.sum(weights)
+            # probabilities = weights.ravel()
 
             if self.use_uncertainty == False:
                 probabilities = np.array([1 / len(bins[i]) for _ in range(len(bins[i]))])

@@ -185,8 +185,8 @@ class DualGranularBalancedDeepForest(object):
                         expanded_pred_array = np.vstack((1 - pred_array, pred_array)).T
                         expanded_pred_array *= (self.n_estimators + 1)
 
-                        print("expanded_pred_array[0]:", expanded_pred_array[0].reshape(1, 2))
-                        print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1, 2).shape)
+                        # print("expanded_pred_array[0]:", expanded_pred_array[0].reshape(1, 2))
+                        # print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1, 2).shape)
 
                         # 现在要对每个样本计算loss
                         combined_instance = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
@@ -198,9 +198,9 @@ class DualGranularBalancedDeepForest(object):
 
                         errors = 1 - pred_array
                         hardnesses = error_to_hardness(errors)
-                        # cur_sample_uncertainty = np.var(hardnesses)
+                        cur_sample_uncertainty = np.var(hardnesses)
 
-                        cur_sample_uncertainty = loss
+                        # cur_sample_uncertainty = loss
 
                         uncertainty_for_class_1.append(cur_sample_uncertainty)
 
@@ -250,8 +250,8 @@ class DualGranularBalancedDeepForest(object):
                             expanded_pred_array = np.vstack((1 - pred_array, pred_array)).T
                             expanded_pred_array *= (self.n_estimators + 1)
 
-                            print("expanded_pred_array[0]:", expanded_pred_array[0].reshape(1, 2))
-                            print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1,2).shape)
+                            # print("expanded_pred_array[0]:", expanded_pred_array[0].reshape(1, 2))
+                            # print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1,2).shape)
 
                             # 现在要对每个样本计算loss
                             combined_instance = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
@@ -274,8 +274,8 @@ class DualGranularBalancedDeepForest(object):
                             # print("shape(hardnesses):", hardnesses.shape)
                             # print("hardnesses:", hardnesses)
 
-                            # cur_sample_uncertainty = np.var(hardnesses)
-                            cur_sample_uncertainty = loss
+                            cur_sample_uncertainty = np.var(hardnesses)
+                            # cur_sample_uncertainty = loss
                             cur_bucket_sample_uncertainty.append(cur_sample_uncertainty)
 
                         sorted_sample_idx = np.argsort(cur_bucket_sample_uncertainty)
