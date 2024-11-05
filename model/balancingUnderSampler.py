@@ -3,7 +3,8 @@ from imbens.sampler import RandomUnderSampler
 from imbens.sampler._under_sampling.base import BaseUnderSampler
 from imbens.sampler._over_sampling.base import BaseOverSampler
 from funcs import *
-
+from model.func_utils import DS_Combine_ensemble_for_instances, ce_loss
+from scipy.stats import norm
 
 class BalancingSampler(BaseUnderSampler):
     def __init__(
@@ -42,6 +43,7 @@ class BalancingSampler(BaseUnderSampler):
         if epoch == 0:
             return RandomUnderSampler().fit_resample(X, y)
 
+        n_label = len(np.unique(y))
         capacities = calculate_bin_capacities(
             num_bins=self.num_bins,
             t=epoch / all_epoch * 5,
@@ -100,7 +102,29 @@ class BalancingSampler(BaseUnderSampler):
                 pred_list = []
                 for k in range(len(y_predict_proba_list)):
                     pred_list.append(y_predict_proba_list[k][index][0])
-                uncertainty = np.var(pred_list)
+
+                pred_array = np.array(pred_list)
+                expanded_pred_array = np.vstack((1 - pred_array, pred_array)).T
+                # expanded_pred_array *= (self.n_estimators + 1)
+
+                # print("expanded_pred_array[0]:", expanded_pred_array[0].reshape(1, 2))
+                # print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1, 2).shape)
+
+                # 现在要对每个样本计算loss
+                if len(expanded_pred_array) == 1:
+                    combined_instance = expanded_pred_array[0].reshape(1, 2)
+                else:
+                    combined_instance = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
+                                                                      expanded_pred_array[1].reshape(1, 2))
+                for i in range(2, len(expanded_pred_array)):
+                    combined_instance = DS_Combine_ensemble_for_instances(combined_instance.reshape(1, 2),
+                                                                          expanded_pred_array[i].reshape(1, 2))
+                loss, A, B = ce_loss(y[index], combined_instance, n_label)
+
+                # uncertainty = np.var(pred_list)
+                uncertainty = loss
+
+
 
                 cur_bin_uncertainties.append(uncertainty)
             per_bin_uncertainties.append(cur_bin_uncertainties)
@@ -119,7 +143,18 @@ class BalancingSampler(BaseUnderSampler):
         choosed_index = []
 
         for i in range(len(per_bin_uncertainties)):
-            probabilities = uncertainty_to_probability_by_sum(per_bin_uncertainties[i])
+            # probabilities = uncertainty_to_probability_by_sum(per_bin_uncertainties[i])
+
+            # 使用 norm 对大类的 loss_instances 进行拟合
+            mu, sigma = norm.fit(per_bin_uncertainties[i])
+
+            # 计算每个大类样本的概率密度
+            weights = norm.pdf(per_bin_uncertainties[i], mu, sigma)
+
+            # 将大类的采样权重归一化
+            weights /= np.sum(weights)
+            probabilities = weights.ravel()
+
             if self.use_uncertainty == False:
                 probabilities = np.array([1 / len(bins[i]) for _ in range(len(bins[i]))])
             per_bin_probabilities.append(probabilities)

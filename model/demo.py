@@ -5,6 +5,7 @@ from sklearn.metrics import accuracy_score, classification_report, roc_auc_score
 from imbens.metrics import geometric_mean_score, sensitivity_score, specificity_score
 from evaluation import accuracy, f1_binary, f1_macro, f1_micro, gmean, sensitivity, specificity, roc_auc
 import os
+from data_util import *
 
 model_dict = {}
 model_dict["rf"] = "RandomForestClassifier"
@@ -28,10 +29,11 @@ def get_config():
     config["if_save_model"] = False
     config["train_evaluation"] = f1_macro
     config["estimator_configs"] = []
+    config["n_estimators"] = 20
 
     for i in range(1):
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": 20, "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["be"], "n_estimators": config["n_estimators"], "n_jobs": -1})
         config["estimator_configs"].append(
             {"n_fold": 5, "type": model_dict["be"], "n_estimators": 20, "n_jobs": -1})
         config["estimator_configs"].append(
@@ -43,8 +45,9 @@ def get_config():
 
 if __name__ == "__main__":
 
-    X = np.load("../dataset/drug_cell_feature.npy", allow_pickle=True)
-    y = np.load("../dataset/drug_cell_label.npy", allow_pickle=True)
+    X = np.load("../dataset/dataset/drug_cell_feature.npy", allow_pickle=True)
+    y = np.load("../dataset/dataset/drug_cell_label.npy", allow_pickle=True)
+    # X, y = get_wine1()
 
     skf = StratifiedKFold(n_splits=5, shuffle=True)
 

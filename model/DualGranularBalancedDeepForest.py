@@ -12,6 +12,9 @@ from imbens.metrics import geometric_mean_score, sensitivity_score, specificity_
 from sklearn.metrics import confusion_matrix
 import pickle
 from funcs import error_to_hardness, calculate_bin_capacities
+from func_utils import *
+
+
 
 LOGGER = get_logger("DualGranularBalancedDeepForest")
 
@@ -28,6 +31,7 @@ class DualGranularBalancedDeepForest(object):
         self.train_evaluation = config["train_evaluation"]
         self.estimator_configs = config["estimator_configs"]
         self.enhancement_vector_method = config["enhancement_vector_method"]
+        self.n_estimators = config["n_estimators"]
         self.layers = []
 
         self.per_layer_res = []
@@ -177,9 +181,26 @@ class DualGranularBalancedDeepForest(object):
                                                              forest_loc * n_label + 1])
 
                         pred_array = np.array(pred_list_class_1)
+
+                        expanded_pred_array = np.vstack((1 - pred_array, pred_array)).T
+                        expanded_pred_array *= (self.n_estimators + 1)
+
+                        print("expanded_pred_array[0]:", expanded_pred_array[0].reshape(1, 2))
+                        print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1, 2).shape)
+
+                        # 现在要对每个样本计算loss
+                        combined_instance = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
+                                                                              expanded_pred_array[1].reshape(1, 2))
+                        for i in range(2, len(self.estimator_configs)):
+                            combined_instance = DS_Combine_ensemble_for_instances(combined_instance.reshape(1, 2),
+                                                                                  expanded_pred_array[i].reshape(1, 2))
+                        loss, A, B = ce_loss(y_train[sample_idx], combined_instance, n_label)
+
                         errors = 1 - pred_array
                         hardnesses = error_to_hardness(errors)
-                        cur_sample_uncertainty = np.var(hardnesses)
+                        # cur_sample_uncertainty = np.var(hardnesses)
+
+                        cur_sample_uncertainty = loss
 
                         uncertainty_for_class_1.append(cur_sample_uncertainty)
 
@@ -226,9 +247,35 @@ class DualGranularBalancedDeepForest(object):
                                                          forest_loc * n_label + 1])
 
                             pred_array = np.array(pred_list)
+                            expanded_pred_array = np.vstack((1 - pred_array, pred_array)).T
+                            expanded_pred_array *= (self.n_estimators + 1)
+
+                            print("expanded_pred_array[0]:", expanded_pred_array[0].reshape(1, 2))
+                            print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1,2).shape)
+
+                            # 现在要对每个样本计算loss
+                            combined_instance = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
+                                                                                  expanded_pred_array[1].reshape(1, 2))
+                            for i in range(2, len(self.estimator_configs)):
+                                combined_instance = DS_Combine_ensemble_for_instances(combined_instance.reshape(1, 2),
+                                                                                      expanded_pred_array[i].reshape(1, 2))
+                            loss, A, B = ce_loss(y_train[sample_idx], combined_instance, n_label)
+
+
+                            # print("type(expanded_pred_array):", type(expanded_pred_array))
+                            # print("shape(expanded_pred_array):", expanded_pred_array.shape)
+                            # print("expanded_pred_array:", expanded_pred_array)
                             errors = 1 - pred_array
+                            # print("type(errors):", type(errors))
+                            # print("shape(errors):", errors.shape)
+                            # print("errors:", errors)
                             hardnesses = error_to_hardness(errors)
-                            cur_sample_uncertainty = np.var(hardnesses)
+                            # print("type(hardnesses):", type(hardnesses))
+                            # print("shape(hardnesses):", hardnesses.shape)
+                            # print("hardnesses:", hardnesses)
+
+                            # cur_sample_uncertainty = np.var(hardnesses)
+                            cur_sample_uncertainty = loss
                             cur_bucket_sample_uncertainty.append(cur_sample_uncertainty)
 
                         sorted_sample_idx = np.argsort(cur_bucket_sample_uncertainty)
