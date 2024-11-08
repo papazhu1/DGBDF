@@ -63,7 +63,7 @@ def get_wine1():
     y = data.iloc[:, -1]
     print("Wine 类别分布:", Counter(y))
     # 将标签转换为二分类：2, 3 为少数类，其余为多数类
-    y = y.apply(lambda x: 1 if x in [2, 3] else 0)  # 1 表示少数类, 0 表示多数类
+    y = y.apply(lambda x: 0 if x in [2, 3] else 1)  # 1 表示少数类, 0 表示多数类
     print(y)
 
     X = pd.get_dummies(X)

@@ -256,9 +256,9 @@ class DualGranularBalancedDeepForest(object):
                             # 现在要对每个样本计算loss
                             combined_instance = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
                                                                                   expanded_pred_array[1].reshape(1, 2))
-                            for i in range(2, len(self.estimator_configs)):
+                            for k in range(2, len(self.estimator_configs)):
                                 combined_instance = DS_Combine_ensemble_for_instances(combined_instance.reshape(1, 2),
-                                                                                      expanded_pred_array[i].reshape(1, 2))
+                                                                                      expanded_pred_array[k].reshape(1, 2))
                             loss, A, B = ce_loss(y_train[sample_idx], combined_instance, n_label)
 
 
@@ -274,15 +274,27 @@ class DualGranularBalancedDeepForest(object):
                             # print("shape(hardnesses):", hardnesses.shape)
                             # print("hardnesses:", hardnesses)
 
-                            cur_sample_uncertainty = np.var(hardnesses)
-                            # cur_sample_uncertainty = loss
+                            # cur_sample_uncertainty = np.var(hardnesses)
+                            cur_sample_uncertainty = loss
                             cur_bucket_sample_uncertainty.append(cur_sample_uncertainty)
 
+                        if len(cur_bucket_sample_uncertainty) != len(bucket):
+                            raise ValueError(
+                                f"Mismatch before sorting: len(cur_bucket_sample_uncertainty) = {len(cur_bucket_sample_uncertainty)}, len(bucket) = {len(bucket)}")
+
                         sorted_sample_idx = np.argsort(cur_bucket_sample_uncertainty)
+                        # print(
+                        #     f"Before sorting, bucket[{i}] length: {len(bucket)}, cur_bucket_sample_uncertainty length: {len(cur_bucket_sample_uncertainty)}")
                         buckets[i] = [bucket[idx] for idx in sorted_sample_idx]
                         cur_bucket_sample_uncertainty = np.array(cur_bucket_sample_uncertainty)
                         cur_bucket_sample_uncertainty = cur_bucket_sample_uncertainty[sorted_sample_idx]
                         bucket_variances.append(cur_bucket_sample_uncertainty)
+                        # print(
+                        #     f"After sorting, buckets[{i}] length: {len(buckets[i])}, cur_bucket_sample_uncertainty length: {len(cur_bucket_sample_uncertainty)}")
+
+                        if len(cur_bucket_sample_uncertainty) != len(buckets[i]):
+                            raise ValueError("len(cur_bucket_sample_uncertainty) != len(buckets[{}])".format(i))
+
 
                     return bucket_variances
 
@@ -305,8 +317,12 @@ class DualGranularBalancedDeepForest(object):
 
                 if buckets is not None:
                     for i in range(num_bins):
+                        # print(f"Bucket {i} has {len(buckets[i])} samples.")
+                        # print(f"Bucket {i} has {len(bucket_variances[i])} uncertainties.")
                         buckets[i] = np.array(buckets[i])
                         bucket_variances[i] = np.array(bucket_variances[i])
+                        if len(bucket_variances[i]) != len(buckets[i]):
+                            raise ValueError("len(bucket_variances[{i}]) != len(buckets[{i}])".format(i=i))
 
                 if depth == 0:
                     uncertainty_for_class_1 = None

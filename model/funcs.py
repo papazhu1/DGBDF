@@ -1,6 +1,6 @@
 import numpy as np
 import csv
-
+from scipy.stats import norm
 
 def error_to_hardness(x):
     return np.tanh(6 * (x - 0.5)) / 2 + 1
@@ -84,6 +84,11 @@ def train_K_fold_paralleling(args):
     train_index, val_index, X, y, est, buckets, bucket_variances, index_1_sorted, uncertainty_1_sorted = args
     X_train, X_val = X[train_index], X[val_index]
     y_train, y_val = y[train_index], y[val_index]
+    # if buckets is not None:
+    #     for i in range(len(buckets)):
+    #         print("len(buckets_", i, "): ", len(buckets[i]))
+    #     for i in range(len(bucket_variances)):
+    #         print("len(bucket_variances_" , i, "): ", len(bucket_variances[i]))
 
     sampled_1_index = None
     if index_1_sorted is None or uncertainty_1_sorted[0] == np.nan:
@@ -119,10 +124,19 @@ def train_K_fold_paralleling(args):
             in_train_index = np.in1d(buckets[i], train_index)
             if isinstance(in_train_index, np.ndarray) and in_train_index.dtype == bool:
                 in_train_index = np.where(in_train_index)[0]
+            else:
+                raise ValueError("in_train_index is not a boolean array.")
+
+            # print("len(buckets[i])", len(buckets[i]))
+            # print("len(bucket_variances[i]", len(bucket_variances[i]))
 
             buckets[i] = buckets[i][in_train_index]
             if bucket_variances is not None:
                 bucket_variances[i] = bucket_variances[i][in_train_index]
+
+                # print("in_train_index", in_train_index)
+                # print("len(buckets[i])", len(buckets[i]))
+                # print("len(bucket_variances[i])", len(bucket_variances[i]))
 
 
         index_0_selected = []
@@ -131,6 +145,13 @@ def train_K_fold_paralleling(args):
         for i in range(len(buckets)):
             if len(buckets[i]) == 0:
                 num_empty_buckets += 1
+
+        # for j in range(len(buckets)):
+        #     print(f"Bucket {j} has {len(buckets[j])} samples.")
+        # print("\n")
+        # for j in range(len(buckets)):
+        #     print(f"Bucket {j} sampled {int(len(index_1) // (len(buckets) - num_empty_buckets))} samples.")
+
         for i in range(len(buckets)):
 
             if len(buckets[i]) == 0:
@@ -139,14 +160,35 @@ def train_K_fold_paralleling(args):
             if bucket_variances is not None:
 
                 probabilities = uncertainty_to_probability_by_sum(bucket_variances[i])
+                # 用高斯拟合
+                # 使用 norm 对大类的 loss_instances 进行拟合
+                # mu, sigma = norm.fit(bucket_variances[i])
+                #
+                # # 计算每个大类样本的概率密度
+                # weights = norm.pdf(bucket_variances[i], mu, sigma)
 
+                # 将大类的采样权重归一化
+                # weights /= np.sum(weights)
+                # weights = weights.ravel()
+
+                # 统计一下每个 bucket 的桶容量，统计一下每个桶中要被采样的数量
+
+
+                # assert len(probabilities) == len(buckets[i])
+                assert len(bucket_variances[i]) == len(buckets[i])
+                assert len(bucket_variances[i]) == len(probabilities)
                 assert len(probabilities) == len(buckets[i])
 
                 if use_uncertainty is True:
+                    actual_sample_size = min(int(len(index_1) // (len(buckets) - num_empty_buckets)), len(buckets[i]))
                     sampled_cur_bucket = np.random.choice(buckets[i],
-                                                          int(len(index_1) // (len(buckets) - num_empty_buckets)),
+                                                          actual_sample_size,
                                                           replace=False,
                                                           p=probabilities)
+                    # sampled_cur_bucket = np.random.choice(buckets[i],
+                    #                                   int(len(index_1) // (len(buckets) - num_empty_buckets)),
+                    #                                   replace=False,
+                    #                                   p=weights)
                 else:
                     sampled_cur_bucket = np.random.choice(buckets[i],
                                                           int(len(index_1) // (len(buckets) - num_empty_buckets)),

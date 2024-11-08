@@ -45,9 +45,9 @@ def get_config():
 
 if __name__ == "__main__":
 
-    X = np.load("../dataset/drug_cell_feature.npy", allow_pickle=True)
-    y = np.load("../dataset/drug_cell_label.npy", allow_pickle=True)
-    # X, y = get_wine1()
+    # X = np.load("../dataset/dataset/drug_cell_feature.npy", allow_pickle=True)
+    # y = np.load("../dataset/dataset/drug_cell_label.npy", allow_pickle=True)
+    X, y = get_wine1()
 
     skf = StratifiedKFold(n_splits=5, shuffle=True)
 
