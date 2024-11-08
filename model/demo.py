@@ -1,3 +1,5 @@
+from pandas.core.common import random_state
+
 from DualGranularBalancedDeepForest import DualGranularBalancedDeepForest
 from sklearn.model_selection import train_test_split, StratifiedKFold
 import numpy as np
@@ -49,7 +51,7 @@ if __name__ == "__main__":
     # y = np.load("../dataset/dataset/drug_cell_label.npy", allow_pickle=True)
     X, y = get_wine1()
 
-    skf = StratifiedKFold(n_splits=5, shuffle=True)
+    skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
     DGBDF_weighted_layers_acc_list = []
     DGBDF_weighted_layers_auc_list = []
