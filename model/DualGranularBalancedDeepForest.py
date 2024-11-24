@@ -1,10 +1,12 @@
 import json
+from pickletools import uint8
 
 import numpy as np
 from sklearn import ensemble
-from layer import Layer
+
 from logger import get_logger
 from k_fold_wrapper import KFoldWrapper
+from layer import Layer
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score, average_precision_score, precision_score, \
     recall_score, \
     confusion_matrix, classification_report
@@ -36,6 +38,53 @@ class DualGranularBalancedDeepForest(object):
 
         self.per_layer_res = []
         self.per_layer_res_weighted_layers = []
+
+    def calculate_B_u(self, y_probas_per_layer_per_forest, n_label):
+        all_instance_B = np.zeros((len(y_probas_per_layer_per_forest[0]), 1))
+        all_instance_u = np.zeros((len(y_probas_per_layer_per_forest[0]), 1))
+
+        for sample_idx in range(len(y_probas_per_layer_per_forest[0])):
+            pred_list = []
+            for layer_loc in range(len(y_probas_per_layer_per_forest)):
+                for forest_loc in range(len(self.estimator_configs)):
+                    if layer_loc >= len(y_probas_per_layer_per_forest):
+                        raise ValueError(
+                            "layer_loc {} >= len(y_train_probas_per_layer_per_forest) {}".format(
+                                layer_loc, len(y_probas_per_layer_per_forest)))
+                    if sample_idx >= len(y_probas_per_layer_per_forest[layer_loc]):
+                        raise ValueError(
+                            "sample_idx {} >= len(y_train_probas_per_layer_per_forest[layer_loc]) {}".format(
+                                sample_idx, len(y_probas_per_layer_per_forest[layer_loc])))
+                    if forest_loc * n_label + 1 >= len(
+                            y_probas_per_layer_per_forest[layer_loc][sample_idx]):
+                        raise ValueError(
+                            "forest_loc * n_label + 1 {} >= len(y_train_probas_per_layer_per_forest[layer_loc][sample_idx]) {}".format(
+                                forest_loc * n_label + 1,
+                                len(y_probas_per_layer_per_forest[layer_loc][sample_idx])))
+
+                    pred_list.append(y_probas_per_layer_per_forest[layer_loc][sample_idx][
+                                         forest_loc * n_label + 1])
+
+            pred_array = np.array(pred_list)
+            expanded_pred_array = np.vstack((1 - pred_array, pred_array)).T
+            expanded_pred_array *= (self.n_estimators + 1)
+
+            # print("expanded_pred_array[0]:", expanded_pred_array[0].reshape(1, 2))
+            # print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1,2).shape)
+
+            # 现在要对每个样本计算loss
+            alpha_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
+                                                                                      expanded_pred_array[1].reshape(1, 2))
+            for k in range(2, len(self.estimator_configs)):
+                alpha_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(alpha_combined.reshape(1, 2),
+                                                                                          expanded_pred_array[k].reshape(1,
+                                                                                                                         2))
+            B = calculate_B(alpha_combined, n_label)
+
+            all_instance_B[sample_idx] = B
+            all_instance_u[sample_idx] = u_combined
+
+        return all_instance_B, all_instance_u
 
     def fit(self, x_train, y_train):
 
@@ -83,7 +132,7 @@ class DualGranularBalancedDeepForest(object):
                     cur_layer_x_train = np.hstack((x_train, enhanced_vector_per_layer[depth - 1]))
                 else:
                     enhanced_vector = enhanced_vector_per_layer[0]
-                    for i in range(1, depth - 1):
+                    for i in range(1, depth):
                         enhanced_vector = np.hstack((enhanced_vector, enhanced_vector_per_layer[i]))
 
                     cur_layer_x_train = np.hstack((x_train, enhanced_vector))
@@ -118,7 +167,7 @@ class DualGranularBalancedDeepForest(object):
                 hardness_1_sorted = hardness_1[hardness_1_sorted_idx]
 
                 num_bins = 5
-                alpha = 0.05
+                alpha = 0.2
 
                 capacities = calculate_bin_capacities(num_bins, depth, alpha)
 
@@ -189,12 +238,12 @@ class DualGranularBalancedDeepForest(object):
                         # print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1, 2).shape)
 
                         # 现在要对每个样本计算loss
-                        combined_instance = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
+                        loss_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
                                                                               expanded_pred_array[1].reshape(1, 2))
                         for i in range(2, len(self.estimator_configs)):
-                            combined_instance = DS_Combine_ensemble_for_instances(combined_instance.reshape(1, 2),
+                            loss_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(loss_combined.reshape(1, 2),
                                                                                   expanded_pred_array[i].reshape(1, 2))
-                        loss, A, B = ce_loss(y_train[sample_idx], combined_instance, n_label)
+                        loss, A, B = ce_loss(y_train[sample_idx], loss_combined, n_label)
 
                         errors = 1 - pred_array
                         hardnesses = error_to_hardness(errors)
@@ -217,6 +266,14 @@ class DualGranularBalancedDeepForest(object):
                 def error_to_uncertainty(buckets):
 
                     bucket_variances = []
+                    loss_A_B_stats = {
+                        "index": [],
+                        "loss": [],
+                        "A": [],
+                        "B": []
+                    }
+                    all_instance_B = np.zeros((x_train.shape[0], 1))
+                    all_instance_u = np.zeros((x_train.shape[0], 1))
 
                     for i, bucket in enumerate(buckets):
                         cur_bucket_sample_uncertainty = []
@@ -254,12 +311,20 @@ class DualGranularBalancedDeepForest(object):
                             # print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1,2).shape)
 
                             # 现在要对每个样本计算loss
-                            combined_instance = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
+                            alpha_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
                                                                                   expanded_pred_array[1].reshape(1, 2))
                             for k in range(2, len(self.estimator_configs)):
-                                combined_instance = DS_Combine_ensemble_for_instances(combined_instance.reshape(1, 2),
+                                alpha_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(alpha_combined.reshape(1, 2),
                                                                                       expanded_pred_array[k].reshape(1, 2))
-                            loss, A, B = ce_loss(y_train[sample_idx], combined_instance, n_label)
+                            loss, A, B = ce_loss(y_train[sample_idx], alpha_combined, n_label)
+
+                            loss_A_B_stats["index"].append(sample_idx)
+                            loss_A_B_stats["loss"].append(loss)
+                            loss_A_B_stats["A"].append(A)
+                            loss_A_B_stats["B"].append(B)
+
+                            all_instance_B[sample_idx] = B
+                            all_instance_u[sample_idx] = u_combined
 
 
                             # print("type(expanded_pred_array):", type(expanded_pred_array))
@@ -296,13 +361,17 @@ class DualGranularBalancedDeepForest(object):
                             raise ValueError("len(cur_bucket_sample_uncertainty) != len(buckets[{}])".format(i))
 
 
-                    return bucket_variances
+                    return bucket_variances, loss_A_B_stats, all_instance_B, all_instance_u
 
                 bucket_variances = None
+                loss_A_B_stats = None
+                all_instance_B = None
+                all_instance_u = None
+
                 if depth == 0:
                     buckets = None
                 else:
-                    bucket_variances = error_to_uncertainty(buckets)
+                    bucket_variances, loss_A_B_stats, all_instance_B, all_instance_u = error_to_uncertainty(buckets)
 
                     if depth == 1:
                         uncertainty_for_class_1, resort_idx_for_class_1 = error_to_uncertainty_for_class_1(
@@ -327,11 +396,12 @@ class DualGranularBalancedDeepForest(object):
                 if depth == 0:
                     uncertainty_for_class_1 = None
                     resort_idx_for_class_1 = None
+                    loss_A_B_stats = None
                 else:
                     pass
 
                 y_proba = k_fold_est.fit(cur_layer_x_train, cur_layer_y_train, buckets, bucket_variances,
-                                         resort_idx_for_class_1, uncertainty_for_class_1)
+                                         resort_idx_for_class_1, uncertainty_for_class_1, loss_A_B_stats)
 
                 y_pred_cur_k_fold_forest = self.category[np.argmax(y_proba, axis=1)]
                 cur_k_fold_forest_cm = confusion_matrix(y_train, y_pred_cur_k_fold_forest)
@@ -407,7 +477,20 @@ class DualGranularBalancedDeepForest(object):
                 elif self.enhancement_vector_method == "class_proba_vector":
 
                     enhanced_vector_per_layer.append(y_train_probas)
+                elif self.enhancement_vector_method == "trusted_enhancement_vector":
 
+                    all_instance_B, all_instance_u = self.calculate_B_u(y_train_probas_per_layer_per_forest, n_label)
+                    if all_instance_B is not None and all_instance_u is not None:
+
+                        enhanced_vector_cur_layer = np.hstack((y_train_probas, all_instance_B, all_instance_u))
+                        enhanced_vector_per_layer.append(enhanced_vector_cur_layer)
+                        print(f"Final enhanced_vector_cur_layer type: {type(enhanced_vector_cur_layer)}")
+                        if isinstance(enhanced_vector_cur_layer, np.ndarray):
+                            print(f"enhanced_vector_cur_layer shape: {enhanced_vector_cur_layer.shape}")
+                        else:
+                            print(f"enhanced_vector_cur_layer content length: {len(enhanced_vector_cur_layer)}")
+                    else:
+                        raise ValueError("all_instance_B is None or all_instance_u is None")
                 else:
                     raise ValueError(
                         "enhancement_vector_method must be mean_confusion_matrix, confusion_matrix or class_proba")
@@ -425,6 +508,26 @@ class DualGranularBalancedDeepForest(object):
                 elif self.enhancement_vector_method == "class_proba_vector":
 
                     enhanced_vector_per_layer.append(y_train_probas)
+                elif self.enhancement_vector_method == "trusted_enhancement_vector":
+
+                    all_instance_B, all_instance_u = self.calculate_B_u(y_train_probas_per_layer_per_forest, n_label)
+                    if all_instance_B is not None and all_instance_u is not None:
+
+                        enhanced_vector_cur_layer = np.hstack((y_train_probas, all_instance_B, all_instance_u))
+                        enhanced_vector_per_layer.append(enhanced_vector_cur_layer)
+
+                        print(f"Final enhanced_vector_cur_layer type: {type(enhanced_vector_cur_layer)}")
+                        if isinstance(enhanced_vector_cur_layer, np.ndarray):
+                            print(f"enhanced_vector_cur_layer shape: {enhanced_vector_cur_layer.shape}")
+                        else:
+                            print(f"enhanced_vector_cur_layer content length: {len(enhanced_vector_cur_layer)}")
+
+                    else:
+                        raise ValueError("all_instance_B is None or all_instance_u is None")
+                else:
+                    raise ValueError(
+                        "enhancement_vector_method must be mean_confusion_matrix, confusion_matrix or class_proba")
+
 
             if current_evaluation > best_layer_evaluation:
                 best_layer_id = current_layer.layer_id
@@ -444,6 +547,7 @@ class DualGranularBalancedDeepForest(object):
                     "best_layer: {}, current_layer:{}, save layers: {}".format(best_layer_id, current_layer.layer_id,
                                                                                len(self.layers)))
                 break
+                pass
             depth += 1
 
         if self.if_save_model:
@@ -495,7 +599,7 @@ class DualGranularBalancedDeepForest(object):
                     x_test_cur_layer = np.hstack((x_test, enhanced_vectors[layer_index - 1]))
                 else:
                     enhanced_vector = enhanced_vectors[0]
-                    for i in range(1, layer_index - 1):
+                    for i in range(1, layer_index):
                         enhanced_vector = np.hstack((enhanced_vector, enhanced_vectors[i]))
                     x_test_cur_layer = np.hstack((x_test, enhanced_vector))
 
@@ -515,6 +619,16 @@ class DualGranularBalancedDeepForest(object):
                 if self.enhancement_vector_method == "class_proba_vector":
                     enhanced_vectors.append(x_test_proba)
                     x_test_probas.append(x_test_proba)
+                    print("x_test_proba", x_test_proba)
+                    print("x_test_probas:", x_test_probas)
+
+                    print("x_test_proba.shape:", x_test_proba.shape)
+                    print("x_test_probas.shape:", x_test_probas.shape)
+                elif self.enhancement_vector_method == "trusted_enhancement_vector":
+                    x_test_probas.append(x_test_proba)
+                    B, u = self.calculate_B_u(x_test_probas, len(self.category))
+                    enhanced_vector_cur_layer = np.hstack((B, u, x_test_proba))
+                    enhanced_vectors.append(enhanced_vector_cur_layer)
                 else:
                     raise ValueError(
                         "enhancement_vector_method must be class_proba_vector")
@@ -546,7 +660,7 @@ class DualGranularBalancedDeepForest(object):
                     x_test_cur_layer = np.hstack((x_test, enhanced_vectors[layer_index - 1]))
                 else:
                     enhanced_vector = enhanced_vectors[0]
-                    for i in range(1, layer_index - 1):
+                    for i in range(1, layer_index):
                         enhanced_vector = np.hstack((enhanced_vector, enhanced_vectors[i]))
                     x_test_cur_layer = np.hstack((x_test, enhanced_vector))
 
@@ -600,6 +714,12 @@ class DualGranularBalancedDeepForest(object):
 
                     enhanced_vectors.append(x_test_proba)
                     x_test_probas.append(x_test_proba)
+
+                elif self.enhancement_vector_method == "trusted_enhancement_vector":
+                    x_test_probas.append(x_test_proba)
+                    B, u = self.calculate_B_u(x_test_probas, len(self.category))
+                    enhanced_vector_cur_layer = np.hstack((B, u, x_test_proba))
+                    enhanced_vectors.append(enhanced_vector_cur_layer)
                 else:
                     raise ValueError(
                         "enhancement_vector_method must be mean_confusion_matrix, confusion_matrix or class_proba_vector")

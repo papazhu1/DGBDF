@@ -38,7 +38,7 @@ class KFoldWrapper(object):
 
         return self.estimator_class(**est_args)
 
-    def fit(self, x, y, buckets=None, bucket_variances=None, index_1_sorted=None, uncertainty_1_sorted=None):
+    def fit(self, x, y, buckets=None, bucket_variances=None, index_1_sorted=None, uncertainty_1_sorted=None, loss_A_B_stats=None):
 
         skf = StratifiedKFold(n_splits=self.n_fold, shuffle=True, random_state=self.random_state)
         cv = [(t, v) for (t, v) in skf.split(x, y)]
@@ -53,7 +53,7 @@ class KFoldWrapper(object):
             est = self._init_estimator()
             train_id, val_id = cv[k]
 
-            args.append((train_id, val_id, x, y, est, buckets, bucket_variances, index_1_sorted, uncertainty_1_sorted))
+            args.append((train_id, val_id, x, y, est, buckets, bucket_variances, index_1_sorted, uncertainty_1_sorted, loss_A_B_stats))
 
         pool = Pool(self.n_fold)
         parallel_return = pool.map(train_K_fold_paralleling, args)

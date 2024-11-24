@@ -1,6 +1,8 @@
 import numpy as np
 import csv
 from scipy.stats import norm
+import matplotlib.pyplot as plt
+
 
 def error_to_hardness(x):
     return np.tanh(6 * (x - 0.5)) / 2 + 1
@@ -81,7 +83,7 @@ def train_K_fold_paralleling(args):
     use_bucket = True
     use_resample = True
 
-    train_index, val_index, X, y, est, buckets, bucket_variances, index_1_sorted, uncertainty_1_sorted = args
+    train_index, val_index, X, y, est, buckets, bucket_variances, index_1_sorted, uncertainty_1_sorted, loss_A_B_stats = args
     X_train, X_val = X[train_index], X[val_index]
     y_train, y_val = y[train_index], y[val_index]
     # if buckets is not None:
@@ -200,6 +202,33 @@ def train_K_fold_paralleling(args):
                                                       replace=False)
                 index_0_selected.extend(sampled_cur_bucket)
 
+        # 假设 index_0_selected 是挑选的 0 类样本的索引
+        index_0_all = np.where(y == 0)[0]  # 所有 0 类样本的索引（假设 y_train 是标签）
+        index_0_not_selected = np.setdiff1d(index_0_all, index_0_selected)  # 未被选中的 0 类样本的索引
+
+        # 绘制图形
+        # plt.figure(figsize=(6, 6))
+        #
+        #
+        #
+        # # 画出未挑选的 0 类样本，颜色为白色
+        # plt.scatter(X[index_0_not_selected, 0], X[index_0_not_selected, 1], c='w', alpha=0.6, edgecolor='k',
+        #             label="Not selected 0 samples")
+        #
+        # # 画出挑选的 0 类样本，颜色为蓝色
+        # plt.scatter(X[index_0_selected, 0], X[index_0_selected, 1], c='b', alpha=0.6, edgecolor='k',
+        #             label="Selected 0 samples")
+        #
+        # plt.title(f"Selected vs Not Selected 0 samples")
+        # plt.legend()
+        # plt.show()
+
+        # print("len(index_0_selected): ", len(index_0_selected))
+        # print("len(index_0_not_selected): ", len(index_0_not_selected))
+        # print("len(index_0_all): ", len(index_0_all))
+
+
+
         if use_bucket is False:
 
             all_majority_samples = []
@@ -207,6 +236,13 @@ def train_K_fold_paralleling(args):
                 all_majority_samples.extend(buckets[i])
 
             index_0_selected = np.random.choice(all_majority_samples, int(len(index_1)), replace=False)
+
+
+
+
+
+
+
 
         index_0_selected = np.array(index_0_selected)
 
@@ -219,6 +255,37 @@ def train_K_fold_paralleling(args):
 
     if use_resample is False:
         X_train, y_train = X[train_index], y[train_index]
+
+    # 画出loss，A，B的图像
+    if loss_A_B_stats is not None:
+        index, loss, A, B = loss_A_B_stats["index"], loss_A_B_stats["loss"], loss_A_B_stats["A"], loss_A_B_stats["B"]
+
+        # print(index)
+        # print(type(index[0]))
+        # print("len(X)", len(X))
+        # print("len(index)", len(index))
+        # print("len(X_train", len(X_train))
+        # plt.figure(figsize=(6, 6))
+        # scatter = plt.scatter(X[index, 0], X[index, 1], c=loss, cmap='coolwarm', alpha=0.6, edgecolor='k')
+        # plt.title(f"Classification loss")
+        # plt.colorbar(scatter, orientation='vertical', label='Predicted Class')
+        # plt.show()
+        #
+        # plt.figure(figsize=(6, 6))
+        # scatter = plt.scatter(X[index, 0], X[index, 1], c=A, cmap='coolwarm', alpha=0.6, edgecolor='k')
+        # plt.title(f"Classification A")
+        # plt.colorbar(scatter, orientation='vertical', label='Predicted Class')
+        # plt.show()
+        #
+        # plt.figure(figsize=(6, 6))
+        # scatter = plt.scatter(X[index, 0], X[index, 1], c=B, cmap='coolwarm', alpha=0.6, edgecolor='k')
+        # plt.title(f"Classification B")
+        # plt.colorbar(scatter, orientation='vertical', label='Predicted Class')
+        # plt.show()
+
+
+
+
 
     est.fit(X_train, y_train)
     y_proba = est.predict_proba(X_val)

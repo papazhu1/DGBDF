@@ -34,19 +34,19 @@ def DS_Combine_ensemble_for_instances(E1, E2):
     K = bb_sum - bb_diag
 
     # 计算 b^a
-    b_a = (b1 * b2 + bu + ub) / np.expand_dims((1 - K), axis=1)
+    b_combined = (b1 * b2 + bu + ub) / np.expand_dims((1 - K), axis=1)
 
     # 计算 u^a
-    u_a = (u1 * u2) / np.expand_dims((1 - K), axis=1)
+    u_combined = (u1 * u2) / np.expand_dims((1 - K), axis=1)
 
     # 计算新的 S
-    S_a = n_classes / u_a
+    S_combined = n_classes / u_combined
 
     # 计算新的 e_k
-    e_a = b_a * np.broadcast_to(S_a, b_a.shape)
-    alpha_a = e_a + 1
+    e_combined = b_combined * np.broadcast_to(S_combined, b_combined.shape)
+    alpha_combined = e_combined + 1
 
-    return alpha_a
+    return alpha_combined, b_combined, u_combined
 
 
 
@@ -99,19 +99,19 @@ def DS_Combin_two(alpha1, alpha2, n_classes):
     K = bb_sum - bb_diag
 
     # 计算 b^a
-    b_a = (b[0] * b[1] + bu + ub) / np.expand_dims((1 - K), axis=1)
+    b_combined = (b[0] * b[1] + bu + ub) / np.expand_dims((1 - K), axis=1)
 
     # 计算 u^a
-    u_a = (u[0] * u[1]) / np.expand_dims((1 - K), axis=1)
+    u_combined = (u[0] * u[1]) / np.expand_dims((1 - K), axis=1)
 
     # 计算新的 S
-    S_a = n_classes / u_a
+    S_combined = n_classes / u_combined
 
     # 计算新的 e_k
-    e_a = b_a * np.broadcast_to(S_a, b_a.shape)
-    alpha_a = e_a + 1
+    e_combined = b_combined * np.broadcast_to(S_combined, b_combined.shape)
+    alpha_combined = e_combined + 1
 
-    return alpha_a
+    return alpha_combined, b_combined, u_combined
 
 
 # 需要传入的参数：
@@ -136,6 +136,14 @@ def KL(alpha, c):
     kl = np.sum((alpha - beta) * (dg1 - dg0), axis=1, keepdims=True) + lnB + lnB_uni
     return kl
 
+def calculate_B(alpha, c):
+    return KL(alpha, c)
+
+def calculate_A(alpha, p, c):
+    S = np.sum(alpha, axis=1, keepdims=True)
+    label = np.eye(c)[p]  # 创建独热编码标签
+    A = np.sum(label * (digamma(S) - digamma(alpha)), axis=1, keepdims=True)
+    return A
 
 # 需要传入的参数：
 # p 样本真实标签
@@ -194,20 +202,20 @@ def ce_loss(p, alpha, c, global_step=0, annealing_step=0, average=True):
         A_counts_log = np.log(A_counts + 1e-6)  # 对频数取对数，避免 log(0)
 
         # 绘制 A 的正常频数分布直方图
-        plt.figure(figsize=(8, 5))
-        plt.bar(A_bins[:-1], A_counts, width=(A_bins[1] - A_bins[0]), color="blue", alpha=0.7, edgecolor="black")
-        plt.title("Distribution of Dirichlet Expected Cross-Entropy Frequency")
-        plt.xlabel("A Value")
-        plt.ylabel("Frequency")
-        plt.show()
-
-        # 绘制 A 的对数化频数分布直方图
-        plt.figure(figsize=(8, 5))
-        plt.bar(A_bins[:-1], A_counts_log, width=(A_bins[1] - A_bins[0]), color="blue", alpha=0.7, edgecolor="black")
-        plt.title("Logarithmic Distribution of Dirichlet Expected Cross-Entropy Frequency")
-        plt.xlabel("A Value")
-        plt.ylabel("Log(Frequency)")
-        plt.show()
+        # plt.figure(figsize=(8, 5))
+        # plt.bar(A_bins[:-1], A_counts, width=(A_bins[1] - A_bins[0]), color="blue", alpha=0.7, edgecolor="black")
+        # plt.title("Distribution of Dirichlet Expected Cross-Entropy Frequency")
+        # plt.xlabel("A Value")
+        # plt.ylabel("Frequency")
+        # plt.show()
+        #
+        # # 绘制 A 的对数化频数分布直方图
+        # plt.figure(figsize=(8, 5))
+        # plt.bar(A_bins[:-1], A_counts_log, width=(A_bins[1] - A_bins[0]), color="blue", alpha=0.7, edgecolor="black")
+        # plt.title("Logarithmic Distribution of Dirichlet Expected Cross-Entropy Frequency")
+        # plt.xlabel("A Value")
+        # plt.ylabel("Log(Frequency)")
+        # plt.show()
 
         # 计算 B 的分布区间，并对频数取对数
         B_counts, B_bins = np.histogram(B, bins=num_bins)
@@ -217,20 +225,20 @@ def ce_loss(p, alpha, c, global_step=0, annealing_step=0, average=True):
         #     print(f"区间 {B_bins[i]:.2f} - {B_bins[i + 1]:.2f}: {B_counts[i]} 个样本")
 
         # 绘制 B 的正常频数分布直方图
-        plt.figure(figsize=(8, 5))
-        plt.bar(B_bins[:-1], B_counts, width=(B_bins[1] - B_bins[0]), color="orange", alpha=0.7, edgecolor="black")
-        plt.title("Distribution of KL-Divergence Frequency")
-        plt.xlabel("B Value")
-        plt.ylabel("Frequency")
-        plt.show()
-
-        # 绘制 B 的对数化频数分布直方图
-        plt.figure(figsize=(8, 5))
-        plt.bar(B_bins[:-1], B_counts_log, width=(B_bins[1] - B_bins[0]), color="orange", alpha=0.7, edgecolor="black")
-        plt.title("Logarithmic Distribution of KL-Divergence Frequency")
-        plt.xlabel("B Value")
-        plt.ylabel("Log(Frequency)")
-        plt.show()
+        # plt.figure(figsize=(8, 5))
+        # plt.bar(B_bins[:-1], B_counts, width=(B_bins[1] - B_bins[0]), color="orange", alpha=0.7, edgecolor="black")
+        # plt.title("Distribution of KL-Divergence Frequency")
+        # plt.xlabel("B Value")
+        # plt.ylabel("Frequency")
+        # plt.show()
+        #
+        # # 绘制 B 的对数化频数分布直方图
+        # plt.figure(figsize=(8, 5))
+        # plt.bar(B_bins[:-1], B_counts_log, width=(B_bins[1] - B_bins[0]), color="orange", alpha=0.7, edgecolor="black")
+        # plt.title("Logarithmic Distribution of KL-Divergence Frequency")
+        # plt.xlabel("B Value")
+        # plt.ylabel("Log(Frequency)")
+        # plt.show()
 
 
         # 执行线性回归，找出 k 和 b
@@ -240,14 +248,14 @@ def ce_loss(p, alpha, c, global_step=0, annealing_step=0, average=True):
         B_fit = slope * A + intercept
 
         # 绘制散点图和拟合直线
-        plt.figure(figsize=(10, 5))
-        plt.scatter(A, B, label="Data", alpha=0.3, color="blue")
-        plt.plot(A, B_fit, color="red", label=f"Fit: B = {slope:.2f}A + {intercept:.2f}")
-        plt.xlabel("A")
-        plt.ylabel("B")
-        plt.title("Relationship between A and B with Linear Fit")
-        plt.legend()
-        plt.show()
+        # plt.figure(figsize=(10, 5))
+        # plt.scatter(A, B, label="Data", alpha=0.3, color="blue")
+        # plt.plot(A, B_fit, color="red", label=f"Fit: B = {slope:.2f}A + {intercept:.2f}")
+        # plt.xlabel("A")
+        # plt.ylabel("B")
+        # plt.title("Relationship between A and B with Linear Fit")
+        # plt.legend()
+        # plt.show()
 
         # 输出拟合的斜率和截距
         # print(f"线性拟合结果：B = {slope:.2f}A + {intercept:.2f}")

@@ -22,12 +22,12 @@ def get_heart_disease():
     label_encoder = LabelEncoder()
     y = label_encoder.fit_transform(y)
     print(Counter(y))
-    return X, y
+    return X, y, "heart_disease"
 
 def get_iris():
     data = load_iris()
     X, y = data.data, data.target
-    return X, y
+    return X, y, "iris"
 
 # wisconsin diagnostic breast cancer 数据集
 def get_WDBC():
@@ -47,7 +47,7 @@ def get_WDBC():
     label_encoder = LabelEncoder()
     y = label_encoder.fit_transform(y)
     print(Counter(y))
-    return X, y
+    return X, y, "WDBC"
 
 # Wine1 数据集
 def get_wine1():
@@ -69,7 +69,7 @@ def get_wine1():
     X = pd.get_dummies(X)
     X, y = np.array(X), np.array(y)
     print("Wine 类别分布:", Counter(y))
-    return X, y
+    return X, y, "wine1"
 
 # Wine1 数据集
 def get_wine2():
@@ -91,7 +91,7 @@ def get_wine2():
     X = pd.get_dummies(X)
     X, y = np.array(X), np.array(y)
     print("Wine 类别分布:", Counter(y))
-    return X, y
+    return X, y, "wine2"
 
 # ionosphere 数据集
 def get_ionosphere():
@@ -101,7 +101,7 @@ def get_ionosphere():
     X, y = np.array(X), np.array(y)
     label_encoder = LabelEncoder()
     y = label_encoder.fit_transform(y)
-    return X, y
+    return X, y, "ionosphere"
 
 # Ecoli 数据集
 def get_ecoli():
@@ -119,7 +119,7 @@ def get_ecoli():
     X = pd.get_dummies(X)
     X, y = np.array(X), np.array(y)
     print("Ecoli 类别分布:", Counter(y))
-    return X, y
+    return X, y, "ecoli"
 
 
 # Ecoli1 数据集
@@ -134,14 +134,15 @@ def get_ecoli1():
     # 分离特征和标签
     X = data.iloc[:, :-1]
     y = data.iloc[:, -1]
+    print("Ecoli 类别分布:", Counter(y))
 
     # 将标签转换为二分类：im 为少数类，其余为多数类
-    y = y.apply(lambda x: 1 if x == 'im' or 'pp' else 0)  # 1 表示少数类, 0 表示多数类
+    y = y.apply(lambda x: 1 if x == 'im' or x == 'pp' else 0)  # 1 表示少数类, 0 表示多数类
 
     X = pd.get_dummies(X)
     X, y = np.array(X), np.array(y)
     print("Ecoli1 类别分布:", Counter(y))
-    return X, y
+    return X, y, "ecoli1"
 
 # Ecoli2 数据集
 def get_ecoli2():
@@ -157,13 +158,13 @@ def get_ecoli2():
     y = data.iloc[:, -1]
 
     # 将标签转换为二分类：im 为少数类，其余为多数类
-    y = y.apply(lambda x: 1 if x == 'imU' or 'pp' or 'om' else 0)  # 1 表示少数类, 0 表示多数类
+    y = y.apply(lambda x: 1 if x == 'imU' or x == 'pp' or x == 'om' else 0)  # 1 表示少数类, 0 表示多数类
 
     X = pd.get_dummies(X)
     X, y = np.array(X), np.array(y)
-    print("Ecoli1 类别分布:", Counter(y))
-    return X, y
+    print("Ecoli2 类别分布:", Counter(y))
+    return X, y, "ecoli2"
 
 
 if __name__ == "__main__":
-    get_ecoli2()
+    get_ecoli1()
