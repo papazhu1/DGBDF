@@ -13,7 +13,7 @@ from imbens.ensemble import (
     AdaUBoostClassifier,
     AsymBoostClassifier
 )
-from DualGranularBalancedDeepForest import DualGranularBalancedDeepForest
+from UADF import DualGranularBalancedDeepForest
 from demo import get_config
 
 if __name__ == '__main__':

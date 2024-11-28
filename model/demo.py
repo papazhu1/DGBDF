@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score, roc_auc_score, f1_score, average_pre
     precision_score
 from sklearn.model_selection import StratifiedKFold
 
-from DualGranularBalancedDeepForest import DualGranularBalancedDeepForest
+from UADF import DualGranularBalancedDeepForest
 from data_util import *
 from evaluation import f1_macro
 import shap
@@ -23,26 +23,26 @@ model_dict["be"] = "BalancedEnsembleClassifier"
 
 def get_config():
     config = {}
-    config["enhancement_vector_method"] = "trusted_enhancement_vector"
+    config["enhancement_vector_method"] = "class_proba_vector"
     config["random_state"] = np.random.randint(0, 10000)
     config["max_layers"] = 5
 
     config["early_stop_rounds"] = 1
-    config["if_stacking"] = False
+    config["if_stacking"] = True
     config["if_save_model"] = False
     config["train_evaluation"] = f1_macro
     config["estimator_configs"] = []
-    config["n_estimators"] = 20
+    config["n_estimators"] = 100
 
     for i in range(1):
         config["estimator_configs"].append(
             {"n_fold": 5, "type": model_dict["be"], "n_estimators": config["n_estimators"], "n_jobs": -1})
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": 20, "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["be"], "n_estimators": 100, "n_jobs": -1})
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": 20, "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["be"], "n_estimators": 100, "n_jobs": -1})
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": 20, "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["be"], "n_estimators": 100, "n_jobs": -1})
     return config
 
 def shap_analysis_per_layer(model, x, y):
@@ -207,10 +207,10 @@ if __name__ == "__main__":
     # X = np.load("../dataset/dataset/drug_cell_feature.npy", allow_pickle=True)
     # y = np.load("../dataset/dataset/drug_cell_label.npy", allow_pickle=True)
     # X, y, dataset_name = get_wine1()
-    dataset = fetch_datasets()['sick_euthyroid']
+    dataset = fetch_datasets()['yeast_ml8']
     X, y = dataset['data'], dataset['target']
     y = np.where(y == -1, 0, y)
-    dataset_name = 'sick_euthyroid'
+    dataset_name = 'yeast_ml8'
     # X, y = np.load("pred_results/X.npy"), np.load("pred_results/y.npy")
 
     skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
