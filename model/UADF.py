@@ -21,7 +21,7 @@ from func_utils import *
 LOGGER = get_logger("DualGranularBalancedDeepForest")
 
 
-class DualGranularBalancedDeepForest(object):
+class UncertaintyAwareDeepForest(object):
 
     def __init__(self, config):
         self.random_state = config["random_state"]
@@ -29,6 +29,7 @@ class DualGranularBalancedDeepForest(object):
         self.early_stop_rounds = config["early_stop_rounds"]
         self.if_stacking = config["if_stacking"]
         self.if_save_model = config["if_save_model"]
+        self.use_u_KL_method = config["use_u_KL_method"]
 
         self.train_evaluation = config["train_evaluation"]
         self.estimator_configs = config["estimator_configs"]
@@ -481,9 +482,17 @@ class DualGranularBalancedDeepForest(object):
 
                     all_instance_B, all_instance_u = self.calculate_B_u(y_train_probas_per_layer_per_forest, n_label)
                     if all_instance_B is not None and all_instance_u is not None:
+                        if self.use_u_KL_method == "u":
+                            enhanced_vector_cur_layer = np.hstack((all_instance_u, y_train_probas))
+                        elif self.use_u_KL_method == "KL":
+                            enhanced_vector_cur_layer = np.hstack((all_instance_B, y_train_probas))
+                        elif self.use_u_KL_method == "all":
+                            enhanced_vector_cur_layer = np.hstack((all_instance_B, all_instance_u, y_train_probas))
+                        else:
+                            raise ValueError("use_u_KL_method must be u or KL or all")
 
                         # enhanced_vector_cur_layer = np.hstack((all_instance_B, all_instance_u, y_train_probas))
-                        enhanced_vector_cur_layer = np.hstack((all_instance_B, y_train_probas))
+                        # enhanced_vector_cur_layer = np.hstack((all_instance_B, y_train_probas))
                         enhanced_vector_per_layer.append(enhanced_vector_cur_layer)
                         print(f"Final enhanced_vector_cur_layer type: {type(enhanced_vector_cur_layer)}")
                         if isinstance(enhanced_vector_cur_layer, np.ndarray):
@@ -514,8 +523,16 @@ class DualGranularBalancedDeepForest(object):
                     all_instance_B, all_instance_u = self.calculate_B_u(y_train_probas_per_layer_per_forest, n_label)
                     if all_instance_B is not None and all_instance_u is not None:
 
+                        if self.use_u_KL_method == "u":
+                            enhanced_vector_cur_layer = np.hstack((all_instance_u, y_train_probas))
+                        elif self.use_u_KL_method == "KL":
+                            enhanced_vector_cur_layer = np.hstack((all_instance_B, y_train_probas))
+                        elif self.use_u_KL_method == "all":
+                            enhanced_vector_cur_layer = np.hstack((all_instance_B, all_instance_u, y_train_probas))
+                        else:
+                            raise ValueError("use_u_KL_method must be u or KL or all")
                         # enhanced_vector_cur_layer = np.hstack((all_instance_B, all_instance_u, y_train_probas))
-                        enhanced_vector_cur_layer = np.hstack((all_instance_B, y_train_probas))
+                        # enhanced_vector_cur_layer = np.hstack((all_instance_B, y_train_probas))
                         enhanced_vector_per_layer.append(enhanced_vector_cur_layer)
 
                         print(f"Final enhanced_vector_cur_layer type: {type(enhanced_vector_cur_layer)}")
@@ -629,8 +646,18 @@ class DualGranularBalancedDeepForest(object):
                 elif self.enhancement_vector_method == "trusted_enhancement_vector":
                     x_test_probas.append(x_test_proba)
                     B, u = self.calculate_B_u(x_test_probas, len(self.category))
-                    enhanced_vector_cur_layer = np.hstack((B, x_test_proba))
+                    # enhanced_vector_cur_layer = np.hstack((B, x_test_proba))
                     # enhanced_vector_cur_layer = np.hstack((u, x_test_proba))
+
+                    if self.use_u_KL_method == "u":
+                        enhanced_vector_cur_layer = np.hstack((u, x_test_proba))
+                    elif self.use_u_KL_method == "KL":
+                        enhanced_vector_cur_layer = np.hstack((B, x_test_proba))
+                    elif self.use_u_KL_method == "all":
+                        enhanced_vector_cur_layer = np.hstack((B, u, x_test_proba))
+                    else:
+                        raise ValueError("use_u_KL_method must be u or KL or all")
+
                     enhanced_vectors.append(enhanced_vector_cur_layer)
 
                 else:
@@ -722,8 +749,18 @@ class DualGranularBalancedDeepForest(object):
                 elif self.enhancement_vector_method == "trusted_enhancement_vector":
                     x_test_probas.append(x_test_proba)
                     B, u = self.calculate_B_u(x_test_probas, len(self.category))
-                    enhanced_vector_cur_layer = np.hstack((B, x_test_proba))
+                    # enhanced_vector_cur_layer = np.hstack((B, x_test_proba))
                     # enhanced_vector_cur_layer = np.hstack((u, x_test_proba))
+
+                    if self.use_u_KL_method == "u":
+                        enhanced_vector_cur_layer = np.hstack((u, x_test_proba))
+                    elif self.use_u_KL_method == "KL":
+                        enhanced_vector_cur_layer = np.hstack((B, x_test_proba))
+                    elif self.use_u_KL_method == "all":
+                        enhanced_vector_cur_layer = np.hstack((B, u, x_test_proba))
+                    else:
+                        raise ValueError("use_u_KL_method must be u or KL or all")
+
                     enhanced_vectors.append(enhanced_vector_cur_layer)
                 else:
                     raise ValueError(

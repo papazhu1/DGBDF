@@ -1,3 +1,5 @@
+import os
+
 from imbens.datasets import fetch_datasets
 from imbens.metrics import geometric_mean_score, sensitivity_score, specificity_score
 from matplotlib import pyplot as plt
@@ -5,7 +7,7 @@ from sklearn.metrics import accuracy_score, roc_auc_score, f1_score, average_pre
     precision_score
 from sklearn.model_selection import StratifiedKFold
 
-from UADF import DualGranularBalancedDeepForest
+from UADF import UncertaintyAwareDeepForest
 from data_util import *
 from evaluation import f1_macro
 import shap
@@ -20,10 +22,21 @@ model_dict["ee"] = "EasyEnsembleClassifier"
 model_dict["rusb"] = "RUSBoostClassifier"
 model_dict["be"] = "BalancedEnsembleClassifier"
 
+use_u_KL_method_list = ["u", "KL", "all"]
+
+# 加载数据集
+def load_data(dataset_name):
+    dataset = fetch_datasets()[dataset_name]
+    X, y = dataset['data'], dataset['target']
+    y = np.where(y == -1, 0, y)  # 将 -1 类别转换为 0
+    print(f"Original class distribution: {Counter(dataset['target'])}")
+    print(f"Transformed class distribution: {Counter(y)}")
+    return X, y
 
 def get_config():
     config = {}
     config["enhancement_vector_method"] = "class_proba_vector"
+    config["use_u_KL_method"] = use_u_KL_method_list[0]
     config["random_state"] = np.random.randint(0, 10000)
     config["max_layers"] = 5
 
@@ -207,11 +220,15 @@ if __name__ == "__main__":
     # X = np.load("../dataset/dataset/drug_cell_feature.npy", allow_pickle=True)
     # y = np.load("../dataset/dataset/drug_cell_label.npy", allow_pickle=True)
     # X, y, dataset_name = get_wine1()
-    dataset = fetch_datasets()['yeast_ml8']
-    X, y = dataset['data'], dataset['target']
-    y = np.where(y == -1, 0, y)
-    dataset_name = 'yeast_ml8'
+
+    # dataset = fetch_datasets()[dataset_name]
+    # X, y = dataset['data'], dataset['target']
+    # y = np.where(y == -1, 0, y)
+
     # X, y = np.load("pred_results/X.npy"), np.load("pred_results/y.npy")
+
+    dataset_name = 'wine_quality'
+    X, y = load_data(dataset_name)
 
     skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
@@ -228,23 +245,43 @@ if __name__ == "__main__":
     per_layer_res = []
     per_layer_res_weighted_layers = []
 
+    print(dataset_name)
+    print("Counter(y)", Counter(y))
+
+    model = UncertaintyAwareDeepForest(get_config())
+    model_name = "UncertaintyAwareDeepForest"
+
+    save_dir = os.path.join("compared_results", f"{dataset_name}_result")
+    os.makedirs(save_dir, exist_ok=True)
+
+    # 存储所有样本的预测结果
+    all_proba = []
+    all_pred = []
+    all_true_label = []
+
+
     for train_index, test_index in skf.split(X, y):
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
 
         config = get_config()
 
-        DGBDF = DualGranularBalancedDeepForest(config)
-        DGBDF.fit(X_train, y_train)
+        UADF = UncertaintyAwareDeepForest(config)
+        UADF.fit(X_train, y_train)
 
         # shap_analysis_per_layer(DGBDF, X_test, y_test)
 
-        per_layer_res.append(DGBDF.per_layer_res)
-        per_layer_res_weighted_layers.append(DGBDF.per_layer_res_weighted_layers)
-        DGBDF_pred_proba_weighted = DGBDF.predict_proba_weighted_layers(
+        per_layer_res.append(UADF.per_layer_res)
+        per_layer_res_weighted_layers.append(UADF.per_layer_res_weighted_layers)
+        DGBDF_pred_proba_weighted = UADF.predict_proba_weighted_layers(
             X_test)
-        DGBDF_pred_weighted = DGBDF.category[
+        DGBDF_pred_weighted = UADF.category[
             np.argmax(DGBDF_pred_proba_weighted, axis=1)]
+
+        # 保存当前折的预测结果
+        all_proba.extend(DGBDF_pred_proba_weighted)
+        all_pred.extend(DGBDF_pred_weighted)
+        all_true_label.extend(y_test)
 
         print("DGBDF_weighted_layers acc: ", accuracy_score(y_test, DGBDF_pred_weighted))
         print("DGBDF_weighted_layers auc: ",
@@ -274,6 +311,11 @@ if __name__ == "__main__":
         DGBDF_weighted_layers_precision_list.append(precision_score(y_test, DGBDF_pred_weighted, average="macro"))
         DGBDF_weighted_layers_recall_list.append(sensitivity_score(y_test, DGBDF_pred_weighted, average="macro"))
 
+    # 保存预测结果到 .npy 文件
+    np.save(os.path.join(save_dir, f"{dataset_name}_{model_name}_proba.npy"), np.array(all_proba))
+    np.save(os.path.join(save_dir, f"{dataset_name}_{model_name}_pred.npy"), np.array(all_pred))
+    np.save(os.path.join(save_dir, f"{dataset_name}_{model_name}_true_label.npy"), np.array(all_true_label))
+    print(f"Saved predictions for {model_name} to {save_dir}")
 
     print("DGBDF weighted_layers acc mean: ", np.mean(DGBDF_weighted_layers_acc_list))
     print("DGBDF weighted_layers auc mean: ", np.mean(DGBDF_weighted_layers_auc_list))
