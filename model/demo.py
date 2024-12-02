@@ -9,7 +9,7 @@ from sklearn.model_selection import StratifiedKFold
 
 from UADF import UncertaintyAwareDeepForest
 from data_util import *
-from evaluation import f1_macro
+from evaluation import f1_macro, gmean
 import shap
 
 model_dict = {}
@@ -43,19 +43,19 @@ def get_config():
     config["early_stop_rounds"] = 1
     config["if_stacking"] = True
     config["if_save_model"] = False
-    config["train_evaluation"] = f1_macro
+    config["train_evaluation"] = gmean
     config["estimator_configs"] = []
-    config["n_estimators"] = 100
+    config["n_estimators"] = 20
 
     for i in range(1):
         config["estimator_configs"].append(
             {"n_fold": 5, "type": model_dict["be"], "n_estimators": config["n_estimators"], "n_jobs": -1})
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": 100, "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["be"], "n_estimators": config["n_estimators"], "n_jobs": -1})
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": 100, "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["be"], "n_estimators": config["n_estimators"], "n_jobs": -1})
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": 100, "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["be"], "n_estimators": config["n_estimators"], "n_jobs": -1})
     return config
 
 def shap_analysis_per_layer(model, x, y):
@@ -219,7 +219,7 @@ if __name__ == "__main__":
 
     # X = np.load("../dataset/dataset/drug_cell_feature.npy", allow_pickle=True)
     # y = np.load("../dataset/dataset/drug_cell_label.npy", allow_pickle=True)
-    # X, y, dataset_name = get_wine1()
+    X, y, dataset_name = get_glass1()
 
     # dataset = fetch_datasets()[dataset_name]
     # X, y = dataset['data'], dataset['target']
@@ -227,8 +227,8 @@ if __name__ == "__main__":
 
     # X, y = np.load("pred_results/X.npy"), np.load("pred_results/y.npy")
 
-    dataset_name = 'wine_quality'
-    X, y = load_data(dataset_name)
+    # dataset_name = 'abalone_19'
+    # X, y = load_data(dataset_name)
 
     skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
@@ -329,3 +329,5 @@ if __name__ == "__main__":
             np.mean(DGBDF_weighted_layers_precision_list))
     print("DGBDF weighted_layers recall mean: ",
             np.mean(DGBDF_weighted_layers_recall_list))
+
+    print("dataset_name: ", dataset_name)

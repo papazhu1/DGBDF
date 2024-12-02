@@ -1,3 +1,4 @@
+from sympy.physics.quantum.gate import CPHASE
 from ucimlrepo import fetch_ucirepo
 from sklearn.datasets import fetch_openml, load_iris, load_diabetes
 import numpy as np
@@ -105,7 +106,7 @@ def get_ionosphere():
 
 # Ecoli 数据集
 def get_ecoli():
-    dataset = fetch_ucirepo(id=39)  # 假设 Ecoli 数据集的 ID 为 10
+    dataset = fetch_ucirepo(id=39)
     X = dataset.data.features
     y = dataset.data.targets
 
@@ -165,6 +166,111 @@ def get_ecoli2():
     print("Ecoli2 类别分布:", Counter(y))
     return X, y, "ecoli2"
 
+def get_glass1():
+    dataset = fetch_ucirepo(id=42)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 5 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("Glass1 类别分布:", Counter(y))
+    return X, y, "Glass1"
+
+def get_glass2():
+    dataset = fetch_ucirepo(id=42)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("Glass2 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 7 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("Glass2 类别分布:", Counter(y))
+    return X, y, "Glass2"
+
+def get_glass3():
+    dataset = fetch_ucirepo(id=42)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("Glass3 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 1 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("Glass3 类别分布:", Counter(y))
+    return X, y, "Glass3"
+
+def get_glass4():
+    dataset = fetch_ucirepo(id=42)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("Glass4 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 3 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("Glass4 类别分布:", Counter(y))
+    return X, y, "Glass4"
+
+
+def get_glass5():
+    dataset = fetch_ucirepo(id=42)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("Glass5 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 2 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("Glass5 类别分布:", Counter(y))
+    return X, y, "Glass5"
+
 
 if __name__ == "__main__":
-    get_ecoli1()
+    get_glass5()

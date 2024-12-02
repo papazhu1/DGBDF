@@ -14,6 +14,7 @@ from sklearn.model_selection import StratifiedKFold
 from imbens.datasets import fetch_datasets
 from collections import Counter
 import os
+from model.data_util import *
 
 # 加载数据集
 def load_data(dataset_name):
@@ -146,8 +147,9 @@ def save_and_print_results_table(results, dataset_name):
 
 # 主程序
 if __name__ == "__main__":
-    dataset_name = 'wine_quality'
-    X, y = load_data(dataset_name)
+    # dataset_name = 'abalone_19'
+    # X, y = load_data(dataset_name)
+    X, y, dataset_name = get_glass1()
 
     models = [
         SelfPacedEnsembleClassifier(n_jobs=-1),
@@ -166,12 +168,12 @@ if __name__ == "__main__":
 
     # 布尔数组，表示是否运行对应模型
     model_selection = [
-        True,   # SelfPacedEnsembleClassifier
+        False,   # SelfPacedEnsembleClassifier
         True,  # BalanceCascadeClassifier
-        True,   # UnderBaggingClassifier
-        True,   # EasyEnsembleClassifier
+        False,   # UnderBaggingClassifier
+        False,   # EasyEnsembleClassifier
         False,  # RUSBoostClassifier
-        True,   # BalancedRandomForestClassifier
+        False,   # BalancedRandomForestClassifier
         False,  # AdaCostClassifier
         False,   # AdaUBoostClassifier
         False    # AsymBoostClassifier
