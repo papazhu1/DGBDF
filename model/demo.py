@@ -43,7 +43,7 @@ def get_config():
     config["early_stop_rounds"] = 1
     config["if_stacking"] = True
     config["if_save_model"] = False
-    config["train_evaluation"] = gmean
+    config["train_evaluation"] = f1_macro
     config["estimator_configs"] = []
     config["n_estimators"] = 20
 
