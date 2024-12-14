@@ -15,7 +15,7 @@ import shap
 model_dict = {}
 model_dict["rf"] = "RandomForestClassifier"
 model_dict["et"] = "ExtraTreesClassifier"
-model_dict["sp"] = "SelfPacedEnsembleClassifier"
+model_dict["spe"] = "SelfPacedEnsembleClassifier"
 model_dict["bc"] = "BalancedCascadeClassifier"
 model_dict["brf"] = "BalancedRandomForestClassifier"
 model_dict["ee"] = "EasyEnsembleClassifier"
@@ -23,6 +23,7 @@ model_dict["rusb"] = "RUSBoostClassifier"
 model_dict["be"] = "BalancedEnsembleClassifier"
 
 use_u_KL_method_list = ["u", "KL", "all"]
+use_vector_list = ["class_proba_vector", "trusted_enhancement_vector"]
 
 # 加载数据集
 def load_data(dataset_name):
@@ -35,27 +36,27 @@ def load_data(dataset_name):
 
 def get_config():
     config = {}
-    config["enhancement_vector_method"] = "class_proba_vector"
-    config["use_u_KL_method"] = use_u_KL_method_list[0]
+    config["enhancement_vector_method"] = use_vector_list[1]
+    config["use_u_KL_method"] = use_u_KL_method_list[2]
     config["random_state"] = np.random.randint(0, 10000)
     config["max_layers"] = 5
 
     config["early_stop_rounds"] = 1
-    config["if_stacking"] = True
+    config["if_stacking"] = False
     config["if_save_model"] = False
-    config["train_evaluation"] = f1_macro
+    config["train_evaluation"] = gmean
     config["estimator_configs"] = []
-    config["n_estimators"] = 20
+    config["n_estimators"] = 50
 
     for i in range(1):
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": config["n_estimators"], "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["et"], "n_estimators": config["n_estimators"], "n_jobs": -1})
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": config["n_estimators"], "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["et"], "n_estimators": config["n_estimators"], "n_jobs": -1})
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": config["n_estimators"], "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["et"], "n_estimators": config["n_estimators"], "n_jobs": -1})
         config["estimator_configs"].append(
-            {"n_fold": 5, "type": model_dict["be"], "n_estimators": config["n_estimators"], "n_jobs": -1})
+            {"n_fold": 5, "type": model_dict["et"], "n_estimators": config["n_estimators"], "n_jobs": -1})
     return config
 
 def shap_analysis_per_layer(model, x, y):
