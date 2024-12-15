@@ -1,15 +1,12 @@
 import numpy as np
 import pandas as pd
+from catboost import CatBoostClassifier
 from sklearn.metrics import (
     accuracy_score, f1_score, precision_score, recall_score,
     roc_auc_score, average_precision_score, roc_curve, precision_recall_curve
 )
 from imbens.metrics import geometric_mean_score, sensitivity_score, specificity_score
-from imbens.ensemble import (
-    SelfPacedEnsembleClassifier, BalanceCascadeClassifier, UnderBaggingClassifier,
-    EasyEnsembleClassifier, RUSBoostClassifier, BalancedRandomForestClassifier,
-    AdaCostClassifier, AdaUBoostClassifier, AsymBoostClassifier
-)
+from imbens.ensemble import *
 from sklearn.model_selection import StratifiedKFold
 from imbens.datasets import fetch_datasets
 from collections import Counter
@@ -114,7 +111,13 @@ def save_and_print_results_table(results, dataset_name):
         "BalancedRandomForestClassifier",
         "AdaCostClassifier",
         "AdaUBoostClassifier",
-        "AsymBoostClassifier"
+        "AsymBoostClassifier",
+        "CatBoostClassifier",
+        "SMOTEBoostClassifier",
+        "OverBaggingClassifier",
+        "OverBoostClassifier",
+        "SMOTEBaggingClassifier",
+        "KMeansSMOTEBoostClassifier",
     ]
     combined_results["Model"] = pd.Categorical(combined_results["Model"], categories=model_order, ordered=True)
     combined_results = combined_results.sort_values("Model")
@@ -152,31 +155,45 @@ if __name__ == "__main__":
     X, y, dataset_name = get_glass1()
 
     models = [
-        SelfPacedEnsembleClassifier(n_jobs=-1),
-        BalanceCascadeClassifier(n_jobs=-1),
-        UnderBaggingClassifier(n_jobs=-1),
-        EasyEnsembleClassifier(n_jobs=-1),
-        RUSBoostClassifier(),
+        SelfPacedEnsembleClassifier(n_estimators=50, n_jobs=-1),
+        BalanceCascadeClassifier(n_estimators=50, n_jobs=-1),
+        UnderBaggingClassifier(n_estimators=50, n_jobs=-1),
+        EasyEnsembleClassifier(n_estimators=50, n_jobs=-1),
+        RUSBoostClassifier(n_estimators=50),
         BalancedRandomForestClassifier(n_jobs=-1),
-        AdaCostClassifier(),
-        AdaUBoostClassifier(),
-        AsymBoostClassifier()
+        AdaCostClassifier(n_estimators=50),
+        AdaUBoostClassifier(n_estimators=50),
+        AsymBoostClassifier(n_estimators=50),
+        CatBoostClassifier(verbose=0, task_type="GPU", n_estimators=50),
+        SMOTEBoostClassifier(n_estimators=50),
+        OverBaggingClassifier(n_estimators=50, n_jobs=-1),
+        OverBoostClassifier(n_estimators=50),
+        SMOTEBaggingClassifier(n_estimators=50, n_jobs=-1),
+        KmeansSMOTEBoostClassifier(n_estimators=50)
+
     ]
 
     # 是否使用布尔数组选择模型
-    use_model_selection = False  # 如果为 True，则使用布尔数组；否则运行所有模型
+    use_model_selection = True  # 如果为 True，则使用布尔数组；否则运行所有模型
 
     # 布尔数组，表示是否运行对应模型
     model_selection = [
         False,   # SelfPacedEnsembleClassifier
-        True,  # BalanceCascadeClassifier
+        False,  # BalanceCascadeClassifier
         False,   # UnderBaggingClassifier
         False,   # EasyEnsembleClassifier
         False,  # RUSBoostClassifier
         False,   # BalancedRandomForestClassifier
         False,  # AdaCostClassifier
         False,   # AdaUBoostClassifier
-        False    # AsymBoostClassifier
+        False,    # AsymBoostClassifier
+        True,  # CatBoostClassifier
+        True,   # SMOTEBoostClassifier
+        True,   # OverBaggingClassifier
+        True,   # OverBoostClassifier
+        True,   # SMOTEBaggingClassifier
+        True,   # KmeansSMOTEBoostClassifier
+
     ]
 
     # 如果启用了模型选择功能，确保模型列表与布尔数组长度一致
