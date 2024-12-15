@@ -8,3 +8,9 @@
 *.pyc
 
 *.xml
+
+*.tsv
+
+*.json
+
+*.tfevents
