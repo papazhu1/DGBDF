@@ -152,7 +152,7 @@ def save_and_print_results_table(results, dataset_name):
 if __name__ == "__main__":
     # dataset_name = 'abalone_19'
     # X, y = load_data(dataset_name)
-    X, y, dataset_name = get_glass1()
+    X, y, dataset_name = get_glass2()
 
     models = [
         SelfPacedEnsembleClassifier(n_estimators=50, n_jobs=-1),
@@ -174,7 +174,7 @@ if __name__ == "__main__":
     ]
 
     # 是否使用布尔数组选择模型
-    use_model_selection = True  # 如果为 True，则使用布尔数组；否则运行所有模型
+    use_model_selection = False  # 如果为 True，则使用布尔数组；否则运行所有模型
 
     # 布尔数组，表示是否运行对应模型
     model_selection = [
