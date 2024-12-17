@@ -154,7 +154,10 @@ if __name__ == "__main__":
     # dataset_names = ["us_crime", "yeast_ml8", "scene", "libras_move", "thyroid_sick", "coil_2000", "solar_flare_m0",
     #                  "oil", "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "abalone_19"]
 
-    dataset_names = ["isolet", "car_eval_34", "spectrometer", "pen_digits"]
+    # dataset_names = ["isolet", "car_eval_34", "spectrometer", "pen_digits"]
+    dataset_names = ["scene", "libras_move", "thyroid_sick", "coil_2000", "solar_flare_m0", "oil",
+                     "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography",
+                     "protein", "abalone_19"]
 
     for dataset_name in dataset_names:
         X, y = load_data(dataset_name)
