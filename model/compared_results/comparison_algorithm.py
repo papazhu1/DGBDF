@@ -35,6 +35,7 @@ def evaluate_and_save_predictions(model, X, y, dataset_name, model_name, n_split
     for fold_idx, (train_index, test_index) in enumerate(skf.split(X, y)):
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
+
         model.fit(X_train, y_train)
 
         # 获取预测结果
@@ -155,7 +156,7 @@ if __name__ == "__main__":
     #                  "oil", "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "abalone_19"]
 
     # dataset_names = ["isolet", "car_eval_34", "spectrometer", "pen_digits"]
-    dataset_names = ["scene", "libras_move", "thyroid_sick", "coil_2000", "solar_flare_m0", "oil",
+    dataset_names = ["thyroid_sick", "coil_2000", "solar_flare_m0", "oil",
                      "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography",
                      "protein", "abalone_19"]
 
@@ -217,21 +218,38 @@ if __name__ == "__main__":
             if not use_model_selection or model_selection[i]:  # 如果未启用布尔数组或布尔值为 True
                 model_name = model.__class__.__name__
                 print(f"Running model: {model_name}")
-                model_results = evaluate_and_save_predictions(model, X, y, dataset_name, model_name)
-                # 添加模型名称，并按需要的指标顺序整理
-                formatted_results = {
-                    "Model": model_name,  # 模型名称
-                    "acc": model_results["Accuracy"],
-                    "sen": model_results["Sensitivity"],
-                    "spe": model_results["Specificity"],
-                    "f1_macro": model_results["F1"],
-                    "gmean": model_results["G-mean"],
-                    "auc": model_results["AUC"],
-                    "aupr": model_results["AUPR"],
-                    "precision": model_results["Precision"],
-                    "recall": model_results["Recall"],
-                }
-                results.append(formatted_results)
+
+                try:
+                    # 评估模型并捕获异常
+                    model_results = evaluate_and_save_predictions(model, X, y, dataset_name, model_name)
+
+                    # 如果 model_results 为空（由于异常处理返回 None），则跳过
+                    if model_results is None:
+                        print(f"Model {model_name} failed. Skipping...")
+                        continue
+
+                    # 添加模型名称，并按需要的指标顺序整理
+                    formatted_results = {
+                        "Model": model_name,  # 模型名称
+                        "acc": model_results["Accuracy"],
+                        "sen": model_results["Sensitivity"],
+                        "spe": model_results["Specificity"],
+                        "f1_macro": model_results["F1"],
+                        "gmean": model_results["G-mean"],
+                        "auc": model_results["AUC"],
+                        "aupr": model_results["AUPR"],
+                        "precision": model_results["Precision"],
+                        "recall": model_results["Recall"],
+                    }
+                    results.append(formatted_results)
+
+                except Exception as e:
+                    # 捕获异常并打印错误信息
+                    print(f"Error while running model {model_name}: {e}")
+                    import traceback
+
+                    traceback.print_exc()  # 打印详细的错误信息
+                    print(f"Skipping model: {model_name}")
             else:
                 # 如果布尔值为 False，则跳过该模型
                 print(f"Skipping model: {model.__class__.__name__}")
