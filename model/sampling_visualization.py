@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
     # 对每个集成方法进行训练和采样数据的可视化
     # for method_name, model in ensemble_methods.items():
-    for method_name, model in {'DualGranularBalancedDeepForest': UncertaintyAwareDeepForest(get_config())}.items():
+    for method_name, model in {'UncertaintyAwareDeepForest': UncertaintyAwareDeepForest(get_config())}.items():
         print(f"Training {method_name}...")
         model.fit(X_train, y_train)
 

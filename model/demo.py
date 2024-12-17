@@ -228,12 +228,16 @@ if __name__ == "__main__":
 
     # X, y = np.load("pred_results/X.npy"), np.load("pred_results/y.npy")
 
-    dataset_names = ["yeast_ml8", "scene", "libras_move", "thyroid_sick", "coil_2000", "solar_flare_m0", "oil", "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography", "protein", "abalone_19"]
+    # dataset_names = ["yeast_ml8", "scene", "libras_move", "thyroid_sick", "coil_2000", "solar_flare_m0", "oil", "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography", "protein", "abalone_19"]
 
-    for dataset_name in dataset_names:
+    function_list = [get_liver_disorders2, get_liver_disorders3]
+
+
+    # for dataset_name in dataset_names:
     # dataset_name = 'sick_euthyroid'
-        X, y = load_data(dataset_name)
-
+    #     X, y = load_data(dataset_name)
+    for func in function_list:
+        X, y, dataset_name = func()
         skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
         DGBDF_weighted_layers_acc_list = []

@@ -18,7 +18,7 @@ from func_utils import *
 
 
 
-LOGGER = get_logger("DualGranularBalancedDeepForest")
+LOGGER = get_logger("UncertaintyAwareDeepForest")
 
 
 class UncertaintyAwareDeepForest(object):

@@ -156,12 +156,16 @@ if __name__ == "__main__":
     #                  "oil", "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "abalone_19"]
 
     # dataset_names = ["isolet", "car_eval_34", "spectrometer", "pen_digits"]
-    dataset_names = ["thyroid_sick", "coil_2000", "solar_flare_m0", "oil",
-                     "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography",
-                     "protein", "abalone_19"]
+    # dataset_names = ["thyroid_sick", "coil_2000", "solar_flare_m0", "oil",
+    #                  "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography",
+    #                  "protein", "abalone_19"]
 
-    for dataset_name in dataset_names:
-        X, y = load_data(dataset_name)
+    function_list = [get_hepatitis, get_liver_disorders1, get_liver_disorders2, get_liver_disorders3]
+
+    # for dataset_name in dataset_names:
+    #     X, y = load_data(dataset_name)
+    for func in function_list:
+        X, y, dataset_name = func()
         # X, y, dataset_name = get_ecoli2()
 
         models = [
@@ -174,7 +178,7 @@ if __name__ == "__main__":
             AdaCostClassifier(n_estimators=50),
             AdaUBoostClassifier(n_estimators=50),
             AsymBoostClassifier(n_estimators=50),
-            CatBoostClassifier(verbose=0, task_type="GPU", n_estimators=50),
+            CatBoostClassifier(verbose=0, n_estimators=50),
             SMOTEBoostClassifier(n_estimators=50),
             OverBaggingClassifier(n_estimators=50, n_jobs=-1),
             OverBoostClassifier(n_estimators=50),

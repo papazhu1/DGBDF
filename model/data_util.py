@@ -6,6 +6,7 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from collections import Counter
 
+# 非01类型
 def get_heart_disease():
     heart_disease = fetch_ucirepo(id=45)
     X = heart_disease.data.features
@@ -25,12 +26,9 @@ def get_heart_disease():
     print(Counter(y))
     return X, y, "heart_disease"
 
-def get_iris():
-    data = load_iris()
-    X, y = data.data, data.target
-    return X, y, "iris"
 
 # wisconsin diagnostic breast cancer 数据集
+# 01类型
 def get_WDBC():
     heart_disease = fetch_ucirepo(id=17)
     X = heart_disease.data.features
@@ -271,6 +269,322 @@ def get_glass5():
     print("Glass5 类别分布:", Counter(y))
     return X, y, "Glass5"
 
+# 01类型
+def get_haberman():
+    heart_disease = fetch_ucirepo(id=43)
+    X = heart_disease.data.features
+    y = heart_disease.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1]
+    y = data.iloc[:, -1]
+
+    X = pd.get_dummies(X)
+    X, y = np.array(X), np.array(y)
+    label_encoder = LabelEncoder()
+    y = label_encoder.fit_transform(y)
+    print(Counter(y))
+    return X, y, "haberman"
+
+def get_car1():
+    dataset = fetch_ucirepo(id=19)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("car1 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == "acc" else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("car1 处理后类别分布:", Counter(y))
+    return X, y, "car1"
+
+def get_car2():
+    dataset = fetch_ucirepo(id=19)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("car2 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == "good" else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("car2 处理后类别分布:", Counter(y))
+    return X, y, "car2"
+
+
+def get_car3():
+    dataset = fetch_ucirepo(id=19)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("car3 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == "vgood" else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("car3 处理后类别分布:", Counter(y))
+    return X, y, "car3"
+
+# 01类型,但是数据太少了，用不了
+def get_hepatitis():
+    dataset = fetch_ucirepo(id=46)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("hepatitis 处理前类别分布:", Counter(y))
+
+    # X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    # y = np.array([1 if label == "vgood" else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("hepatitis 处理后类别分布:", Counter(y))
+    return X, y, "hepatitis"
+
+def get_poker_hand():
+    dataset = fetch_ucirepo(id=158)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("poker_hand 处理前类别分布:", Counter(y))
+
+    # X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    # y = np.array([1 if label == "vgood" else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("poker_hand 处理后类别分布:", Counter(y))
+    return X, y, "poker_hand"
+
+def get_liver_disorders1():
+    dataset = fetch_ucirepo(id=60)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("liver_disorders1 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 0.5 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("liver_disorders1 处理后类别分布:", Counter(y))
+    return X, y, "liver_disorders1"
+
+def get_liver_disorders2():
+    dataset = fetch_ucirepo(id=60)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("liver_disorders2 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 4.0 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("liver_disorders2 处理后类别分布:", Counter(y))
+    return X, y, "liver_disorders2"
+
+def get_liver_disorders3():
+    dataset = fetch_ucirepo(id=60)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("liver_disorders3 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 6.0 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("liver_disorders3 处理后类别分布:", Counter(y))
+    return X, y, "liver_disorders3"
+
+def get_liver_disorders4():
+    dataset = fetch_ucirepo(id=60)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("liver_disorders4 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 2.0 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("liver_disorders4 处理后类别分布:", Counter(y))
+    return X, y, "liver_disorders4"
+
+
+def get_yeast1():
+    dataset = fetch_ucirepo(id=110)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("yeast1 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 'CYT' else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("yeast1 处理后类别分布:", Counter(y))
+    return X, y, "yeast1"
+
+def get_yeast2():
+    dataset = fetch_ucirepo(id=110)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("yeast2 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 'NUC' else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("yeast2 处理后类别分布:", Counter(y))
+    return X, y, "yeast2"
+
+def get_yeast3():
+    dataset = fetch_ucirepo(id=110)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("yeast3 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 'MIT' else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("yeast3 处理后类别分布:", Counter(y))
+    return X, y, "yeast3"
+
+def get_yeast4():
+    dataset = fetch_ucirepo(id=110)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("yeast4 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 'ME3' else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("yeast4 处理后类别分布:", Counter(y))
+    return X, y, "yeast4"
+
+def get_yeast5():
+    dataset = fetch_ucirepo(id=110)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("yeast5 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 'ME2' else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("yeast5 处理后类别分布:", Counter(y))
+    return X, y, "yeast5"
 
 if __name__ == "__main__":
-    get_glass5()
+    get_yeast1()
