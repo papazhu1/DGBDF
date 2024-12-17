@@ -136,7 +136,7 @@ def KL(alpha, c):
     kl = np.sum((alpha - beta) * (dg1 - dg0), axis=1, keepdims=True) + lnB + lnB_uni
     return kl
 
-def calculate_B(alpha, c):
+def calculate_KL(alpha, c):
     return KL(alpha, c)
 
 def calculate_A(alpha, p, c):

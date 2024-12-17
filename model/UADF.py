@@ -39,9 +39,11 @@ class UncertaintyAwareDeepForest(object):
 
         self.per_layer_res = []
         self.per_layer_res_weighted_layers = []
+        self.mean_KL_per_layer = []
 
-    def calculate_B_u(self, y_probas_per_layer_per_forest, n_label):
-        all_instance_B = np.zeros((len(y_probas_per_layer_per_forest[0]), 1))
+
+    def calculate_KL_u(self, y_probas_per_layer_per_forest, n_label):
+        all_instance_KL = np.zeros((len(y_probas_per_layer_per_forest[0]), 1))
         all_instance_u = np.zeros((len(y_probas_per_layer_per_forest[0]), 1))
 
         for sample_idx in range(len(y_probas_per_layer_per_forest[0])):
@@ -80,12 +82,12 @@ class UncertaintyAwareDeepForest(object):
                 alpha_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(alpha_combined.reshape(1, 2),
                                                                                           expanded_pred_array[k].reshape(1,
                                                                                                                          2))
-            B = calculate_B(alpha_combined, n_label)
+            KL = calculate_KL(alpha_combined, n_label)
 
-            all_instance_B[sample_idx] = B
+            all_instance_KL[sample_idx] = KL
             all_instance_u[sample_idx] = u_combined
 
-        return all_instance_B, all_instance_u
+        return all_instance_KL, all_instance_u
 
     def fit(self, x_train, y_train):
 
@@ -121,7 +123,7 @@ class UncertaintyAwareDeepForest(object):
             LOGGER.info(
                 "-----------------------------------------layer-{}--------------------------------------------".format(
                     current_layer.layer_id))
-            LOGGER.info("The shape of x_train is {}".format(x_train.shape))
+            # LOGGER.info("The shape of x_train is {}".format(x_train.shape))
 
             y_train_probas_avg = np.zeros((x_train.shape[0], n_label))
 
@@ -366,13 +368,13 @@ class UncertaintyAwareDeepForest(object):
 
                 bucket_variances = None
                 loss_A_B_stats = None
-                all_instance_B = None
+                all_instance_KL = None
                 all_instance_u = None
 
                 if depth == 0:
                     buckets = None
                 else:
-                    bucket_variances, loss_A_B_stats, all_instance_B, all_instance_u = error_to_uncertainty(buckets)
+                    bucket_variances, loss_A_B_stats, all_instance_KL, all_instance_u = error_to_uncertainty(buckets)
 
                     if depth == 1:
                         uncertainty_for_class_1, resort_idx_for_class_1 = error_to_uncertainty_for_class_1(
@@ -480,19 +482,19 @@ class UncertaintyAwareDeepForest(object):
                     enhanced_vector_per_layer.append(y_train_probas)
                 elif self.enhancement_vector_method == "trusted_enhancement_vector":
 
-                    all_instance_B, all_instance_u = self.calculate_B_u(y_train_probas_per_layer_per_forest, n_label)
-                    if all_instance_B is not None and all_instance_u is not None:
+                    all_instance_KL, all_instance_u = self.calculate_KL_u(y_train_probas_per_layer_per_forest, n_label)
+                    if all_instance_KL is not None and all_instance_u is not None:
                         if self.use_u_KL_method == "u":
                             enhanced_vector_cur_layer = np.hstack((all_instance_u, y_train_probas))
                         elif self.use_u_KL_method == "KL":
-                            enhanced_vector_cur_layer = np.hstack((all_instance_B, y_train_probas))
+                            enhanced_vector_cur_layer = np.hstack((all_instance_KL, y_train_probas))
                         elif self.use_u_KL_method == "all":
-                            enhanced_vector_cur_layer = np.hstack((all_instance_B, all_instance_u, y_train_probas))
+                            enhanced_vector_cur_layer = np.hstack((all_instance_KL, all_instance_u, y_train_probas))
                         else:
                             raise ValueError("use_u_KL_method must be u or KL or all")
 
-                        # enhanced_vector_cur_layer = np.hstack((all_instance_B, all_instance_u, y_train_probas))
-                        # enhanced_vector_cur_layer = np.hstack((all_instance_B, y_train_probas))
+                        # enhanced_vector_cur_layer = np.hstack((all_instance_KL, all_instance_u, y_train_probas))
+                        # enhanced_vector_cur_layer = np.hstack((all_instance_KL, y_train_probas))
                         enhanced_vector_per_layer.append(enhanced_vector_cur_layer)
                         print(f"Final enhanced_vector_cur_layer type: {type(enhanced_vector_cur_layer)}")
                         if isinstance(enhanced_vector_cur_layer, np.ndarray):
@@ -500,7 +502,7 @@ class UncertaintyAwareDeepForest(object):
                         else:
                             print(f"enhanced_vector_cur_layer content length: {len(enhanced_vector_cur_layer)}")
                     else:
-                        raise ValueError("all_instance_B is None or all_instance_u is None")
+                        raise ValueError("all_instance_KL is None or all_instance_u is None")
                 else:
                     raise ValueError(
                         "enhancement_vector_method must be mean_confusion_matrix, confusion_matrix or class_proba")
@@ -520,29 +522,30 @@ class UncertaintyAwareDeepForest(object):
                     enhanced_vector_per_layer.append(y_train_probas)
                 elif self.enhancement_vector_method == "trusted_enhancement_vector":
 
-                    all_instance_B, all_instance_u = self.calculate_B_u(y_train_probas_per_layer_per_forest, n_label)
-                    if all_instance_B is not None and all_instance_u is not None:
+                    all_instance_KL, all_instance_u = self.calculate_KL_u(y_train_probas_per_layer_per_forest, n_label)
+                    if all_instance_KL is not None and all_instance_u is not None:
 
                         if self.use_u_KL_method == "u":
                             enhanced_vector_cur_layer = np.hstack((all_instance_u, y_train_probas))
                         elif self.use_u_KL_method == "KL":
-                            enhanced_vector_cur_layer = np.hstack((all_instance_B, y_train_probas))
+                            enhanced_vector_cur_layer = np.hstack((all_instance_KL, y_train_probas))
                         elif self.use_u_KL_method == "all":
-                            enhanced_vector_cur_layer = np.hstack((all_instance_B, all_instance_u, y_train_probas))
+                            enhanced_vector_cur_layer = np.hstack((all_instance_KL, all_instance_u, y_train_probas))
                         else:
                             raise ValueError("use_u_KL_method must be u or KL or all")
-                        # enhanced_vector_cur_layer = np.hstack((all_instance_B, all_instance_u, y_train_probas))
-                        # enhanced_vector_cur_layer = np.hstack((all_instance_B, y_train_probas))
+                        # enhanced_vector_cur_layer = np.hstack((all_instance_KL, all_instance_u, y_train_probas))
+                        # enhanced_vector_cur_layer = np.hstack((all_instance_KL, y_train_probas))
                         enhanced_vector_per_layer.append(enhanced_vector_cur_layer)
 
-                        print(f"Final enhanced_vector_cur_layer type: {type(enhanced_vector_cur_layer)}")
+                        # print(f"Final enhanced_vector_cur_layer type: {type(enhanced_vector_cur_layer)}")
                         if isinstance(enhanced_vector_cur_layer, np.ndarray):
-                            print(f"enhanced_vector_cur_layer shape: {enhanced_vector_cur_layer.shape}")
+                            # print(f"enhanced_vector_cur_layer shape: {enhanced_vector_cur_layer.shape}")
+                            pass
                         else:
                             print(f"enhanced_vector_cur_layer content length: {len(enhanced_vector_cur_layer)}")
 
                     else:
-                        raise ValueError("all_instance_B is None or all_instance_u is None")
+                        raise ValueError("all_instance_KL is None or all_instance_u is None")
                 else:
                     raise ValueError(
                         "enhancement_vector_method must be mean_confusion_matrix, confusion_matrix or class_proba")
@@ -554,7 +557,7 @@ class UncertaintyAwareDeepForest(object):
             LOGGER.info(
                 "The evaluation[{}] of layer_{} is {:.4f}".format(evaluate.__name__, depth, current_evaluation))
 
-            print("num_layers_before_append:", len(self.layers))
+            # print("num_layers_before_append:", len(self.layers))
             self.layers.append(current_layer)
             print("num_layers:", len(self.layers))
 
@@ -583,7 +586,7 @@ class UncertaintyAwareDeepForest(object):
         label = self.category[np.argmax(prob, axis=1)]
         return label
 
-    def predict_proba_weighted_layers(self, x, method="ln"):
+    def predict_proba_weighted_layers(self, x, method="sum"):
         n_layers = len(self.layers)
 
         if method == "sum":
@@ -593,6 +596,7 @@ class UncertaintyAwareDeepForest(object):
                 [np.log(performance / (1 - performance)) for performance in
                  self.per_layer_generalized_performance_list])
             weights = weights / np.sum(weights)
+
         else:
             raise ValueError("method must be sum or ln")
 
@@ -645,7 +649,7 @@ class UncertaintyAwareDeepForest(object):
                     # print("x_test_probas.shape:", x_test_probas.shape)
                 elif self.enhancement_vector_method == "trusted_enhancement_vector":
                     x_test_probas.append(x_test_proba)
-                    B, u = self.calculate_B_u(x_test_probas, len(self.category))
+                    B, u = self.calculate_KL_u(x_test_probas, len(self.category))
                     # enhanced_vector_cur_layer = np.hstack((B, x_test_proba))
                     # enhanced_vector_cur_layer = np.hstack((u, x_test_proba))
 
@@ -748,7 +752,7 @@ class UncertaintyAwareDeepForest(object):
 
                 elif self.enhancement_vector_method == "trusted_enhancement_vector":
                     x_test_probas.append(x_test_proba)
-                    B, u = self.calculate_B_u(x_test_probas, len(self.category))
+                    B, u = self.calculate_KL_u(x_test_probas, len(self.category))
                     # enhanced_vector_cur_layer = np.hstack((B, x_test_proba))
                     # enhanced_vector_cur_layer = np.hstack((u, x_test_proba))
 

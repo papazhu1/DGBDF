@@ -62,24 +62,24 @@ class KFoldWrapper(object):
         for k, ret in enumerate(parallel_return):
             est, y_proba, y_pred, val_id = ret
 
-            LOGGER_2.info(
-                "{}, n_fold_{},Accuracy={:.4f}, f1_score={:.4f}, auc={:.4f}, gmean={:.4f}, sen={:.4f}, spe={:.4f}, aupr={:.4f}".format(
-                    self.name, k, accuracy_score(y[val_id], y_pred),
-                    f1_score(y[val_id], y_pred, average="macro"), roc_auc_score(y[val_id], y_proba[:, 1]),
-                    geometric_mean_score(y[val_id], y_pred),
-                    sensitivity_score(y[val_id], y_pred), specificity_score(y[val_id], y_pred),
-                    average_precision_score(y[val_id], y_proba[:, 1])))
+            # LOGGER_2.info(
+            #     "{}, n_fold_{},Accuracy={:.4f}, f1_score={:.4f}, auc={:.4f}, gmean={:.4f}, sen={:.4f}, spe={:.4f}, aupr={:.4f}".format(
+            #         self.name, k, accuracy_score(y[val_id], y_pred),
+            #         f1_score(y[val_id], y_pred, average="macro"), roc_auc_score(y[val_id], y_proba[:, 1]),
+            #         geometric_mean_score(y[val_id], y_pred),
+            #         sensitivity_score(y[val_id], y_pred), specificity_score(y[val_id], y_pred),
+            #         average_precision_score(y[val_id], y_proba[:, 1])))
             y_probas[val_id] += y_proba
             self.estimators[k] = est
 
-        LOGGER_2.info(
-            "{}, {},Accuracy={:.4f}, f1_score={:.4f}, auc={:.4f}, gmean={:.4f}, sen={:.4f}, spe={:.4f}, aupr={:.4f}".format(
-                self.name, "wrapper", accuracy_score(y, np.argmax(y_probas, axis=1)),
-                f1_score(y, np.argmax(y_probas, axis=1), average="macro"), roc_auc_score(y, y_probas[:, 1]),
-                geometric_mean_score(y, np.argmax(y_probas, axis=1)),
-                sensitivity_score(y, np.argmax(y_probas, axis=1)), specificity_score(y, np.argmax(y_probas, axis=1)),
-                average_precision_score(y, y_probas[:, 1])))
-        LOGGER_2.info("----------")
+        # LOGGER_2.info(
+        #     "{}, {},Accuracy={:.4f}, f1_score={:.4f}, auc={:.4f}, gmean={:.4f}, sen={:.4f}, spe={:.4f}, aupr={:.4f}".format(
+        #         self.name, "wrapper", accuracy_score(y, np.argmax(y_probas, axis=1)),
+        #         f1_score(y, np.argmax(y_probas, axis=1), average="macro"), roc_auc_score(y, y_probas[:, 1]),
+        #         geometric_mean_score(y, np.argmax(y_probas, axis=1)),
+        #         sensitivity_score(y, np.argmax(y_probas, axis=1)), specificity_score(y, np.argmax(y_probas, axis=1)),
+        #         average_precision_score(y, y_probas[:, 1])))
+        # LOGGER_2.info("----------")
         return y_probas
 
     def predict_proba(self, x_test):
