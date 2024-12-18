@@ -586,5 +586,239 @@ def get_yeast5():
     print("yeast5 处理后类别分布:", Counter(y))
     return X, y, "yeast5"
 
+def get_waveform1():
+    dataset = fetch_ucirepo(id=107)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("waveform1 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 0 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("waveform1 处理后类别分布:", Counter(y))
+    return X, y, "waveform1"
+
+def get_waveform2():
+    dataset = fetch_ucirepo(id=107)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("waveform2 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 1 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("waveform2 处理后类别分布:", Counter(y))
+    return X, y, "waveform2"
+
+def get_waveform3():
+    dataset = fetch_ucirepo(id=107)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("waveform3 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 2 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("waveform3 处理后类别分布:", Counter(y))
+    return X, y, "waveform3"
+
+def get_page_blocks1():
+    dataset = fetch_ucirepo(id=78)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("page_blocks1 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 2 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("page_blocks1 处理后类别分布:", Counter(y))
+    return X, y, "page_blocks1"
+
+def get_page_blocks2():
+    dataset = fetch_ucirepo(id=78)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("page_blocks2 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 5 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("page_blocks2 处理后类别分布:", Counter(y))
+    return X, y, "page_blocks2"
+
+
+def get_page_blocks3():
+    dataset = fetch_ucirepo(id=78)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("page_blocks3 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 4 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("page_blocks3 处理后类别分布:", Counter(y))
+    return X, y, "page_blocks3"
+
+
+def get_page_blocks4():
+    dataset = fetch_ucirepo(id=78)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("page_blocks4 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 3 else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("page_blocks4 处理后类别分布:", Counter(y))
+    return X, y, "page_blocks4"
+
+def get_statlog_vehicle_silhouettes1():
+    dataset = fetch_ucirepo(id=149)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("statlog_vehicle_silhouettes1 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 'saab' else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("statlog_vehicle_silhouettes1 处理后类别分布:", Counter(y))
+    return X, y, "statlog_vehicle_silhouettes1"
+
+def get_statlog_vehicle_silhouettes2():
+    dataset = fetch_ucirepo(id=149)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("statlog_vehicle_silhouettes2 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 'bus' else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("statlog_vehicle_silhouettes2 处理后类别分布:", Counter(y))
+    return X, y, "statlog_vehicle_silhouettes2"
+
+def get_statlog_vehicle_silhouettes3():
+    dataset = fetch_ucirepo(id=149)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("statlog_vehicle_silhouettes3 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 'opel' else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("statlog_vehicle_silhouettes3 处理后类别分布:", Counter(y))
+    return X, y, "statlog_vehicle_silhouettes3"
+
+def get_statlog_vehicle_silhouettes4():
+    dataset = fetch_ucirepo(id=149)
+    X = dataset.data.features
+    y = dataset.data.targets
+
+    # 删除缺失值
+    data = pd.concat([X, y], axis=1).dropna()
+
+    # 分离特征和标签
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    print("statlog_vehicle_silhouettes4 处理前类别分布:", Counter(y))
+
+    X = pd.get_dummies(pd.DataFrame(X)).values  # 转为 DataFrame 后编码
+    y = np.array([1 if label == 'van' else 0 for label in y])  # 使用列表推导式处理
+
+    X, y = np.array(X), y
+
+    print("statlog_vehicle_silhouettes4 处理后类别分布:", Counter(y))
+    return X, y, "statlog_vehicle_silhouettes4"
+
+
 if __name__ == "__main__":
-    get_yeast1()
+    get_statlog_vehicle_silhouettes1()

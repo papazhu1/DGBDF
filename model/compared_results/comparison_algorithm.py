@@ -160,8 +160,7 @@ if __name__ == "__main__":
     #                  "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography",
     #                  "protein", "abalone_19"]
 
-    function_list = [get_hepatitis, get_liver_disorders1, get_liver_disorders2, get_liver_disorders3]
-
+    function_list = [get_statlog_vehicle_silhouettes1, get_statlog_vehicle_silhouettes2, get_statlog_vehicle_silhouettes3, get_statlog_vehicle_silhouettes4]
     # for dataset_name in dataset_names:
     #     X, y = load_data(dataset_name)
     for func in function_list:
@@ -192,8 +191,8 @@ if __name__ == "__main__":
 
         # 布尔数组，表示是否运行对应模型
         model_selection = [
-            False,   # SelfPacedEnsembleClassifier
-            False,  # BalanceCascadeClassifier
+            True,   # SelfPacedEnsembleClassifier
+            True,  # BalanceCascadeClassifier
             False,   # UnderBaggingClassifier
             False,   # EasyEnsembleClassifier
             False,  # RUSBoostClassifier
@@ -201,12 +200,12 @@ if __name__ == "__main__":
             False,  # AdaCostClassifier
             False,   # AdaUBoostClassifier
             False,    # AsymBoostClassifier
-            True,  # CatBoostClassifier
-            True,   # SMOTEBoostClassifier
-            True,   # OverBaggingClassifier
-            True,   # OverBoostClassifier
-            True,   # SMOTEBaggingClassifier
-            True,   # KmeansSMOTEBoostClassifier
+            False,  # CatBoostClassifier
+            False,   # SMOTEBoostClassifier
+            False,   # OverBaggingClassifier
+            False,   # OverBoostClassifier
+            False,   # SMOTEBaggingClassifier
+            False,   # KmeansSMOTEBoostClassifier
 
         ]
 

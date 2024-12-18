@@ -230,7 +230,7 @@ if __name__ == "__main__":
 
     # dataset_names = ["yeast_ml8", "scene", "libras_move", "thyroid_sick", "coil_2000", "solar_flare_m0", "oil", "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography", "protein", "abalone_19"]
 
-    function_list = [get_yeast1, get_yeast2, get_yeast3, get_yeast4, get_yeast5]
+    function_list = [get_statlog_vehicle_silhouettes1, get_statlog_vehicle_silhouettes2, get_statlog_vehicle_silhouettes3, get_statlog_vehicle_silhouettes4]
 
 
     # for dataset_name in dataset_names:
