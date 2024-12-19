@@ -4,11 +4,14 @@ import pandas as pd
 from sklearn.metrics import f1_score, roc_auc_score, average_precision_score
 
 # 数据集名称列表
+# 24个数据集
 dataset_names = ['ecoli2', 'satimage', 'optical_digits', 'pen_digits', 'spectrometer',
                  'isolet', 'us_crime', 'libras_move', 'thyroid_sick', 'solar_flare_m0',
                  'oil', 'wine_quality', 'letter_img', 'yeast_me2', 'ozone_level', 'WDBC',
-                 'yeast3', 'yeast4', 'yeast5', 'waveform1', 'waveform2', 'waveform3']
+                 'yeast3', 'yeast4', 'yeast5', 'waveform1', 'waveform2', 'waveform3',
+                 'statlog_vehicle_silhouettes2', 'statlog_vehicle_silhouettes4']
 
+#
 # 模型名称列表（指定顺序）
 model_order = [
     "SelfPacedEnsembleClassifier",
