@@ -52,8 +52,8 @@ def plot_barycentric_triangle(ax):
     ax.fill(*zip(*vertices), edgecolor='black', facecolor='white', linewidth=2)
 
     # Annotate vertices
-    ax.text(0, -0.05, r'$\bar{x}$', fontsize=text_size, ha='center', va='top')
-    ax.text(L, -0.05, r'$x$', fontsize=text_size, ha='center', va='top')
+    ax.text(0, -0.05, r'$b$', fontsize=text_size, ha='center', va='top')
+    ax.text(L, -0.05, r'$d$', fontsize=text_size, ha='center', va='top')
     ax.text(L / 2, 1.05, r'$u$', fontsize=text_size, ha='center')
 
     # Define barycentric coordinates
@@ -98,13 +98,11 @@ def plot_barycentric_triangle(ax):
         ax.text(mid_x, mid_y, label, fontsize=text_size, color=color, ha='center', va='center')
 
     # Add label below the triangle
-    ax.text(L / 2, -0.2, "Barycentric Triangle", fontsize=text_size, ha='center')
+    ax.text(L / 2, -0.3, "Barycentric Triangle", fontsize=text_size, ha='center')
 
     # Axis settings
     ax.set_aspect('equal')
     ax.axis('off')
-    ax.set_xlim(-0.1, L + 0.1)  # 固定坐标范围
-    ax.set_ylim(-0.1, 1.1)
 
 
 # Function to plot Dirichlet heatmaps and the Barycentric triangle
@@ -149,12 +147,13 @@ def plot_combined_heatmaps():
         sc = ax.scatter(x, y, c=log_density, cmap='inferno', s=1, edgecolor=None, vmin=vmin, vmax=vmax)
         ax.plot(*zip(*np.vstack([vertices, vertices[0]])), 'k-', linewidth=1.5)
 
-        # Add contour lines
-        levels = np.linspace(vmin, vmax, 10)
-        ax.tricontour(x, y, log_density, levels=levels, colors='k', linewidths=0.5)
+        # Annotate vertices
+        ax.text(0, -0.05, r'$d$', fontsize=text_size, ha='center', va='top')
+        ax.text(2 / np.sqrt(3), -0.05, r'$b$', fontsize=text_size, ha='center', va='top')
+        ax.text(1 / np.sqrt(3), 1.05, r'$u$', fontsize=text_size, ha='center')
 
         # Add alpha label below the triangle
-        ax.text(1 / np.sqrt(3), -0.2, label, fontsize=text_size, ha='center')
+        ax.text(1 / np.sqrt(3), -0.3, label, fontsize=text_size, ha='center')
 
         ax.set_aspect('equal')
         ax.axis('off')
@@ -163,6 +162,12 @@ def plot_combined_heatmaps():
     cbar = fig.colorbar(sc, ax=axes[1:], location='right', shrink=0.8)
     cbar.ax.set_ylabel("Log-scaled Beta Distribution Density", fontsize=text_size)
 
+    # Set consistent axis limits for all subplots
+    for ax in axes:
+        ax.set_xlim(-0.1, 2 / np.sqrt(3) + 0.1)
+        ax.set_ylim(-0.1, 1.1)
+
+    plt.savefig("beta_heatmaps.jpg", dpi=300)
     plt.show()
 
 

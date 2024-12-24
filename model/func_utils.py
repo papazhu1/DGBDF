@@ -12,11 +12,19 @@ def DS_Combine_ensemble_for_instances(E1, E2):
     S1 = np.sum(alpha1, axis=1, keepdims=True)
     S2 = np.sum(alpha2, axis=1, keepdims=True)
 
+    print("S1", S1)
+    print("S2", S2)
     b1 = E1 / S1
     b2 = E2 / S2
 
+    # print("b1", b1)
+    # print("b2", b2)
+
     u1 = n_classes / S1
     u2 = n_classes / S2
+
+    # print("u1", u1)
+    # print("u2", u2)
 
     bb = np.einsum('ij,ik->ijk', b1, b2)
 
@@ -75,6 +83,8 @@ def DS_Combin_two(alpha1, alpha2, n_classes):
         # print("np.expand_dims(S[v], axis=1).shape", np.expand_dims(S[v], axis=1).shape)
         # print("b[v].shape", b[v].shape)
         u[v] = n_classes / S[v]
+
+        print(u[v])
 
     # 计算 b^0 @ b^(0+1)
 

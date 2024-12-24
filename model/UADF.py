@@ -71,6 +71,7 @@ class UncertaintyAwareDeepForest(object):
             pred_array = np.array(pred_list)
             expanded_pred_array = np.vstack((1 - pred_array, pred_array)).T
             expanded_pred_array *= (self.n_estimators + 1)
+            print("expanded_pred_array", expanded_pred_array)
 
             # print("expanded_pred_array[0]:", expanded_pred_array[0].reshape(1, 2))
             # print("expanded_pred_array[0].shape", expanded_pred_array[0].reshape(1,2).shape)

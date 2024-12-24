@@ -162,6 +162,7 @@ def get_ecoli2():
     X = pd.get_dummies(X)
     X, y = np.array(X), np.array(y)
     print("Ecoli2 类别分布:", Counter(y))
+    print("ecoli.shape", X.shape)
     return X, y, "ecoli2"
 
 def get_glass1():
