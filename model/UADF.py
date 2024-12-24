@@ -304,8 +304,22 @@ class UncertaintyAwareDeepForest(object):
                                                 forest_loc * n_label + 1,
                                                 len(y_train_probas_per_layer_per_forest[layer_loc][sample_idx])))
 
+
                                     pred_list.append(y_train_probas_per_layer_per_forest[layer_loc][sample_idx][
                                                          forest_loc * n_label + 1])
+
+                            for layer_loc in range(len(self.layers)): # 每层
+                                cur_layer = self.layers[layer_loc]
+                                for forest_loc in range(len(cur_layer.estimators)): # 每个森林
+                                    forest = cur_layer.estimators[forest_loc]
+                                    forest_total_samples_per_class = np.zeros(forest.n_classes_)
+                                    for tree_idx, tree in enumerate(forest.estimators_): # 每棵树
+                                        tree_structure = tree.tree_
+                                        leaf_index = tree.apply(x_train[sample_idx].reshape(1, -1)).flatten()[tree_idx]
+                                        samples_per_class = tree_structure.value[leaf_index, 0]
+                                        forest_total_samples_per_class += samples_per_class
+
+                                    S = np.sum(forest_total_samples_per_class)
 
                             pred_array = np.array(pred_list)
                             expanded_pred_array = np.vstack((1 - pred_array, pred_array)).T
