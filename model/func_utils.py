@@ -12,8 +12,8 @@ def DS_Combine_ensemble_for_instances(E1, E2):
     S1 = np.sum(alpha1, axis=1, keepdims=True)
     S2 = np.sum(alpha2, axis=1, keepdims=True)
 
-    print("S1", S1)
-    print("S2", S2)
+    # print("S1", S1)
+    # print("S2", S2)
     b1 = E1 / S1
     b2 = E2 / S2
 
@@ -166,109 +166,27 @@ def ce_loss(p, alpha, c, global_step=0, annealing_step=0, average=True):
     S = np.sum(alpha, axis=1, keepdims=True)
     E = alpha - 1
 
-    # print("S:\n", S)
-    # print("E:\n", E)
     # 独热编码
     label = np.eye(c)[p]  # 创建独热编码标签
-    # print("label", label)
+
     # 计算 A 项
     A = np.sum(label * (digamma(S) - digamma(alpha)), axis=1, keepdims=True)
 
-    # 计算退火系数
-    # annealing_coef = min(1, global_step / annealing_step)
-
-    # 先让系数固定
     annealing_coef = 1
 
-    # print("1 - label:\n", 1 - label)
-    # 计算 alp 和 B 项
     alp = E * (1 - label) + 1
-    # print("alp:\n", alp)
 
     # 现在B项是随着alpha的分布越接近均匀分布，KL散度越大
     B = annealing_coef * KL(alp, c)
-
-    # print("A:\n", A)
-    # print("B:\n", B)
-    # print("A.shape:\n", A.shape)
-    # print("B.shape:\n", B.shape)
     # 返回 (A + B) 的均值
     if average is True:
         res = np.mean(A + B)
         return res, A.reshape(-1, 1), B.reshape(-1, 1)
     else:
-        # print("res:\n", A + B)
         res = A + B
 
         # 用一个y = kx + b的图像来画出A和B的变化
         A = A.flatten()
         B = B.flatten()
-
-        # 绘制 A 和 B 的散点图
-        num_bins = 50  # 可以根据需求调整区间数量
-
-        # 计算 A 的分布区间，并对频数取对数
-        A_counts, A_bins = np.histogram(A, bins=num_bins)
-        A_counts_log = np.log(A_counts + 1e-6)  # 对频数取对数，避免 log(0)
-
-        # 绘制 A 的正常频数分布直方图
-        # plt.figure(figsize=(8, 5))
-        # plt.bar(A_bins[:-1], A_counts, width=(A_bins[1] - A_bins[0]), color="blue", alpha=0.7, edgecolor="black")
-        # plt.title("Distribution of Dirichlet Expected Cross-Entropy Frequency")
-        # plt.xlabel("A Value")
-        # plt.ylabel("Frequency")
-        # plt.show()
-        #
-        # # 绘制 A 的对数化频数分布直方图
-        # plt.figure(figsize=(8, 5))
-        # plt.bar(A_bins[:-1], A_counts_log, width=(A_bins[1] - A_bins[0]), color="blue", alpha=0.7, edgecolor="black")
-        # plt.title("Logarithmic Distribution of Dirichlet Expected Cross-Entropy Frequency")
-        # plt.xlabel("A Value")
-        # plt.ylabel("Log(Frequency)")
-        # plt.show()
-
-        # 计算 B 的分布区间，并对频数取对数
-        B_counts, B_bins = np.histogram(B, bins=num_bins)
-        B_counts_log = np.log(B_counts + 1e-6)  # 对频数取对数，避免 log(0)
-        # print("\nB 的区间分布:")
-        # for i in range(len(B_bins) - 1):
-        #     print(f"区间 {B_bins[i]:.2f} - {B_bins[i + 1]:.2f}: {B_counts[i]} 个样本")
-
-        # 绘制 B 的正常频数分布直方图
-        # plt.figure(figsize=(8, 5))
-        # plt.bar(B_bins[:-1], B_counts, width=(B_bins[1] - B_bins[0]), color="orange", alpha=0.7, edgecolor="black")
-        # plt.title("Distribution of KL-Divergence Frequency")
-        # plt.xlabel("B Value")
-        # plt.ylabel("Frequency")
-        # plt.show()
-        #
-        # # 绘制 B 的对数化频数分布直方图
-        # plt.figure(figsize=(8, 5))
-        # plt.bar(B_bins[:-1], B_counts_log, width=(B_bins[1] - B_bins[0]), color="orange", alpha=0.7, edgecolor="black")
-        # plt.title("Logarithmic Distribution of KL-Divergence Frequency")
-        # plt.xlabel("B Value")
-        # plt.ylabel("Log(Frequency)")
-        # plt.show()
-
-
-        # 执行线性回归，找出 k 和 b
-        slope, intercept, r_value, p_value, std_err = linregress(A, B)
-
-        # 生成拟合直线的 y 值
-        B_fit = slope * A + intercept
-
-        # 绘制散点图和拟合直线
-        # plt.figure(figsize=(10, 5))
-        # plt.scatter(A, B, label="Data", alpha=0.3, color="blue")
-        # plt.plot(A, B_fit, color="red", label=f"Fit: B = {slope:.2f}A + {intercept:.2f}")
-        # plt.xlabel("A")
-        # plt.ylabel("B")
-        # plt.title("Relationship between A and B with Linear Fit")
-        # plt.legend()
-        # plt.show()
-
-        # 输出拟合的斜率和截距
-        # print(f"线性拟合结果：B = {slope:.2f}A + {intercept:.2f}")
-        # print(f"相关系数 (R^2): {r_value ** 2:.2f}")
 
         return res, A.reshape(-1, 1), B.reshape(-1, 1)

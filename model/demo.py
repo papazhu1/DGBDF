@@ -230,14 +230,20 @@ if __name__ == "__main__":
 
     # dataset_names = ["yeast_ml8", "scene", "libras_move", "thyroid_sick", "coil_2000", "solar_flare_m0", "oil", "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography", "protein", "abalone_19"]
 
-    function_list = [get_statlog_vehicle_silhouettes1, get_statlog_vehicle_silhouettes2, get_statlog_vehicle_silhouettes3, get_statlog_vehicle_silhouettes4]
+    dataset_names = ['ecoli', 'abalone', 'yeast_ml8', 'scene', 'us_crime', 'car_eval_4', 'abalone_19', 'satimage', 'optical_digits',
+                     'pen_digits', 'spectrometer',
+                     'isolet', 'us_crime', 'libras_move', 'thyroid_sick', 'solar_flare_m0',
+                     'oil', 'wine_quality', 'letter_img', 'yeast_me2', 'ozone_level', 'WDBC']
+
+    # function_list = [get_ecoli2, get_yeast3, get_yeast4, get_yeast5, get_waveform1, get_waveform2, get_waveform3,
+    #                  get_statlog_vehicle_silhouettes2, get_statlog_vehicle_silhouettes4]
 
 
-    # for dataset_name in dataset_names:
+    for dataset_name in dataset_names:
     # dataset_name = 'sick_euthyroid'
-    #     X, y = load_data(dataset_name)
-    for func in function_list:
-        X, y, dataset_name = func()
+        X, y = load_data(dataset_name)
+    # for func in function_list:
+    #     X, y, dataset_name = func()
         skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
         DGBDF_weighted_layers_acc_list = []
@@ -259,7 +265,7 @@ if __name__ == "__main__":
         model = UncertaintyAwareDeepForest(get_config())
         model_name = "UncertaintyAwareDeepForest"
 
-        save_dir = os.path.join("compared_results", f"{dataset_name}_result")
+        save_dir = os.path.join("compared_results_evidence", f"{dataset_name}_result")
         os.makedirs(save_dir, exist_ok=True)
 
         # 存储所有样本的预测结果

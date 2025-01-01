@@ -48,6 +48,7 @@ class KFoldWrapper(object):
         args = []
 
         y_probas = np.zeros((x.shape[0], n_label))
+        y_evidences = np.zeros((x.shape[0], n_label))
 
         for k in range(self.n_fold):
             est = self._init_estimator()
@@ -60,7 +61,7 @@ class KFoldWrapper(object):
         pool.close()
 
         for k, ret in enumerate(parallel_return):
-            est, y_proba, y_pred, val_id = ret
+            est, y_proba, y_pred, val_id, y_evidence = ret
 
             # LOGGER_2.info(
             #     "{}, n_fold_{},Accuracy={:.4f}, f1_score={:.4f}, auc={:.4f}, gmean={:.4f}, sen={:.4f}, spe={:.4f}, aupr={:.4f}".format(
@@ -70,6 +71,9 @@ class KFoldWrapper(object):
             #         sensitivity_score(y[val_id], y_pred), specificity_score(y[val_id], y_pred),
             #         average_precision_score(y[val_id], y_proba[:, 1])))
             y_probas[val_id] += y_proba
+            y_evidences[val_id] += y_evidence
+
+
             self.estimators[k] = est
 
         # LOGGER_2.info(
@@ -80,7 +84,9 @@ class KFoldWrapper(object):
         #         sensitivity_score(y, np.argmax(y_probas, axis=1)), specificity_score(y, np.argmax(y_probas, axis=1)),
         #         average_precision_score(y, y_probas[:, 1])))
         # LOGGER_2.info("----------")
-        return y_probas
+
+        alpha = np.sum(y_evidences) / len(y_evidence)
+        return y_probas, y_evidences, alpha
 
     def predict_proba(self, x_test):
 

@@ -59,6 +59,6 @@ def calculate_stability_ranking(input_file, output_file):
 
 # 执行函数
 if __name__ == "__main__":
-    input_file = "result_add_std_deviation.xlsx"  # 输入文件
-    output_file = "stability_ranking_final.xlsx"  # 输出文件
+    input_file = "result_add_std_deviation_evidence.xlsx"  # 输入文件
+    output_file = "stability_ranking_final_evidence.xlsx"  # 输出文件
     calculate_stability_ranking(input_file, output_file)

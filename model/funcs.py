@@ -3,6 +3,8 @@ import csv
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 
+# from model.test_rf_leaf_getting import leaf_indices
+
 
 def error_to_hardness(x):
     return np.tanh(6 * (x - 0.5)) / 2 + 1
@@ -288,10 +290,30 @@ def train_K_fold_paralleling(args):
 
 
     est.fit(X_train, y_train)
+
+
     y_proba = est.predict_proba(X_val)
+
+    # print(y_proba.shape)
+    # print(type(y_proba))
+
+    y_evidence = np.zeros(y_proba.shape)
+
+    for val_idx, instance in enumerate(X_val):
+        instance = instance.reshape(1, -1)
+        leaf_indices = est.apply(instance).flatten()
+        total_samples_per_class = np.zeros(est.n_classes_)
+        for tree_idx, tree in enumerate(est.estimators_):
+            tree_structure = tree.tree_
+            leaf_index = leaf_indices[tree_idx]
+            samples_per_class = tree_structure.value[leaf_index, 0]
+            total_samples_per_class += samples_per_class
+
+        y_evidence[val_idx] = total_samples_per_class
+
     y_pred = est.predict(X_val)
 
-    return [est, y_proba, y_pred, val_index]
+    return [est, y_proba, y_pred, val_index, y_evidence]
 
 
 def predict_proba_parallel(ars):
