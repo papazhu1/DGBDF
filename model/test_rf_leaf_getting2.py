@@ -1,11 +1,14 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from imbens.ensemble.under_sampling import RUSBoostClassifier, SelfPacedEnsembleClassifier, BalanceCascadeClassifier
+from imbens.ensemble.under_sampling import RUSBoostClassifier, SelfPacedEnsembleClassifier, BalanceCascadeClassifier, \
+    EasyEnsembleClassifier
 from pandas.core.common import random_state
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import make_moons
 import joblib  # 用于保存模型
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.pipeline import Pipeline
 
 
 if __name__ == "__main__":
@@ -38,7 +41,7 @@ if __name__ == "__main__":
     y = np.hstack([y[y == 1], y[y == 0], np.zeros(num_outliers)])
 
     # Train a RandomForest classifier
-    rf = RUSBoostClassifier(n_estimators=20)
+    rf = EasyEnsembleClassifier(n_estimators=20)
     rf.fit(X, y)
 
     # 保存训练好的模型
@@ -54,19 +57,32 @@ if __name__ == "__main__":
         # leaf_indices = rf.apply(sample).flatten()  # Get leaf indices for this sample
         leaf_indices = []  # 存储该样本的叶子索引
 
-        # 遍历 RUSBoostClassifier 的基分类器
-        for tree in rf.estimators_:
-            # 每个基分类器是一个 DecisionTreeClassifier
-            leaf_index = tree.apply(sample)  # 获取该样本在树中的叶子索引
-            leaf_indices.append(leaf_index[0])  # 存储叶子索引
+        # 遍历 EasyEnsembleClassifier 的每个基分类器（AdaBoost 或 Pipeline）
+        for ensemble_idx, adaboost in enumerate(rf.estimators_):
+            # 检查是否是 Pipeline
+            if isinstance(adaboost, Pipeline):
+                # 如果是 Pipeline，提取其中的实际分类器
+                adaboost = adaboost.steps[-1][1]  # 提取 Pipeline 的最后一步
+
+            # 遍历基分类器中的弱分类器（决策树）
+            for tree_idx, tree in enumerate(adaboost.estimators_):
+                if isinstance(tree, DecisionTreeClassifier):  # 确保是决策树
+                    # 获取该样本在树中的叶子索引
+                    leaf_index = tree.apply(sample)
+                    leaf_indices.append(leaf_index[0])  # 存储叶子索引
 
         total_samples_per_class = np.zeros(rf.n_classes_)  # Initialize class evidence counts
 
-        for i, tree in enumerate(rf.estimators_):
-            tree_structure = tree.tree_
-            leaf_index = leaf_indices[i]  # Get the leaf index for this tree
-            samples_per_class = tree_structure.value[leaf_index, 0]  # Class evidence in this leaf
-            total_samples_per_class += samples_per_class  # Accumulate evidence counts
+        for i, adaboost in enumerate(rf.estimators_):
+            if isinstance(adaboost, Pipeline):
+                adaboost = adaboost.steps[-1][1]  # 提取 Pipeline 的最后一步
+
+            for tree_idx, tree in enumerate(adaboost.estimators_):
+                if isinstance(tree, DecisionTreeClassifier):
+                    tree_structure = tree.tree_
+                    leaf_index = leaf_indices[i]  # Get the leaf index for this tree
+                    samples_per_class = tree_structure.value[leaf_index, 0]  # Class evidence in this leaf
+                    total_samples_per_class += samples_per_class  # Accumulate evidence counts
 
         S = np.sum(total_samples_per_class)  # Total evidence for this sample
         total_class_counts.append(total_samples_per_class)
@@ -165,7 +181,7 @@ if __name__ == "__main__":
         x_majority, sorted_overlap_majority, width=1, color="#97a1a5", edgecolor='black', linewidth=2.5,
         label='Overlap', alpha=0.9
     )
-    axes[1].set_ylim(0, max(sorted_blue_part_majority + sorted_orange_part_majority + sorted_overlap_majority) * 1.2)
+    axes[1].set_ylim(0, max(sorted_blue_part_majority + sorted_orange_part_majority + sorted_overlap_majority) * 1.5)
     axes[1].set_xlabel("Majority Class Instances", fontsize=text_size)
     axes[1].set_ylabel("Evidence Sum", fontsize=text_size)
     axes[1].legend(fontsize=text_size, loc='upper right')
@@ -185,7 +201,7 @@ if __name__ == "__main__":
         x_minority, sorted_overlap_minority, width=1, color="#97a1a5", edgecolor='black', linewidth=2.5,
         label='Overlap', alpha=0.9
     )
-    axes[2].set_ylim(0, max(sorted_blue_part_minority + sorted_orange_part_minority + sorted_overlap_minority) * 1.2)
+    axes[2].set_ylim(0, max(sorted_blue_part_minority + sorted_orange_part_minority + sorted_overlap_minority) * 1.5)
     axes[2].set_xlabel("Minority Class Instances", fontsize=text_size)
     axes[2].set_ylabel("Evidence Sum", fontsize=text_size)
     axes[2].legend(fontsize=text_size, loc='upper right')

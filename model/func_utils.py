@@ -140,10 +140,10 @@ def KL(alpha, c):
     dg0 = digamma(S_alpha)
     dg1 = digamma(alpha)
 
-    # 计算 KL 散度
-    # print("(alpha - beta).shape", (alpha - beta).shape)
-    # print("(dg1 - dg0).shape", (dg1 - dg0).shape)
     kl = np.sum((alpha - beta) * (dg1 - dg0), axis=1, keepdims=True) + lnB + lnB_uni
+
+    if kl < 0:
+        raise ValueError('kl < 0')
     return kl
 
 def calculate_KL(alpha, c):

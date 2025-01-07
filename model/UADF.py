@@ -422,6 +422,7 @@ class UncertaintyAwareDeepForest(object):
                                 alpha_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(alpha_combined.reshape(1, 2),
                                                                                     evidence_array[k].reshape(1, 2))
 
+
                             loss, A, B = ce_loss(y_train[sample_idx], alpha_combined, n_classes_)
 
                             loss_A_B_stats["index"].append(sample_idx)

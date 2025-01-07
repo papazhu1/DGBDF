@@ -27,15 +27,15 @@ if __name__ == "__main__":
     X = np.vstack([majority_class_samples, minority_class_samples])
     y = np.hstack([np.zeros(len(majority_class_samples)), np.ones(len(minority_class_samples))])
 
-    minority_center = np.mean(minority_class_samples, axis=0)
+    # minority_center = np.mean(minority_class_samples, axis=0)
 
-    # Generate a few outliers near the minority class center
-    num_outliers = 0
-    outliers = minority_center + np.random.randn(num_outliers, 2) * 0.5  # Add small noise
-
-    # Add the outliers to the majority class
-    X = np.vstack([minority_class_samples, majority_class_samples, outliers])
-    y = np.hstack([y[y == 1], y[y == 0], np.zeros(num_outliers)])
+    # # Generate a few outliers near the minority class center
+    # num_outliers = 0
+    # outliers = minority_center + np.random.randn(num_outliers, 2) * 0.5  # Add small noise
+    #
+    # # Add the outliers to the majority class
+    # X = np.vstack([minority_class_samples, majority_class_samples, outliers])
+    # y = np.hstack([y[y == 1], y[y == 0], np.zeros(num_outliers)])
 
     # Train a RandomForest classifier
     rf = BalanceCascadeClassifier(n_estimators=20)
