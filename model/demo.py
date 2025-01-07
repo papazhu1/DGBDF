@@ -230,10 +230,12 @@ if __name__ == "__main__":
 
     # dataset_names = ["yeast_ml8", "scene", "libras_move", "thyroid_sick", "coil_2000", "solar_flare_m0", "oil", "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography", "protein", "abalone_19"]
 
-    dataset_names = ['ecoli', 'abalone', 'yeast_ml8', 'scene', 'us_crime', 'car_eval_4', 'abalone_19', 'satimage', 'optical_digits',
-                     'pen_digits', 'spectrometer',
-                     'isolet', 'us_crime', 'libras_move', 'thyroid_sick', 'solar_flare_m0',
-                     'oil', 'wine_quality', 'letter_img', 'yeast_me2', 'ozone_level', 'WDBC']
+    dataset_names = [
+                    'isolet', 'libras_move', 'thyroid_sick', 'solar_flare_m0',
+                    'oil', 'wine_quality', 'letter_img', 'yeast_me2', 'ozone_level',
+                    'ecoli', 'abalone', 'yeast_ml8', 'scene', 'us_crime', 'car_eval_4', 'abalone_19',
+                    'satimage', 'optical_digits', 'pen_digits', 'spectrometer'
+    ]
 
     # function_list = [get_ecoli2, get_yeast3, get_yeast4, get_yeast5, get_waveform1, get_waveform2, get_waveform3,
     #                  get_statlog_vehicle_silhouettes2, get_statlog_vehicle_silhouettes4]

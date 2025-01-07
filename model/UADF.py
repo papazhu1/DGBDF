@@ -390,9 +390,9 @@ class UncertaintyAwareDeepForest(object):
                                                 len(y_train_evidence_per_layer_per_forest[layer_loc][sample_idx])))
 
                                     evidence_array[forest_idx, 0] = y_train_evidence_per_layer_per_forest[layer_loc][sample_idx][
-                                                         forest_loc * n_classes_]
+                                                         forest_loc * n_classes_] / 50
                                     evidence_array[forest_idx, 1] = y_train_evidence_per_layer_per_forest[layer_loc][sample_idx][
-                                                            forest_loc * n_classes_ + 1]
+                                                            forest_loc * n_classes_ + 1] / 50
                                     forest_idx += 1
 
                             pred_array = np.array(pred_list)
@@ -416,15 +416,28 @@ class UncertaintyAwareDeepForest(object):
                             #     alpha_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(alpha_combined.reshape(1, 2),
                             #                                                           expanded_pred_array[k].reshape(1, 2))
 
-                            alpha_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(evidence_array[0].reshape(1, 2),
-                                                                                evidence_array[1].reshape(1, 2))
+                            # alpha_combined, b_combined, u_combined = DS_Combine2(evidence_array[0].reshape(1, 2),
+                            #                                                     evidence_array[1].reshape(1, 2))
+                            Opinion = DS_Combine2(evidence_array[0].reshape(1, 2),
+                                                    evidence_array[1].reshape(1, 2))
+
+                            W = 1
+                            beta_distributions = []
+                            for k in range(len(self.estimator_configs)):
+                                alpha_k, beta_k = evidence_array[k][0]+W, evidence_array[k][1]+W
+                                beta_distributions.append([alpha_k, beta_k])
+
                             for k in range(2, len(self.estimator_configs)):
-                                alpha_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(alpha_combined.reshape(1, 2),
-                                                                                    evidence_array[k].reshape(1, 2))
+                                Opinion = DS_Combine_evidence_with_opinion(evidence_array[k].reshape(1, 2),
+                                                                                    Opinion)
 
+                            b_combined, d_combined, u_combined = Opinion
 
-                            loss, A, B = ce_loss(y_train[sample_idx], alpha_combined, n_classes_)
+                            alpha_combined = (b_combined * 2 * W) / u_combined + W
+                            beta_combined = (d_combined * 2 * W) / u_combined + W
 
+                            # loss, A, B = ce_loss(y_train[sample_idx], alpha_combined, n_classes_)
+                            loss, A,B = ce_loss2(y_train[sample_idx], alpha_combined, beta_combined, beta_distributions)
                             loss_A_B_stats["index"].append(sample_idx)
                             loss_A_B_stats["loss"].append(loss)
                             loss_A_B_stats["A"].append(A)

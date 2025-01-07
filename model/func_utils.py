@@ -2,8 +2,75 @@ import numpy as np
 from scipy.special import gammaln, digamma
 from scipy.stats import linregress
 import matplotlib.pyplot as plt
+from sklearn.metrics import consensus_score
+from sympy.abc import alpha
+
+def combine_opinions(opinion_1, opinion_2):
+    b_i, d_i, u_i = opinion_1
+    b_j, d_j, u_j = opinion_2
+    C = b_i * d_j + b_j * d_i
+    b_combined = (b_i * b_j + b_i * u_j + b_j * u_i) / (1 - C)
+    d_combined = (d_i * d_j + d_i * u_j + d_j * u_i) / (1 - C)
+    u_combined = (u_i * u_j) / (1 - C)
+    b_combined = b_combined / (b_combined + d_combined + u_combined)
+    d_combined = d_combined / (b_combined + d_combined + u_combined)
+    u_combined = u_combined / (b_combined + d_combined + u_combined)
+    return b_combined, d_combined, u_combined
+
 
 # 传入的参数已经是对次数的统计值了
+
+def DS_Combine_evidence_with_opinion(E, Opinion):
+    W = 50 / 2
+    beta1, alpha1 = (E + W)[0]
+    S1 = alpha1 + beta1
+
+    b1 = (alpha1 - W) / S1
+    d1 = (beta1 - W) / S1
+    u1 = 2 * W / S1
+
+    o1 = np.array([b1, d1, u1])
+    o2 = Opinion
+    #
+    # elementwise_product = o1 * o2
+    # C = np.sum(elementwise_product)
+    #
+    # consensus_opinion = (1 / C) * elementwise_product + (o1 + o2)
+    # consensus_opinion /= np.sum(consensus_opinion)
+
+    consensus_opinion = combine_opinions(o1, o2)
+    return consensus_opinion
+
+
+def DS_Combine2(E1, E2):
+
+    W = 50 / 2
+    beta1, alpha1 = (E1 + W)[0]
+    beta2, alpha2 = (E2 + W)[0]
+
+    S1 = alpha1 + beta1
+    S2 = alpha2 + beta2
+
+    b1 = (alpha1-W) / S1
+    d1 = (beta1-W) / S1
+    u1 = 2 * W / S1
+
+    b2 = (alpha2-W) / S2
+    d2 = (beta2-W) / S2
+    u2 = 2 * W / S2
+
+    o1 = np.array([b1, d1, u1])
+    o2 = np.array([b2, d2, u2])
+
+    # elementwise_product = o1 * o2
+    # C = np.sum(elementwise_product)
+    #
+    # consensus_opinion = (1 / C) * elementwise_product + (o1 + o2)
+    # consensus_opinion /= np.sum(consensus_opinion)
+
+    consensus_opinion = combine_opinions(o1, o2)
+    return consensus_opinion
+
 def DS_Combine_ensemble_for_instances(E1, E2):
     n_classes = E1.shape[1]
     alpha1 = E1 + 1
@@ -154,6 +221,87 @@ def calculate_A(alpha, p, c):
     label = np.eye(c)[p]  # 创建独热编码标签
     A = np.sum(label * (digamma(S) - digamma(alpha)), axis=1, keepdims=True)
     return A
+
+
+def KL_divergence(alpha1, beta1, alpha2, beta2):
+    """
+    计算 Beta 分布的 KL 散度 D_KL(Beta(alpha1, beta1) || Beta(alpha2, beta2))
+    """
+    term1 = gammaln(alpha2 + beta2) - gammaln(alpha2) - gammaln(beta2)
+    term2 = gammaln(alpha1 + beta1) - gammaln(alpha1) - gammaln(beta1)
+    term3 = (alpha1 - alpha2) * (digamma(alpha1) - digamma(alpha1 + beta1))
+    term4 = (beta1 - beta2) * (digamma(beta1) - digamma(alpha1 + beta1))
+    KL = term1 - term2 + term3 + term4
+    return KL
+
+
+def JS_divergence(alpha_combined, beta_combined, alpha_i, beta_i):
+    """
+    计算 Beta 分布的 JS 散度
+    D_JS = 0.5 * D_KL(P || M) + 0.5 * D_KL(Q || M)
+    """
+    # 平均分布 M 的参数
+    alpha_m = 0.5 * (alpha_combined + alpha_i)
+    beta_m = 0.5 * (beta_combined + beta_i)
+
+    # 计算 KL 散度的两部分
+    KL_P_M = KL_divergence(alpha_combined, beta_combined, alpha_m, beta_m)
+    KL_Q_M = KL_divergence(alpha_i, beta_i, alpha_m, beta_m)
+
+    # 计算 JS 散度
+    JS = 0.5 * KL_P_M + 0.5 * KL_Q_M
+
+    # 打印中间结果
+    print(f"alpha_combined: {alpha_combined}, beta_combined: {beta_combined}")
+    print(f"alpha_i: {alpha_i}, beta_i: {beta_i}")
+    # print(f"alpha_m: {alpha_m}, beta_m: {beta_m}")
+    # print(f"KL(P || M): {KL_P_M}, KL(Q || M): {KL_Q_M}")
+    print(f"JS Divergence: {JS}")
+
+    return JS
+
+
+def wasserstein_distance(alpha1, beta1, alpha2, beta2):
+    """
+    计算 Beta 分布的 Wasserstein 距离
+    """
+    # 计算均值
+    mu1 = alpha1 / (alpha1 + beta1)
+    mu2 = alpha2 / (alpha2 + beta2)
+
+    # 计算标准差
+    sigma1 = np.sqrt((alpha1 * beta1) / ((alpha1 + beta1) ** 2 * (alpha1 + beta1 + 1)))
+    sigma2 = np.sqrt((alpha2 * beta2) / ((alpha2 + beta2) ** 2 * (alpha2 + beta2 + 1)))
+
+    # Wasserstein 距离
+    W = np.sqrt((mu1 - mu2) ** 2 + (sigma1 - sigma2) ** 2)
+
+    return W
+
+def ce_loss2(y, alpha_combined, beta_combined, beta_distributions):
+    """
+    计算 Wasserstein 距离的损失函数
+    """
+    # 将真实目标值 y 转换为一个极端 Beta 分布
+    epsilon = 1e-8  # 用于平滑以避免数值问题
+    alpha_y = y + epsilon
+    beta_y = 1 - y + epsilon
+
+    # print(alpha_y, beta_y, alpha_combined, beta_combined)
+    # 计算 Wasserstein 距离与目标值分布的误差
+    W_A = wasserstein_distance(alpha_y, beta_y, alpha_combined, beta_combined)
+
+    # 计算 Wasserstein 距离与分类器 Beta 分布的误差
+    W_B = 0
+    for k in range(len(beta_distributions)):
+        alpha_k, beta_k = beta_distributions[k]
+        W_B += wasserstein_distance(alpha_combined, beta_combined, alpha_k, beta_k)
+
+    W_B /= len(beta_distributions)
+
+    # print("W_A", W_A, "W_B", W_B)
+    return W_A + W_B, W_A, W_B
+
 
 # 需要传入的参数：
 # p 样本真实标签
