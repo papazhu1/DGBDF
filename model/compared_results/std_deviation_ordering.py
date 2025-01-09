@@ -1,64 +1,100 @@
 import pandas as pd
 import numpy as np
-import re
+from scipy.stats import wilcoxon, friedmanchisquare
+import matplotlib.pyplot as plt
 
-# 提取标准差的函数
-def extract_std(value):
-    try:
-        # 使用正则表达式提取 "±" 后的数字
-        std = re.search(r"±\s*([\d\.]+)", value)
-        return float(std.group(1)) if std else np.nan
-    except:
-        return np.nan
+from model.compared_results.std_deviation_wilcoxon import compute_cd
+from Orange.evaluation import compute_cd
 
-# 计算稳定性排名
-def calculate_stability_ranking(input_file, output_file):
-    # 读取 Excel 文件
-    df = pd.read_excel(input_file)
+def compute_critical_difference(avranks, names, cd, width=10):
+    """
+    Draws Critical Difference (CD) diagram.
+    """
+    k = len(avranks)
+    fig, ax = plt.subplots(figsize=(width, 5))
 
-    # 提取标准差部分
-    df['F1-std'] = df['F1-macro'].apply(extract_std)
-    df['AUC-std'] = df['AUC'].apply(extract_std)
-    df['AUPR-std'] = df['AUPR'].apply(extract_std)
+    # Set the range for ranks
+    low, high = min(avranks) - 0.5, max(avranks) + 0.5
+    ax.set_xlim(low, high)
+    ax.set_ylim(-1, k + 1)
 
-    # 初始化存储排名的列表
-    ranking_results = []
+    # Plot the ranks
+    for i, (rank, name) in enumerate(zip(avranks, names)):
+        ax.scatter(rank, i, color='black', zorder=3)  # Add scatter point
+        ax.text(rank, i, f'{name}', verticalalignment='center', horizontalalignment='right', fontsize=10)
 
-    # 遍历指标
-    for metric_std in ['F1-std', 'AUC-std', 'AUPR-std']:
-        all_ranks = []
+    # Draw the CD bar
+    cd_low, cd_high = low + (high - low) / 2 - cd / 2, low + (high - low) / 2 + cd / 2
+    ax.hlines(-0.5, cd_low, cd_high, color='red', linewidth=2)
+    ax.text((cd_low + cd_high) / 2, -1, f'CD = {cd:.2f}', color='red', horizontalalignment='center', fontsize=12)
 
-        # 按数据集分组
-        for dataset, group in df.groupby('Dataset'):
-            group = group.copy()
-            # 根据标准差排序，标准差越小排名越高
-            group['Rank'] = group[metric_std].rank(ascending=True, method='min')
-            all_ranks.append(group[['Model', 'Rank']])
+    ax.axis('off')  # Hide axes
+    plt.tight_layout()
+    plt.show()
 
-        # 汇总所有排名，计算每个模型的平均排名
-        combined_ranks = pd.concat(all_ranks)
-        avg_ranking = combined_ranks.groupby('Model')['Rank'].mean().reset_index()
-        avg_ranking = avg_ranking.rename(columns={'Rank': f'AvgRank_{metric_std}'})
-        ranking_results.append(avg_ranking)
 
-    # 合并所有指标的平均排名
-    final_ranking = ranking_results[0]
-    for i in range(1, len(ranking_results)):
-        final_ranking = pd.merge(final_ranking, ranking_results[i], on='Model')
+# Wilcoxon-Holm 检验
+def wilcoxon_holm(alpha=0.05, df_perf=None):
+    """
+    Performs Wilcoxon-Holm test with aligned data.
+    """
+    # 对数据进行对齐，只保留出现在所有分类器中的数据集
+    df_perf = df_perf.pivot(index='Dataset', columns='Model', values='AUC')
+    df_perf = df_perf.dropna()  # 删除含有 NaN 的行
+    classifiers = df_perf.columns.tolist()
 
-    # 计算最终排名：对平均排名再次排序
-    final_ranking['Final_AvgRank'] = final_ranking.iloc[:, 1:].mean(axis=1)
-    final_ranking = final_ranking.sort_values(by='Final_AvgRank', ascending=True).reset_index(drop=True)
+    # Friedman 检验
+    friedman_p_value = friedmanchisquare(*[
+        df_perf[c].values for c in classifiers
+    ])[1]
+    if friedman_p_value >= alpha:
+        print('The null hypothesis over all classifiers cannot be rejected.')
+        exit()
 
-    # 添加最终排名列
-    final_ranking['Final_Rank'] = final_ranking.index + 1
+    # Wilcoxon 检验
+    m = len(classifiers)
+    p_values = []
+    for i in range(m - 1):
+        classifier_1 = classifiers[i]
+        perf_1 = df_perf[classifier_1].values
+        for j in range(i + 1, m):
+            classifier_2 = classifiers[j]
+            perf_2 = df_perf[classifier_2].values
+            p_value = wilcoxon(perf_1, perf_2, zero_method='pratt')[1]
+            p_values.append((classifier_1, classifier_2, p_value, False))
 
-    # 保存结果到 Excel 文件
-    final_ranking.to_excel(output_file, index=False, sheet_name="Stability_Ranking")
-    print(f"Stability rankings saved to {output_file}")
+    # Holm 校正
+    k = len(p_values)
+    p_values.sort(key=lambda x: x[2])  # 按 p 值排序
+    for i in range(k):
+        new_alpha = alpha / (k - i)
+        if p_values[i][2] <= new_alpha:
+            p_values[i] = (p_values[i][0], p_values[i][1], p_values[i][2], True)
+        else:
+            break
 
-# 执行函数
+    # 计算平均排名
+    avg_ranks = df_perf.rank(axis=1, ascending=False).mean(axis=0).sort_values()
+    return p_values, avg_ranks
+
+
+# 主程序
 if __name__ == "__main__":
+    # 读取输入数据
     input_file = "result_add_std_deviation_evidence.xlsx"  # 输入文件
-    output_file = "stability_ranking_final_evidence.xlsx"  # 输出文件
-    calculate_stability_ranking(input_file, output_file)
+    df_perf = pd.read_excel(input_file)
+
+    # 解析 AUC 并删除误差部分
+    df_perf['AUC'] = df_perf['AUC'].apply(lambda x: float(str(x).split('±')[0]))
+
+    # Wilcoxon-Holm 检验
+    alpha = 0.05
+    p_values, avg_ranks = wilcoxon_holm(alpha=alpha, df_perf=df_perf)
+
+    # 设置 Critical Difference
+    n_datasets = df_perf['Dataset'].nunique()
+    k = len(avg_ranks)  # 分类器数量
+    cd = 2.241 * np.sqrt((k * (k + 1)) / (6 * n_datasets))  # 使用 Tukey's HSD 方法计算 CD
+
+    # 绘制 CD 图
+    compute_critical_difference(avg_ranks.values, avg_ranks.index, cd)
