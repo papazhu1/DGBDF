@@ -18,7 +18,7 @@ X = np.vstack([majority_class_samples, minority_class_samples])
 y = np.hstack([np.zeros(len(majority_class_samples)), np.ones(len(minority_class_samples))])
 
 # 特殊点的索引
-special_indices = [7, 3, 15, 16]
+special_indices = [3, 16]
 
 # 可视化数据
 plt.figure(figsize=(6, 6), dpi=300)
