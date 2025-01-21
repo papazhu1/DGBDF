@@ -1,15 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import dirichlet
-
-text_size = 20  # 全局字体大小
-
+from matplotlib.patches import RegularPolygon
+text_size = 25  # 全局字体大小
 
 # Function to generate vertices of an equilateral triangle
 def generate_triangle_vertices():
     L = 2 / np.sqrt(3)  # Side length
     return np.array([[0, 0], [L, 0], [L / 2, 1]])  # Vertices (B, A, C)
-
 
 # Function to generate barycentric grid and convert to Cartesian coordinates
 def generate_barycentric_grid(resolution=400):
@@ -28,11 +26,9 @@ def generate_barycentric_grid(resolution=400):
     y = grid_d * 0 + grid_u * 1
     return x, y, np.vstack([grid_b, grid_d, grid_u]).T  # Cartesian and barycentric
 
-
 # Function to compute Dirichlet density
 def compute_dirichlet_density(barycentric_coords, alpha):
     return np.array([dirichlet.pdf(coord, alpha) for coord in barycentric_coords])
-
 
 # Function to project a point to a line segment (find perpendicular foot)
 def project_to_line(p, a, b):
@@ -41,7 +37,6 @@ def project_to_line(p, a, b):
     t = np.dot(ap, ab) / np.dot(ab, ab)
     t = np.clip(t, 0, 1)  # Ensure projection is within the segment
     return a + t * ab
-
 
 # Function to plot Barycentric triangle with perpendicular lines (First Subplot)
 def plot_barycentric_triangle(ax):
@@ -52,9 +47,9 @@ def plot_barycentric_triangle(ax):
     ax.fill(*zip(*vertices), edgecolor='black', facecolor='white', linewidth=2)
 
     # Annotate vertices
-    ax.text(0, -0.05, r'$b$', fontsize=text_size, ha='center', va='top')
-    ax.text(L, -0.05, r'$d$', fontsize=text_size, ha='center', va='top')
-    ax.text(L / 2, 1.05, r'$u$', fontsize=text_size, ha='center')
+    ax.text(0, -0.05, r'$d$', fontsize=text_size, ha='center', va='top')
+    ax.text(L, -0.05, r'$u$', fontsize=text_size, ha='center', va='top')
+    ax.text(L / 2, 1.05, r'$b$', fontsize=text_size, ha='center')
 
     # Define barycentric coordinates
     disbelief = 0.3
@@ -71,9 +66,9 @@ def plot_barycentric_triangle(ax):
 
     # Draw perpendicular lines in two segments to leave space for text labels
     edge_pairs = [
-        (vertices[0], vertices[1], 'blue', r'$b_x$'),
-        (vertices[1], vertices[2], 'green', r'$d_x$'),
-        (vertices[2], vertices[0], 'purple', r'$u_x$')
+        (vertices[0], vertices[1], (118/ 255,181/ 255,197/ 255), r'$b_x$'),
+        (vertices[1], vertices[2], (234/ 255,182/ 255,118/ 255), r'$d_x$'),
+        (vertices[2], vertices[0], (135/ 255,62/ 255,35/ 255), r'$u_x$')
     ]
     for a, b, color, label in edge_pairs:
         foot = project_to_line(barycenter, a, b)
@@ -97,12 +92,26 @@ def plot_barycentric_triangle(ax):
         # Add label at the center of the line
         ax.text(mid_x, mid_y, label, fontsize=text_size, color=color, ha='center', va='center')
 
+    # # Add custom arrow and pattern
+    # ax.annotate('', xy=(1.1, 0.5), xytext=(L / 2, 0.5),  # Arrow start and end points
+    #             arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=8))
+
+    # Draw circles using RegularPolygon
+    circle_x = 2 / np.sqrt(3) + 0.25  # Align with colorbar x-coordinate
+    radius = 0.05
+    circle_centers = [0.5, 0.65, 0.35]
+    circle_colors = ['blue', 'green', 'purple']
+    for center, color in zip(circle_centers, circle_colors):
+        patch = RegularPolygon((circle_x, center), numVertices=50, radius=radius, color=color, zorder=10)
+        ax.add_patch(patch)
+
     # Add label below the triangle
-    ax.text(L / 2, -0.3, "Barycentric Triangle", fontsize=text_size, ha='center')
+    ax.text(L / 2, -0.3, r'$\omega_x=(b_x, d_x, u_x)$', fontsize=text_size, ha='center')
 
     # Axis settings
     ax.set_aspect('equal')
     ax.axis('off')
+
 
 
 # Function to plot Dirichlet heatmaps and the Barycentric triangle
@@ -112,20 +121,16 @@ def plot_combined_heatmaps():
 
     # Define alphas and titles
     alphas = [
-        [4, 2, 2],
-        [10, 1, 1],
-        [1.1, 1.1, 1.1],
-        [0.1, 0.4, 0.5]
+        [4, 2, 2]
     ]
     labels = [
-        r"$\alpha = [4, 2, 2]$",
-        r"$\alpha = [10, 1, 1]$",
-        r"$\alpha = [1.1, 1.1, 1.1]$",
-        r"$\alpha = [10, 10, 10]$"
+        "Beta Distribution"
     ]
 
-    # Create figure with subplots
-    fig, axes = plt.subplots(1, len(alphas) + 1, figsize=(18, 6), constrained_layout=True)
+    # Create figure with subplots in a vertical layout (2 rows, 1 column)
+    fig, axes = plt.subplots(len(alphas) + 1, 1, figsize=(6, 10),  # Adjust size for vertical layout
+                             gridspec_kw={'hspace': 0.1},  # Reduce vertical space
+                             constrained_layout=True)
 
     # First subplot: Barycentric triangle
     plot_barycentric_triangle(axes[0])
@@ -134,7 +139,7 @@ def plot_combined_heatmaps():
     all_densities = []
     for alpha in alphas:
         density = compute_dirichlet_density(barycentric_coords, alpha)
-        log_density = np.log1p(density)  # Log transformation
+        log_density = density  # Log transformation
         all_densities.append(log_density)
 
     vmin = min(np.min(d) for d in all_densities)
@@ -158,18 +163,18 @@ def plot_combined_heatmaps():
         ax.set_aspect('equal')
         ax.axis('off')
 
-    # Add a single shared colorbar for the four Dirichlet heatmaps
-    cbar = fig.colorbar(sc, ax=axes[1:], location='right', shrink=0.8)
-    cbar.ax.set_ylabel("Beta Distribution Density", fontsize=text_size)
+        # Add a colorbar only for the heatmap
+        cbar = fig.colorbar(sc, ax=ax, location='right', shrink=0.8)
+        cbar.ax.set_ylabel("Distribution Density", fontsize=text_size)
+        cbar.ax.tick_params(labelsize=20)
 
     # Set consistent axis limits for all subplots
     for ax in axes:
         ax.set_xlim(-0.1, 2 / np.sqrt(3) + 0.1)
         ax.set_ylim(-0.1, 1.1)
 
-    plt.savefig("beta_heatmaps.jpg", dpi=300)
+    plt.savefig("beta_heatmaps_tight_vertical.jpg", dpi=300)
     plt.show()
-
 
 # Execute the combined function
 plot_combined_heatmaps()

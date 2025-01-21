@@ -30,9 +30,9 @@ def plot_barycentric_triangle():
     ax.fill(*zip(*vertices), edgecolor='black', facecolor='white', linewidth=2)
 
     # Annotate triangle vertices with modern fonts
-    ax.text(0, -0.05, r'$\bar{x}$ vertex (disbelief)', fontsize=12, ha='center', va='top', color='black')
-    ax.text(L, -0.05, r'$x$ vertex (belief)', fontsize=12, ha='center', va='top', color='black')
-    ax.text(L / 2, 1.05, r'$u$ vertex (uncertainty)', fontsize=12, ha='center', color='black')
+    ax.text(0, -0.05, r'disbelief', fontsize=25, ha='center', va='top', color='black')
+    ax.text(L, -0.05, r'belief', fontsize=25, ha='center', va='top', color='black')
+    ax.text(L / 2, 1.05, r'uncertainty', fontsize=25, ha='center', color='black')
 
     # Define barycentric coordinates
     disbelief = 0.3
@@ -45,8 +45,8 @@ def plot_barycentric_triangle():
     barycenter = np.array([bx, by])
 
     # Plot barycentric point with size and style
-    ax.plot(bx, by, 'o', color='red', markersize=8, label=r'$C_x=(b_x, d_x, u_x)$', zorder=5)
-
+    # ax.plot(bx, by, 'o', color='red', markersize=8, label=r'$\omega_x=(b_x, d_x, u_x)$', zorder=5)
+    ax.plot(bx, by, 'o', color='red', markersize=8, zorder=5)
     # Draw perpendicular lines with soft dashed lines
     edge_pairs = [
         (vertices[0], vertices[1], r'$u_x$', 'blue'),
@@ -61,10 +61,10 @@ def plot_barycentric_triangle():
         # Add label to the middle of the line
         mid_x = (barycenter[0] + foot[0]) / 2
         mid_y = (barycenter[1] + foot[1]) / 2
-        ax.text(mid_x, mid_y, label, fontsize=12, color=color, ha='center', va='center', backgroundcolor='white')
+        ax.text(mid_x, mid_y, label, fontsize=25, color=color, ha='center', va='center', backgroundcolor='white')
 
     # Add barycenter label
-    ax.text(bx + 0.02, by + 0.02, r'$C_x$', fontsize=12, color='red')
+    ax.text(bx - 0.05, by + 0.05, r'$\omega_s$', fontsize=25, color='red')
 
     # Add grid for a more polished look
     ax.grid(True, linestyle='--', alpha=0.3)
@@ -74,7 +74,7 @@ def plot_barycentric_triangle():
     ax.set_ylim(-0.1, 1.1)
     ax.axis('equal')
     ax.axis('off')
-    plt.title("Barycentric Triangle", fontsize=15, color='black')
+    # plt.title("Additive Constraint between Binomial Opinion ", fontsize=20, color='black')
     plt.legend()
     plt.show()
 
