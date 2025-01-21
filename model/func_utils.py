@@ -314,6 +314,7 @@ def ce_loss(p, alpha, c, global_step=0, annealing_step=0, average=True):
     S = np.sum(alpha, axis=1, keepdims=True)
     E = alpha - 1
 
+    p = int(p)
     # 独热编码
     label = np.eye(c)[p]  # 创建独热编码标签
 

@@ -1,30 +1,9 @@
 from sympy.physics.quantum.gate import CPHASE
 from ucimlrepo import fetch_ucirepo
-from sklearn.datasets import fetch_openml, load_iris, load_diabetes
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from collections import Counter
-
-# 非01类型
-def get_heart_disease():
-    heart_disease = fetch_ucirepo(id=45)
-    X = heart_disease.data.features
-    y = heart_disease.data.targets
-
-    # 删除缺失值
-    data = pd.concat([X, y], axis=1).dropna()
-
-    # 分离特征和标签
-    X = data.iloc[:, :-1]
-    y = data.iloc[:, -1]
-
-    X = pd.get_dummies(X)
-    X, y = np.array(X), np.array(y)
-    label_encoder = LabelEncoder()
-    y = label_encoder.fit_transform(y)
-    print(Counter(y))
-    return X, y, "heart_disease"
 
 
 # wisconsin diagnostic breast cancer 数据集
@@ -92,33 +71,6 @@ def get_wine2():
     print("Wine 类别分布:", Counter(y))
     return X, y, "wine2"
 
-# ionosphere 数据集
-def get_ionosphere():
-    data = fetch_openml("ionosphere", version=1)
-    X, y = data.data, data.target
-    X = pd.get_dummies(X)
-    X, y = np.array(X), np.array(y)
-    label_encoder = LabelEncoder()
-    y = label_encoder.fit_transform(y)
-    return X, y, "ionosphere"
-
-# Ecoli 数据集
-def get_ecoli():
-    dataset = fetch_ucirepo(id=39)
-    X = dataset.data.features
-    y = dataset.data.targets
-
-    # 删除缺失值
-    data = pd.concat([X, y], axis=1).dropna()
-
-    # 分离特征和标签
-    X = data.iloc[:, :-1]
-    y = data.iloc[:, -1]
-
-    X = pd.get_dummies(X)
-    X, y = np.array(X), np.array(y)
-    print("Ecoli 类别分布:", Counter(y))
-    return X, y, "ecoli"
 
 
 # Ecoli1 数据集
