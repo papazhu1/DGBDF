@@ -278,7 +278,7 @@ def wasserstein_distance(alpha1, beta1, alpha2, beta2):
 
     return W
 
-def ce_loss2(y, alpha_combined, beta_combined, beta_distributions):
+def ce_loss2(y, alpha_combined, beta_combined, beta_distributions, lamb=0.5):
     """
     计算 Wasserstein 距离的损失函数
     """
@@ -300,7 +300,8 @@ def ce_loss2(y, alpha_combined, beta_combined, beta_distributions):
     W_B /= len(beta_distributions)
 
     # print("W_A", W_A, "W_B", W_B)
-    return W_A + W_B, W_A, W_B
+    Weight = lamb * W_A + (1-lamb) * W_B
+    return Weight, W_A, W_B
 
 
 # 需要传入的参数：
@@ -309,7 +310,7 @@ def ce_loss2(y, alpha_combined, beta_combined, beta_distributions):
 # c = n_classes
 # global_step 当前训练步数
 # annealing_step 退火步数
-def ce_loss(p, alpha, c, global_step=0, annealing_step=0, average=True):
+def ce_loss(p, alpha, c, global_step=0, lamb=0.5, average=True):
     # 计算 S 和 E
     S = np.sum(alpha, axis=1, keepdims=True)
     E = alpha - 1
@@ -321,18 +322,16 @@ def ce_loss(p, alpha, c, global_step=0, annealing_step=0, average=True):
     # 计算 A 项
     A = np.sum(label * (digamma(S) - digamma(alpha)), axis=1, keepdims=True)
 
-    annealing_coef = 1
-
     alp = E * (1 - label) + 1
 
     # 现在B项是随着alpha的分布越接近均匀分布，KL散度越大
-    B = annealing_coef * KL(alp, c)
+    B = lamb * KL(alp, c)
     # 返回 (A + B) 的均值
     if average is True:
         res = np.mean(A + B)
         return res, A.reshape(-1, 1), B.reshape(-1, 1)
     else:
-        res = A + B
+        res = lamb * A + (1-lamb) * B
 
         # 用一个y = kx + b的图像来画出A和B的变化
         A = A.flatten()

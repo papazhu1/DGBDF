@@ -35,7 +35,7 @@ def load_data(dataset_name):
     print(f"Transformed class distribution: {Counter(y)}")
     return X, y
 
-def get_config():
+def get_config(lamb = 0.5):
     config = {}
     config["enhancement_vector_method"] = use_vector_list[1]
     config["use_u_KL_method"] = use_u_KL_method_list[2]
@@ -48,6 +48,7 @@ def get_config():
     config["train_evaluation"] = gmean
     config["estimator_configs"] = []
     config["n_estimators"] = 50
+    config["lamb"] = lamb
 
     for i in range(1):
         config["estimator_configs"].append(
@@ -240,9 +241,9 @@ if __name__ == "__main__":
 
     # function_list = [get_ecoli2, get_yeast3, get_yeast4, get_yeast5, get_waveform1, get_waveform2, get_waveform3,
     #                  get_statlog_vehicle_silhouettes2, get_statlog_vehicle_silhouettes4]
-    # function_list = [get_WDBC, get_wine1, get_wine2, get_ecoli1, get_ecoli2, get_glass1]
-    function_list = [name for name, obj in inspect.getmembers(data_util) if
-                 inspect.isfunction(obj) and name.startswith('get')]
+    function_list = ['get_statlog_vehicle_silhouettes1', 'get_statlog_vehicle_silhouettes2', 'get_statlog_vehicle_silhouettes3', 'get_statlog_vehicle_silhouettes4', 'get_waveform1', 'get_waveform2', 'get_waveform3', 'get_wine1', 'get_wine2', 'get_yeast1', 'get_yeast2', 'get_yeast3', 'get_yeast4', 'get_yeast5']
+    # function_list = [name for name, obj in inspect.getmembers(data_util) if
+    #              inspect.isfunction(obj) and name.startswith('get')]
 
     # for dataset_name in dataset_names:
     #     X, y = load_data(dataset_name)

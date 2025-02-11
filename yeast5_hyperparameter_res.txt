@@ -1,0 +1,1494 @@
+D:\Anaconda\envs\machine-learning\python.exe C:\Users\10928\Documents\GitHub\DGBDF\model\test_lambda_hyperparameter.py
+yeast5 处理前类别分布: Counter({'CYT': 463, 'NUC': 429, 'MIT': 244, 'ME3': 163, 'ME2': 51, 'ME1': 44, 'EXC': 35, 'VAC': 30, 'POX': 20, 'ERL': 5})
+yeast5 处理后类别分布: Counter({0: 1433, 1: 51})
+Begin to train.... - 2025-02-11 09:07:32,485 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 09:07:32,485 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 09:07:32,485 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 09:07:32,485 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 09:07:32,485 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.2207 - 2025-02-11 09:08:21,325 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 09:08:21,325 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6162 - 2025-02-11 09:09:08,604 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 09:09:08,604 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7028 - 2025-02-11 09:09:56,032 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 09:09:56,032 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.7190 - 2025-02-11 09:10:43,495 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 09:10:43,495 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_4 is 0.6148 - 2025-02-11 09:11:31,122 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 09:11:31,122 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 09:11:31,122 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0
+F1-macro: 0.7553
+AUC: 0.9615
+AUPR: 0.5695
+Gmean: 0.7022
+----------------------------------------
+Begin to train.... - 2025-02-11 09:15:29,723 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 09:15:29,723 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 09:15:29,724 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 09:15:29,724 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 09:15:29,724 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2207 - 2025-02-11 09:16:17,415 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 09:16:17,415 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6343 - 2025-02-11 09:17:05,175 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 09:17:05,176 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7657 - 2025-02-11 09:17:52,995 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 09:17:52,995 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.8078 - 2025-02-11 09:18:40,791 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 09:18:40,791 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_4 is 0.7186 - 2025-02-11 09:19:28,427 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 09:19:28,427 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 09:19:28,427 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.1
+F1-macro: 0.7413
+AUC: 0.9620
+AUPR: 0.5272
+Gmean: 0.7009
+----------------------------------------
+Begin to train.... - 2025-02-11 09:23:26,772 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 09:23:26,772 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 09:23:26,772 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 09:23:26,772 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 09:23:26,772 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.2205 - 2025-02-11 09:24:14,388 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 09:24:14,388 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.5772 - 2025-02-11 09:25:02,162 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 09:25:02,163 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7024 - 2025-02-11 09:25:50,327 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 09:25:50,328 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7355 - 2025-02-11 09:26:38,341 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 09:26:38,341 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.7378 - 2025-02-11 09:27:26,268 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 09:27:26,268 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 4
+last_layer_index 4
+lambda: 0.2
+F1-macro: 0.7553
+AUC: 0.9666
+AUPR: 0.5339
+Gmean: 0.7022
+----------------------------------------
+Begin to train.... - 2025-02-11 09:32:35,069 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 09:32:35,069 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 09:32:35,069 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 09:32:35,069 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 09:32:35,069 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.2205 - 2025-02-11 09:33:22,866 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 09:33:22,867 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.7043 - 2025-02-11 09:34:10,773 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 09:34:10,773 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7492 - 2025-02-11 09:34:58,752 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 09:34:58,752 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7633 - 2025-02-11 09:35:47,010 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 09:35:47,010 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.7947 - 2025-02-11 09:36:34,999 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 09:36:34,999 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 4
+last_layer_index 4
+lambda: 0.3
+F1-macro: 0.7640
+AUC: 0.9594
+AUPR: 0.5452
+Gmean: 0.7665
+----------------------------------------
+Begin to train.... - 2025-02-11 09:41:42,510 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 09:41:42,510 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 09:41:42,510 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 09:41:42,510 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 09:41:42,510 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.1560 - 2025-02-11 09:42:30,360 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 09:42:30,361 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.5980 - 2025-02-11 09:43:18,050 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 09:43:18,050 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.6688 - 2025-02-11 09:44:06,110 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 09:44:06,110 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.6506 - 2025-02-11 09:44:53,879 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 09:44:53,879 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 09:44:53,879 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.4
+F1-macro: 0.7881
+AUC: 0.9620
+AUPR: 0.6004
+Gmean: 0.7046
+----------------------------------------
+Begin to train.... - 2025-02-11 09:47:43,242 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 09:47:43,242 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 09:47:43,242 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 09:47:43,242 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 09:47:43,243 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.1560 - 2025-02-11 09:48:30,794 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 09:48:30,794 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.5969 - 2025-02-11 09:49:18,601 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 09:49:18,601 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.6688 - 2025-02-11 09:50:06,328 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 09:50:06,329 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.6688 - 2025-02-11 09:50:54,025 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 09:50:54,025 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 09:50:54,025 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.5
+F1-macro: 0.7881
+AUC: 0.9533
+AUPR: 0.6091
+Gmean: 0.7046
+----------------------------------------
+Begin to train.... - 2025-02-11 09:53:43,153 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 09:53:43,153 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 09:53:43,153 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 09:53:43,153 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 09:53:43,153 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.1559 - 2025-02-11 09:54:30,573 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 09:54:30,573 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6877 - 2025-02-11 09:55:18,071 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 09:55:18,071 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7520 - 2025-02-11 09:56:05,984 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 09:56:05,984 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7509 - 2025-02-11 09:56:53,978 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 09:56:53,978 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 09:56:53,978 - UncertaintyAwareDeepForest
+last_layer_index 2
+last_layer_index 2
+lambda: 0.6
+F1-macro: 0.7413
+AUC: 0.9598
+AUPR: 0.5725
+Gmean: 0.7009
+----------------------------------------
+Begin to train.... - 2025-02-11 09:59:44,607 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 09:59:44,607 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 09:59:44,607 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 09:59:44,607 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 09:59:44,607 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2205 - 2025-02-11 10:00:32,626 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 10:00:32,626 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.6354 - 2025-02-11 10:01:20,498 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 10:01:20,498 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7177 - 2025-02-11 10:02:08,569 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 10:02:08,569 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.7037 - 2025-02-11 10:02:56,344 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 10:02:56,344 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 10:02:56,344 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+Begin to train.... - 2025-02-11 10:05:48,195 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 10:05:48,195 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 10:05:48,195 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 10:05:48,195 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 10:05:48,195 - UncertaintyAwareDeepForest
+lambda: 0.7
+F1-macro: 0.7708
+AUC: 0.9622
+AUPR: 0.5774
+Gmean: 0.7034
+----------------------------------------
+The evaluation[gmean] of layer_0 is 0.1560 - 2025-02-11 10:06:35,961 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 10:06:35,962 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.5772 - 2025-02-11 10:07:23,948 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 10:07:23,948 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7005 - 2025-02-11 10:08:11,948 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 10:08:11,948 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.6691 - 2025-02-11 10:08:59,880 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 10:08:59,880 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 10:08:59,880 - UncertaintyAwareDeepForest
+last_layer_index 2
+last_layer_index 2
+lambda: 0.8
+F1-macro: 0.7881
+AUC: 0.9653
+AUPR: 0.5866
+Gmean: 0.7046
+----------------------------------------
+Begin to train.... - 2025-02-11 10:11:50,310 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 10:11:50,310 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 10:11:50,310 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 10:11:50,310 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 10:11:50,310 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.2700 - 2025-02-11 10:12:38,440 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 10:12:38,440 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6165 - 2025-02-11 10:13:26,350 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 10:13:26,350 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.6312 - 2025-02-11 10:14:14,331 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 10:14:14,331 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.7173 - 2025-02-11 10:15:02,317 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 10:15:02,317 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_4 is 0.6685 - 2025-02-11 10:15:50,410 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 10:15:50,410 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 10:15:50,410 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.9
+F1-macro: 0.7413
+AUC: 0.9645
+AUPR: 0.5504
+Gmean: 0.7009
+----------------------------------------
+Begin to train.... - 2025-02-11 10:19:47,217 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 10:19:47,218 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 10:19:47,218 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 10:19:47,218 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 10:19:47,218 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.1559 - 2025-02-11 10:20:34,806 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 10:20:34,806 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.5572 - 2025-02-11 10:21:22,735 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 10:21:22,735 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.6858 - 2025-02-11 10:22:10,537 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 10:22:10,537 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.7186 - 2025-02-11 10:22:58,436 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 10:22:58,436 - UncertaintyAwareDeepForest
+num_layers: 4
+num_layers: 5
+The evaluation[gmean] of layer_4 is 0.6679 - 2025-02-11 10:23:46,292 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 10:23:46,292 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 10:23:46,292 - UncertaintyAwareDeepForest
+last_layer_index 3
+last_layer_index 3
+lambda: 1
+F1-macro: 0.7553
+AUC: 0.9563
+AUPR: 0.5599
+Gmean: 0.7022
+----------------------------------------
+Begin to train.... - 2025-02-11 10:27:44,115 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 10:27:44,115 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 10:27:44,115 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 10:27:44,115 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 10:27:44,115 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2703 - 2025-02-11 10:28:31,618 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 10:28:31,618 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.6556 - 2025-02-11 10:29:19,337 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 10:29:19,337 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.6883 - 2025-02-11 10:30:07,198 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 10:30:07,198 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.6733 - 2025-02-11 10:30:55,226 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 10:30:55,228 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 10:30:55,228 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0
+F1-macro: 0.7285
+AUC: 0.9206
+AUPR: 0.4371
+Gmean: 0.6997
+----------------------------------------
+Begin to train.... - 2025-02-11 10:33:44,817 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 10:33:44,817 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 10:33:44,817 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 10:33:44,817 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 10:33:44,817 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.3121 - 2025-02-11 10:34:32,568 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 10:34:32,568 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6349 - 2025-02-11 10:35:20,460 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 10:35:20,460 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7341 - 2025-02-11 10:36:08,142 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 10:36:08,142 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7499 - 2025-02-11 10:36:55,734 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 10:36:55,734 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.6480 - 2025-02-11 10:37:43,640 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 10:37:43,640 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 10:37:43,640 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.1
+F1-macro: 0.7168
+AUC: 0.9244
+AUPR: 0.4845
+Gmean: 0.6984
+----------------------------------------
+Begin to train.... - 2025-02-11 10:41:43,150 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 10:41:43,151 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 10:41:43,151 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 10:41:43,151 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 10:41:43,151 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.3123 - 2025-02-11 10:42:30,914 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 10:42:30,915 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.7199 - 2025-02-11 10:43:18,939 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 10:43:18,940 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7503 - 2025-02-11 10:44:06,901 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 10:44:06,901 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.7018 - 2025-02-11 10:44:55,006 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 10:44:55,006 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 10:44:55,006 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.2
+F1-macro: 0.7060
+AUC: 0.9125
+AUPR: 0.4186
+Gmean: 0.6972
+----------------------------------------
+Begin to train.... - 2025-02-11 10:47:46,715 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 10:47:46,715 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 10:47:46,715 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 10:47:46,715 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 10:47:46,715 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.3121 - 2025-02-11 10:48:34,770 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 10:48:34,770 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6377 - 2025-02-11 10:49:22,651 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 10:49:22,651 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7523 - 2025-02-11 10:50:10,759 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 10:50:10,759 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7661 - 2025-02-11 10:50:58,822 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 10:50:58,822 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.7028 - 2025-02-11 10:51:46,895 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 10:51:46,895 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 10:51:46,895 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.3
+F1-macro: 0.7060
+AUC: 0.9054
+AUPR: 0.4290
+Gmean: 0.6972
+----------------------------------------
+Begin to train.... - 2025-02-11 10:55:48,527 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 10:55:48,527 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 10:55:48,527 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 10:55:48,527 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 10:55:48,527 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2705 - 2025-02-11 10:56:36,371 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 10:56:36,371 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6895 - 2025-02-11 10:57:24,336 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 10:57:24,336 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7530 - 2025-02-11 10:58:12,372 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 10:58:12,373 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.7190 - 2025-02-11 10:59:00,153 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 10:59:00,153 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 10:59:00,153 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.4
+F1-macro: 0.7285
+AUC: 0.9258
+AUPR: 0.4567
+Gmean: 0.6997
+----------------------------------------
+Begin to train.... - 2025-02-11 11:01:50,752 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 11:01:50,752 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 11:01:50,752 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 11:01:50,752 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 11:01:50,752 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2704 - 2025-02-11 11:02:38,346 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 11:02:38,346 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6577 - 2025-02-11 11:03:26,291 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 11:03:26,291 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7056 - 2025-02-11 11:04:14,053 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 11:04:14,053 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7056 - 2025-02-11 11:05:01,818 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 11:05:01,818 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 11:05:01,818 - UncertaintyAwareDeepForest
+last_layer_index 2
+last_layer_index 2
+lambda: 0.5
+F1-macro: 0.7010
+AUC: 0.9301
+AUPR: 0.4260
+Gmean: 0.6269
+----------------------------------------
+Begin to train.... - 2025-02-11 11:07:53,144 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 11:07:53,145 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 11:07:53,145 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 11:07:53,145 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 11:07:53,145 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.3122 - 2025-02-11 11:08:40,891 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 11:08:40,891 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6181 - 2025-02-11 11:09:28,850 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 11:09:28,851 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.7216 - 2025-02-11 11:10:16,622 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 11:10:16,622 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7222 - 2025-02-11 11:11:04,483 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 11:11:04,483 - UncertaintyAwareDeepForest
+num_layers: 5
+The evaluation[gmean] of layer_4 is 0.6542 - 2025-02-11 11:11:52,253 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 11:11:52,253 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 11:11:52,253 - UncertaintyAwareDeepForest
+last_layer_index 3
+last_layer_index 3
+lambda: 0.6
+F1-macro: 0.7168
+AUC: 0.9230
+AUPR: 0.4378
+Gmean: 0.6984
+----------------------------------------
+Begin to train.... - 2025-02-11 11:15:50,592 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 11:15:50,592 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 11:15:50,592 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 11:15:50,592 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 11:15:50,592 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2705 - 2025-02-11 11:16:37,884 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 11:16:37,884 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.5790 - 2025-02-11 11:17:25,797 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 11:17:25,797 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.6703 - 2025-02-11 11:18:13,731 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 11:18:13,731 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7212 - 2025-02-11 11:19:01,507 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 11:19:01,507 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.7209 - 2025-02-11 11:19:49,194 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 11:19:49,194 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 11:19:49,194 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.7
+F1-macro: 0.7010
+AUC: 0.9179
+AUPR: 0.4183
+Gmean: 0.6269
+----------------------------------------
+Begin to train.... - 2025-02-11 11:23:47,861 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 11:23:47,861 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 11:23:47,861 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 11:23:47,861 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 11:23:47,861 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.3121 - 2025-02-11 11:24:35,391 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 11:24:35,391 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6178 - 2025-02-11 11:25:23,297 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 11:25:23,298 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7381 - 2025-02-11 11:26:10,872 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 11:26:10,872 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.7059 - 2025-02-11 11:26:58,618 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 11:26:58,618 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 11:26:58,618 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.8
+F1-macro: 0.7010
+AUC: 0.9157
+AUPR: 0.4329
+Gmean: 0.6269
+----------------------------------------
+Begin to train.... - 2025-02-11 11:29:47,799 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 11:29:47,799 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 11:29:47,799 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 11:29:47,799 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 11:29:47,799 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.2208 - 2025-02-11 11:30:35,919 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 11:30:35,919 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.5993 - 2025-02-11 11:31:24,245 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 11:31:24,245 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.6530 - 2025-02-11 11:32:12,213 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 11:32:12,214 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.6533 - 2025-02-11 11:33:00,580 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 11:33:00,581 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.5756 - 2025-02-11 11:33:48,650 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 11:33:48,650 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 11:33:48,650 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.9
+F1-macro: 0.7010
+AUC: 0.9115
+AUPR: 0.4145
+Gmean: 0.6269
+----------------------------------------
+Begin to train.... - 2025-02-11 11:37:48,859 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 11:37:48,859 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 11:37:48,860 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 11:37:48,860 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 11:37:48,860 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2209 - 2025-02-11 11:38:37,115 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 11:38:37,115 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.6733 - 2025-02-11 11:39:25,442 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 11:39:25,442 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.6880 - 2025-02-11 11:40:13,560 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 11:40:13,560 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.7358 - 2025-02-11 11:41:01,709 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 11:41:01,709 - UncertaintyAwareDeepForest
+num_layers: 4
+num_layers: 5
+The evaluation[gmean] of layer_4 is 0.7506 - 2025-02-11 11:41:50,035 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 11:41:50,035 - UncertaintyAwareDeepForest
+last_layer_index 4
+last_layer_index 4
+lambda: 1
+F1-macro: 0.7168
+AUC: 0.9002
+AUPR: 0.4682
+Gmean: 0.6984
+----------------------------------------
+Begin to train.... - 2025-02-11 11:46:59,839 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 11:46:59,839 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 11:46:59,839 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 11:46:59,839 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 11:46:59,840 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.3488 - 2025-02-11 11:47:47,659 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 11:47:47,659 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.6363 - 2025-02-11 11:48:35,778 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 11:48:35,778 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.6843 - 2025-02-11 11:49:24,087 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 11:49:24,087 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.7784 - 2025-02-11 11:50:12,036 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 11:50:12,036 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_4 is 0.7650 - 2025-02-11 11:51:00,188 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 11:51:00,188 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 11:51:00,188 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0
+F1-macro: 0.7395
+AUC: 0.9249
+AUPR: 0.4897
+Gmean: 0.7637
+----------------------------------------
+Begin to train.... - 2025-02-11 11:55:00,923 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 11:55:00,923 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 11:55:00,923 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 11:55:00,923 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 11:55:00,923 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.3486 - 2025-02-11 11:55:48,951 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 11:55:48,951 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6176 - 2025-02-11 11:56:37,035 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 11:56:37,036 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.6718 - 2025-02-11 11:57:25,345 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 11:57:25,345 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.6724 - 2025-02-11 11:58:13,644 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 11:58:13,644 - UncertaintyAwareDeepForest
+num_layers: 5
+The evaluation[gmean] of layer_4 is 0.6165 - 2025-02-11 11:59:01,755 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 11:59:01,755 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 11:59:01,755 - UncertaintyAwareDeepForest
+last_layer_index 3
+last_layer_index 3
+lambda: 0.1
+F1-macro: 0.7060
+AUC: 0.9237
+AUPR: 0.4532
+Gmean: 0.6972
+----------------------------------------
+Begin to train.... - 2025-02-11 12:03:01,659 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 12:03:01,659 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 12:03:01,659 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 12:03:01,659 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 12:03:01,659 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.3485 - 2025-02-11 12:03:49,395 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 12:03:49,395 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6165 - 2025-02-11 12:04:37,426 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 12:04:37,426 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.6864 - 2025-02-11 12:05:25,612 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 12:05:25,612 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.6694 - 2025-02-11 12:06:13,912 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 12:06:13,912 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 12:06:13,912 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.2
+F1-macro: 0.7060
+AUC: 0.9073
+AUPR: 0.4479
+Gmean: 0.6972
+----------------------------------------
+Begin to train.... - 2025-02-11 12:09:06,921 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 12:09:06,921 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 12:09:06,921 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 12:09:06,921 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 12:09:06,921 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.3488 - 2025-02-11 12:09:54,368 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 12:09:54,368 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6200 - 2025-02-11 12:10:42,064 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 12:10:42,064 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.5980 - 2025-02-11 12:11:30,012 - UncertaintyAwareDeepForest
+best_layer: 1, current_layer:2, save layers: 2 - 2025-02-11 12:11:30,013 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 12:11:30,013 - UncertaintyAwareDeepForest
+last_layer_index 1
+last_layer_index 1
+lambda: 0.3
+F1-macro: 0.7168
+AUC: 0.9254
+AUPR: 0.4884
+Gmean: 0.6984
+----------------------------------------
+Begin to train.... - 2025-02-11 12:13:23,290 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 12:13:23,291 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 12:13:23,291 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 12:13:23,291 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 12:13:23,291 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.3121 - 2025-02-11 12:14:10,703 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 12:14:10,704 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.6192 - 2025-02-11 12:14:58,425 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 12:14:58,425 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.6165 - 2025-02-11 12:15:46,580 - UncertaintyAwareDeepForest
+best_layer: 1, current_layer:2, save layers: 2 - 2025-02-11 12:15:46,581 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 12:15:46,581 - UncertaintyAwareDeepForest
+last_layer_index 1
+last_layer_index 1
+lambda: 0.4
+F1-macro: 0.6791
+AUC: 0.9120
+AUPR: 0.4667
+Gmean: 0.6247
+----------------------------------------
+Begin to train.... - 2025-02-11 12:17:27,445 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 12:17:27,445 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 12:17:27,445 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 12:17:27,445 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 12:17:27,445 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.2703 - 2025-02-11 12:18:14,820 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 12:18:14,820 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6173 - 2025-02-11 12:19:02,571 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 12:19:02,571 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.6691 - 2025-02-11 12:19:50,467 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 12:19:50,467 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.6134 - 2025-02-11 12:20:38,093 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 12:20:38,093 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 12:20:38,093 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.5
+F1-macro: 0.7060
+AUC: 0.8875
+AUPR: 0.4448
+Gmean: 0.6972
+----------------------------------------
+Begin to train.... - 2025-02-11 12:23:26,522 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 12:23:26,522 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 12:23:26,522 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 12:23:26,522 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 12:23:26,522 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.3119 - 2025-02-11 12:24:14,132 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 12:24:14,132 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.5990 - 2025-02-11 12:25:01,760 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 12:25:01,760 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7050 - 2025-02-11 12:25:49,493 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 12:25:49,493 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7034 - 2025-02-11 12:26:37,193 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 12:26:37,193 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 12:26:37,193 - UncertaintyAwareDeepForest
+last_layer_index 2
+last_layer_index 2
+lambda: 0.6
+F1-macro: 0.7060
+AUC: 0.8986
+AUPR: 0.4724
+Gmean: 0.6972
+----------------------------------------
+Begin to train.... - 2025-02-11 12:29:25,195 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 12:29:25,195 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 12:29:25,195 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 12:29:25,196 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 12:29:25,196 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2700 - 2025-02-11 12:30:12,693 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 12:30:12,693 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6176 - 2025-02-11 12:31:00,490 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 12:31:00,490 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.6521 - 2025-02-11 12:31:48,623 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 12:31:48,623 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.6323 - 2025-02-11 12:32:36,140 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 12:32:36,140 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 12:32:36,140 - UncertaintyAwareDeepForest
+last_layer_index 2
+last_layer_index 2
+lambda: 0.7
+F1-macro: 0.7060
+AUC: 0.9146
+AUPR: 0.4439
+Gmean: 0.6972
+----------------------------------------
+Begin to train.... - 2025-02-11 12:35:24,956 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 12:35:24,956 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 12:35:24,956 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 12:35:24,956 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 12:35:24,957 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.3118 - 2025-02-11 12:36:12,386 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 12:36:12,386 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6369 - 2025-02-11 12:36:59,966 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 12:36:59,968 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7361 - 2025-02-11 12:37:47,832 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 12:37:47,832 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.6877 - 2025-02-11 12:38:35,490 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 12:38:35,490 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 12:38:35,490 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.8
+F1-macro: 0.6961
+AUC: 0.8892
+AUPR: 0.5123
+Gmean: 0.6959
+----------------------------------------
+Begin to train.... - 2025-02-11 12:41:25,194 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 12:41:25,194 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 12:41:25,194 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 12:41:25,194 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 12:41:25,194 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.3489 - 2025-02-11 12:42:12,870 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 12:42:12,870 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.6363 - 2025-02-11 12:43:00,535 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 12:43:00,535 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.6880 - 2025-02-11 12:43:48,377 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 12:43:48,377 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.7053 - 2025-02-11 12:44:36,480 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 12:44:36,480 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_4 is 0.6694 - 2025-02-11 12:45:24,588 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 12:45:24,588 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 12:45:24,589 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.9
+F1-macro: 0.7060
+AUC: 0.9197
+AUPR: 0.4708
+Gmean: 0.6972
+----------------------------------------
+Begin to train.... - 2025-02-11 12:49:24,896 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 12:49:24,897 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 12:49:24,897 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 12:49:24,897 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 12:49:24,897 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.3118 - 2025-02-11 12:50:12,648 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 12:50:12,648 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.5982 - 2025-02-11 12:51:00,480 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 12:51:00,480 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.6880 - 2025-02-11 12:51:48,493 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 12:51:48,493 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7177 - 2025-02-11 12:52:36,608 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 12:52:36,608 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.6297 - 2025-02-11 12:53:24,886 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 12:53:24,886 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 12:53:24,886 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 1
+F1-macro: 0.6961
+AUC: 0.9064
+AUPR: 0.4469
+Gmean: 0.6959
+----------------------------------------
+Begin to train.... - 2025-02-11 12:57:21,694 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 12:57:21,694 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 12:57:21,694 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 12:57:21,695 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 12:57:21,695 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.2737 - 2025-02-11 12:58:09,444 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 12:58:09,444 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6419 - 2025-02-11 12:58:57,245 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 12:58:57,246 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.7282 - 2025-02-11 12:59:45,090 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 12:59:45,090 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.7443 - 2025-02-11 13:00:33,084 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 13:00:33,084 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_4 is 0.6786 - 2025-02-11 13:01:21,093 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 13:01:21,093 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 13:01:21,093 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0
+F1-macro: 0.7281
+AUC: 0.9644
+AUPR: 0.5693
+Gmean: 0.7822
+----------------------------------------
+Begin to train.... - 2025-02-11 13:05:19,287 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 13:05:19,288 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 13:05:19,288 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 13:05:19,288 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 13:05:19,288 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2234 - 2025-02-11 13:06:07,279 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 13:06:07,279 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6054 - 2025-02-11 13:06:55,098 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 13:06:55,098 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.6416 - 2025-02-11 13:07:42,926 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 13:07:42,926 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.6783 - 2025-02-11 13:08:30,909 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 13:08:30,909 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_4 is 0.6593 - 2025-02-11 13:09:18,751 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 13:09:18,751 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 13:09:18,751 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.1
+F1-macro: 0.7286
+AUC: 0.9634
+AUPR: 0.5454
+Gmean: 0.7281
+----------------------------------------
+Begin to train.... - 2025-02-11 13:13:16,646 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 13:13:16,646 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 13:13:16,646 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 13:13:16,646 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 13:13:16,646 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.3161 - 2025-02-11 13:14:04,137 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 13:14:04,138 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6070 - 2025-02-11 13:14:51,947 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 13:14:51,947 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7305 - 2025-02-11 13:15:39,760 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 13:15:39,762 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.7302 - 2025-02-11 13:16:27,366 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 13:16:27,366 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 13:16:27,366 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.2
+F1-macro: 0.7395
+AUC: 0.9584
+AUPR: 0.5508
+Gmean: 0.7295
+----------------------------------------
+Begin to train.... - 2025-02-11 13:19:17,799 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 13:19:17,799 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 13:19:17,799 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 13:19:17,799 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 13:19:17,799 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.3532 - 2025-02-11 13:20:05,221 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 13:20:05,221 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6786 - 2025-02-11 13:20:53,018 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 13:20:53,019 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7273 - 2025-02-11 13:21:40,687 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 13:21:40,687 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7596 - 2025-02-11 13:22:28,719 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 13:22:28,720 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.7312 - 2025-02-11 13:23:16,574 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 13:23:16,575 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 13:23:16,575 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.3
+F1-macro: 0.7281
+AUC: 0.9606
+AUPR: 0.5902
+Gmean: 0.7822
+----------------------------------------
+Begin to train.... - 2025-02-11 13:27:13,960 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 13:27:13,960 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 13:27:13,960 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 13:27:13,960 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 13:27:13,960 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.2739 - 2025-02-11 13:28:01,781 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 13:28:01,781 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6261 - 2025-02-11 13:28:49,561 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 13:28:49,562 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.6611 - 2025-02-11 13:29:37,487 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 13:29:37,488 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.6433 - 2025-02-11 13:30:25,479 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 13:30:25,479 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 13:30:25,479 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.4
+F1-macro: 0.7395
+AUC: 0.9533
+AUPR: 0.5485
+Gmean: 0.7295
+----------------------------------------
+Begin to train.... - 2025-02-11 13:33:15,780 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 13:33:15,780 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 13:33:15,780 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 13:33:15,780 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 13:33:15,780 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.1580 - 2025-02-11 13:34:03,437 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 13:34:03,437 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6065 - 2025-02-11 13:34:51,175 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 13:34:51,175 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.6032 - 2025-02-11 13:35:39,328 - UncertaintyAwareDeepForest
+best_layer: 1, current_layer:2, save layers: 2 - 2025-02-11 13:35:39,328 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 13:35:39,328 - UncertaintyAwareDeepForest
+num_layers: 3
+last_layer_index 1
+last_layer_index 1
+lambda: 0.5
+F1-macro: 0.7010
+AUC: 0.9655
+AUPR: 0.5904
+Gmean: 0.5988
+----------------------------------------
+Begin to train.... - 2025-02-11 13:37:20,690 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 13:37:20,690 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 13:37:20,690 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 13:37:20,690 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 13:37:20,690 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2235 - 2025-02-11 13:38:08,315 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 13:38:08,315 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.6620 - 2025-02-11 13:38:56,381 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 13:38:56,381 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.6947 - 2025-02-11 13:39:44,260 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 13:39:44,260 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.7115 - 2025-02-11 13:40:32,267 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 13:40:32,267 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_4 is 0.6013 - 2025-02-11 13:41:20,307 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 13:41:20,308 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 13:41:20,308 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.6
+F1-macro: 0.7587
+AUC: 0.9623
+AUPR: 0.5692
+Gmean: 0.7865
+----------------------------------------
+Begin to train.... - 2025-02-11 13:45:16,291 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 13:45:16,291 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 13:45:16,291 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 13:45:16,291 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 13:45:16,291 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.2736 - 2025-02-11 13:46:04,090 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 13:46:04,090 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6250 - 2025-02-11 13:46:52,123 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 13:46:52,123 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.6587 - 2025-02-11 13:47:40,108 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 13:47:40,108 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7150 - 2025-02-11 13:48:28,518 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 13:48:28,519 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.6638 - 2025-02-11 13:49:16,540 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 13:49:16,540 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 13:49:16,540 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+Begin to train.... - 2025-02-11 13:53:15,566 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 13:53:15,567 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 13:53:15,567 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 13:53:15,567 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 13:53:15,567 - UncertaintyAwareDeepForest
+lambda: 0.7
+F1-macro: 0.7395
+AUC: 0.9565
+AUPR: 0.5034
+Gmean: 0.7295
+----------------------------------------
+The evaluation[gmean] of layer_0 is 0.3161 - 2025-02-11 13:54:04,136 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 13:54:04,137 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6043 - 2025-02-11 13:54:52,944 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 13:54:52,944 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.6774 - 2025-02-11 13:55:40,560 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 13:55:40,561 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.6402 - 2025-02-11 13:56:29,173 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 13:56:29,173 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 13:56:29,173 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.8
+F1-macro: 0.7184
+AUC: 0.9641
+AUPR: 0.5610
+Gmean: 0.7268
+----------------------------------------
+Begin to train.... - 2025-02-11 13:59:24,402 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 13:59:24,402 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 13:59:24,402 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 13:59:24,402 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 13:59:24,402 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.2737 - 2025-02-11 14:00:12,265 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 14:00:12,265 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6049 - 2025-02-11 14:01:00,361 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 14:01:00,361 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7115 - 2025-02-11 14:01:48,531 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 14:01:48,531 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7599 - 2025-02-11 14:02:36,762 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 14:02:36,762 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.6780 - 2025-02-11 14:03:25,273 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 14:03:25,273 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 14:03:25,273 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.9
+F1-macro: 0.7644
+AUC: 0.9650
+AUPR: 0.5896
+Gmean: 0.8378
+----------------------------------------
+Begin to train.... - 2025-02-11 14:07:27,345 - UncertaintyAwareDeepForest
+the shape of training samples: (1187, 8) - 2025-02-11 14:07:27,345 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 14:07:27,345 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 14:07:27,345 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 14:07:27,346 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.2235 - 2025-02-11 14:08:15,811 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 14:08:15,811 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.5191 - 2025-02-11 14:09:03,670 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 14:09:03,671 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.6928 - 2025-02-11 14:09:51,724 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 14:09:51,724 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.6593 - 2025-02-11 14:10:39,847 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 14:10:39,847 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 14:10:39,847 - UncertaintyAwareDeepForest
+last_layer_index 2
+last_layer_index 2
+lambda: 1
+F1-macro: 0.7512
+AUC: 0.9631
+AUPR: 0.5680
+Gmean: 0.7308
+----------------------------------------
+Begin to train.... - 2025-02-11 14:13:37,876 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 14:13:37,877 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 14:13:37,877 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 14:13:37,877 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 14:13:37,877 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.3822 - 2025-02-11 14:14:25,825 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 14:14:25,825 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.6386 - 2025-02-11 14:15:14,348 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 14:15:14,348 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.7385 - 2025-02-11 14:16:02,481 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 14:16:02,481 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.7361 - 2025-02-11 14:16:50,980 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 14:16:50,980 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 14:16:50,980 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0
+F1-macro: 0.5503
+AUC: 0.9262
+AUPR: 0.2472
+Gmean: 0.3135
+----------------------------------------
+Begin to train.... - 2025-02-11 14:19:46,176 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 14:19:46,176 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 14:19:46,176 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 14:19:46,176 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 14:19:46,176 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.4128 - 2025-02-11 14:20:34,252 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 14:20:34,252 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.6929 - 2025-02-11 14:21:22,037 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 14:21:22,037 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7401 - 2025-02-11 14:22:09,874 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 14:22:09,874 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.7706 - 2025-02-11 14:22:57,915 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 14:22:57,915 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_4 is 0.7537 - 2025-02-11 14:23:46,112 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 14:23:46,112 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 14:23:46,112 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.1
+F1-macro: 0.6378
+AUC: 0.9259
+AUPR: 0.2571
+Gmean: 0.5410
+----------------------------------------
+Begin to train.... - 2025-02-11 14:27:50,357 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 14:27:50,357 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 14:27:50,357 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 14:27:50,357 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 14:27:50,357 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.4130 - 2025-02-11 14:28:37,981 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 14:28:37,981 - UncertaintyAwareDeepForest
+num_layers: 1
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.7391 - 2025-02-11 14:29:26,101 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 14:29:26,101 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_2 is 0.7834 - 2025-02-11 14:30:14,191 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 14:30:14,191 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_3 is 0.7219 - 2025-02-11 14:31:02,429 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 14:31:02,429 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 14:31:02,429 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.2
+F1-macro: 0.6223
+AUC: 0.9234
+AUPR: 0.2493
+Gmean: 0.5390
+----------------------------------------
+Begin to train.... - 2025-02-11 14:33:55,046 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 14:33:55,046 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 14:33:55,046 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 14:33:55,047 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 14:33:55,047 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.4681 - 2025-02-11 14:34:42,832 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 14:34:42,832 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.6754 - 2025-02-11 14:35:30,903 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 14:35:30,903 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_2 is 0.7560 - 2025-02-11 14:36:19,152 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 14:36:19,153 - UncertaintyAwareDeepForest
+num_layers: 3
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7557 - 2025-02-11 14:37:07,246 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 14:37:07,246 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 14:37:07,246 - UncertaintyAwareDeepForest
+last_layer_index 2
+last_layer_index 2
+Begin to train.... - 2025-02-11 14:57:11,908 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 14:57:11,908 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 14:57:11,908 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 14:57:11,908 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 14:57:11,908 - UncertaintyAwareDeepForest
+lambda: 0.3
+F1-macro: 0.6466
+AUC: 0.9301
+AUPR: 0.2583
+Gmean: 0.5419
+----------------------------------------
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.3819 - 2025-02-11 14:58:00,494 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 14:58:00,494 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.7267 - 2025-02-11 14:58:48,963 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 14:58:48,963 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7255 - 2025-02-11 14:59:37,033 - UncertaintyAwareDeepForest
+best_layer: 1, current_layer:2, save layers: 2 - 2025-02-11 14:59:37,033 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 14:59:37,033 - UncertaintyAwareDeepForest
+last_layer_index 1
+last_layer_index 1
+lambda: 0.4
+F1-macro: 0.4870
+AUC: 0.9309
+AUPR: 0.2571
+Gmean: 0.0000
+----------------------------------------
+Begin to train.... - 2025-02-11 15:01:25,153 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 15:01:25,153 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 15:01:25,153 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 15:01:25,153 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 15:01:25,153 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.4132 - 2025-02-11 15:02:12,878 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 15:02:12,878 - UncertaintyAwareDeepForest
+num_layers: 2
+The evaluation[gmean] of layer_1 is 0.7408 - 2025-02-11 15:03:01,534 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 15:03:01,534 - UncertaintyAwareDeepForest
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7388 - 2025-02-11 15:03:49,528 - UncertaintyAwareDeepForest
+best_layer: 1, current_layer:2, save layers: 2 - 2025-02-11 15:03:49,529 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 15:03:49,529 - UncertaintyAwareDeepForest
+last_layer_index 1
+last_layer_index 1
+lambda: 0.5
+F1-macro: 0.5503
+AUC: 0.9231
+AUPR: 0.2412
+Gmean: 0.3135
+----------------------------------------
+Begin to train.... - 2025-02-11 15:05:41,524 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 15:05:41,524 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 15:05:41,524 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 15:05:41,524 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 15:05:41,524 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.3123 - 2025-02-11 15:06:29,653 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 15:06:29,653 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6760 - 2025-02-11 15:07:19,091 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 15:07:19,091 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7072 - 2025-02-11 15:08:07,761 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 15:08:07,761 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7401 - 2025-02-11 15:08:56,780 - UncertaintyAwareDeepForest
+-----------------------------------------layer-4-------------------------------------------- - 2025-02-11 15:08:56,780 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_4 is 0.7401 - 2025-02-11 15:09:44,972 - UncertaintyAwareDeepForest
+best_layer: 3, current_layer:4, save layers: 4 - 2025-02-11 15:09:44,972 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 15:09:44,972 - UncertaintyAwareDeepForest
+num_layers: 5
+last_layer_index 3
+last_layer_index 3
+lambda: 0.6
+F1-macro: 0.5989
+AUC: 0.9241
+AUPR: 0.2597
+Gmean: 0.4425
+----------------------------------------
+Begin to train.... - 2025-02-11 15:13:51,280 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 15:13:51,280 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 15:13:51,280 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 15:13:51,280 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 15:13:51,280 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.4411 - 2025-02-11 15:14:39,174 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 15:14:39,174 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.7258 - 2025-02-11 15:15:28,744 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 15:15:28,744 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7408 - 2025-02-11 15:16:17,345 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 15:16:17,345 - UncertaintyAwareDeepForest
+num_layers: 4
+The evaluation[gmean] of layer_3 is 0.7401 - 2025-02-11 15:17:05,611 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 15:17:05,611 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 15:17:05,611 - UncertaintyAwareDeepForest
+last_layer_index 2
+last_layer_index 2
+Begin to train.... - 2025-02-11 15:20:02,454 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 15:20:02,454 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 15:20:02,454 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 15:20:02,454 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 15:20:02,454 - UncertaintyAwareDeepForest
+lambda: 0.7
+F1-macro: 0.6466
+AUC: 0.9262
+AUPR: 0.2528
+Gmean: 0.5419
+----------------------------------------
+The evaluation[gmean] of layer_0 is 0.4128 - 2025-02-11 15:20:50,594 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 15:20:50,594 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.7271 - 2025-02-11 15:21:39,603 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 15:21:39,603 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7267 - 2025-02-11 15:22:28,472 - UncertaintyAwareDeepForest
+best_layer: 1, current_layer:2, save layers: 2 - 2025-02-11 15:22:28,472 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 15:22:28,472 - UncertaintyAwareDeepForest
+last_layer_index 1
+last_layer_index 1
+lambda: 0.8
+F1-macro: 0.6063
+AUC: 0.9329
+AUPR: 0.2677
+Gmean: 0.4433
+----------------------------------------
+Begin to train.... - 2025-02-11 15:24:17,864 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 15:24:17,864 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 15:24:17,864 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 15:24:17,864 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 15:24:17,864 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_0 is 0.4415 - 2025-02-11 15:25:05,926 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 15:25:05,928 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_1 is 0.6923 - 2025-02-11 15:25:54,011 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 15:25:54,012 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7540 - 2025-02-11 15:26:42,335 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 15:26:42,335 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.7368 - 2025-02-11 15:27:31,012 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 15:27:31,012 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 15:27:31,012 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 0.9
+F1-macro: 0.5989
+AUC: 0.9247
+AUPR: 0.2460
+Gmean: 0.4425
+----------------------------------------
+Begin to train.... - 2025-02-11 15:30:27,630 - UncertaintyAwareDeepForest
+the shape of training samples: (1188, 8) - 2025-02-11 15:30:27,630 - UncertaintyAwareDeepForest
+use gmean as training evaluation - 2025-02-11 15:30:27,630 - UncertaintyAwareDeepForest
+stacking: False, save model: False - 2025-02-11 15:30:27,630 - UncertaintyAwareDeepForest
+-----------------------------------------layer-0-------------------------------------------- - 2025-02-11 15:30:27,630 - UncertaintyAwareDeepForest
+num_layers: 1
+The evaluation[gmean] of layer_0 is 0.4128 - 2025-02-11 15:31:15,571 - UncertaintyAwareDeepForest
+-----------------------------------------layer-1-------------------------------------------- - 2025-02-11 15:31:15,571 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_1 is 0.6192 - 2025-02-11 15:32:03,623 - UncertaintyAwareDeepForest
+-----------------------------------------layer-2-------------------------------------------- - 2025-02-11 15:32:03,623 - UncertaintyAwareDeepForest
+num_layers: 2
+num_layers: 3
+The evaluation[gmean] of layer_2 is 0.7689 - 2025-02-11 15:32:51,966 - UncertaintyAwareDeepForest
+-----------------------------------------layer-3-------------------------------------------- - 2025-02-11 15:32:51,966 - UncertaintyAwareDeepForest
+The evaluation[gmean] of layer_3 is 0.7216 - 2025-02-11 15:33:40,524 - UncertaintyAwareDeepForest
+best_layer: 2, current_layer:3, save layers: 3 - 2025-02-11 15:33:40,526 - UncertaintyAwareDeepForest
+training finish... - 2025-02-11 15:33:40,526 - UncertaintyAwareDeepForest
+num_layers: 4
+last_layer_index 2
+last_layer_index 2
+lambda: 1
+F1-macro: 0.6466
+AUC: 0.9344
+AUPR: 0.2579
+Gmean: 0.5419
+----------------------------------------
+[0.70035086 0.70608377 0.70582991 0.71228658 0.68443125 0.68926579
+ 0.70433271 0.71276536 0.7019707  0.70230634 0.71319119]
+[0.93951833 0.93988486 0.93363951 0.93617974 0.93680877 0.93189892
+ 0.93356358 0.93548999 0.93343151 0.93706598 0.93209207]
+[0.46256565 0.45346954 0.44008252 0.46220563 0.46590581 0.46228628
+ 0.46232174 0.43914816 0.47211579 0.45424626 0.46017155]
+[0.6522494  0.6731314  0.67300326 0.69724978 0.55169298 0.58819701
+ 0.66510363 0.65978141 0.63952299 0.66105662 0.67384625]
+
+进程已结束，退出代码为 0

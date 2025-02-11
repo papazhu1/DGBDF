@@ -3,7 +3,7 @@ from imbens.sampler import RandomUnderSampler
 from imbens.sampler._under_sampling.base import BaseUnderSampler
 from imbens.sampler._over_sampling.base import BaseOverSampler
 from funcs import *
-from model.func_utils import DS_Combine_ensemble_for_instances, ce_loss
+from func_utils import DS_Combine_ensemble_for_instances, ce_loss
 from scipy.stats import norm
 
 class BalancingSampler(BaseUnderSampler):

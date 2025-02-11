@@ -40,7 +40,7 @@ class UncertaintyAwareDeepForest(object):
         self.per_layer_res = []
         self.per_layer_res_weighted_layers = []
         self.mean_KL_per_layer = []
-
+        self.lamb = config["lamb"]
     def calculate_KL_u_use_evidence(self, y_train_evidence_per_layer_per_forest, n_classes_):
         all_instance_KL = np.zeros((len(y_train_evidence_per_layer_per_forest[0]), 1))
         all_instance_u = np.zeros((len(y_train_evidence_per_layer_per_forest[0]), 1))
@@ -305,7 +305,7 @@ class UncertaintyAwareDeepForest(object):
 
                         # loss_combined, b_combined, u_combined = DS_Combine_ensemble_for_instances(expanded_pred_array[0].reshape(1, 2),
                         #                                                               expanded_pred_array[1].reshape(1, 2))
-                        loss, A, B = ce_loss(y_train[sample_idx], loss_combined, n_classes_)
+                        loss, A, B = ce_loss(y_train[sample_idx], loss_combined, n_classes_, lamb=self.lamb)
 
                         errors = 1 - pred_array
                         hardnesses = error_to_hardness(errors)

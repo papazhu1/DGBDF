@@ -253,6 +253,7 @@ def train_K_fold_paralleling(args):
         else:
             new_train_index = np.concatenate([index_0_selected, index_1])
 
+        new_train_index = new_train_index.astype(int)
         X_train, y_train = X[new_train_index], y[new_train_index]
 
     if use_resample is False:

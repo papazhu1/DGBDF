@@ -4,7 +4,6 @@ from scipy.stats import wilcoxon, friedmanchisquare
 import matplotlib.pyplot as plt
 
 from model.compared_results.std_deviation_wilcoxon import compute_cd
-from Orange.evaluation import compute_cd
 
 def compute_critical_difference(avranks, names, cd, width=10):
     """

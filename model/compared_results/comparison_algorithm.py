@@ -11,6 +11,8 @@ from sklearn.model_selection import StratifiedKFold
 from imbens.datasets import fetch_datasets
 from collections import Counter
 import os
+
+from model.compared_results.add_std_deviation import dataset_names_evidence
 from model.data_util import *
 
 # 加载数据集
@@ -155,15 +157,20 @@ if __name__ == "__main__":
     # dataset_names = ["us_crime", "yeast_ml8", "scene", "libras_move", "thyroid_sick", "coil_2000", "solar_flare_m0",
     #                  "oil", "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "abalone_19"]
 
+    # 还缺少的数据集
+    # dataset_names = ['abalone_19', 'car_eval_4', 'letter_img', 'ozone_level']
+    function_list = ['get_waveform1', 'get_waveform2', 'get_waveform3', 'get_wine1',
+                 'get_wine2']
     # dataset_names = ["isolet", "car_eval_34", "spectrometer", "pen_digits"]
     # dataset_names = ["thyroid_sick", "coil_2000", "solar_flare_m0", "oil",
     #                  "car_eval_4", "wine_quality", "webpage", "letter_img", "yeast_me2", "ozone_level", "mammography",
     #                  "protein", "abalone_19"]
 
-    function_list = [get_statlog_vehicle_silhouettes1, get_statlog_vehicle_silhouettes2, get_statlog_vehicle_silhouettes3, get_statlog_vehicle_silhouettes4]
+    # function_list = [get_statlog_vehicle_silhouettes1, get_statlog_vehicle_silhouettes2, get_statlog_vehicle_silhouettes3, get_statlog_vehicle_silhouettes4]
     # for dataset_name in dataset_names:
     #     X, y = load_data(dataset_name)
     for func in function_list:
+        func = globals()[func]
         X, y, dataset_name = func()
         # X, y, dataset_name = get_ecoli2()
 
