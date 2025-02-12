@@ -7,15 +7,15 @@ import numpy as np
 from imbens.metrics import geometric_mean_score
 from sklearn.metrics import roc_auc_score, f1_score, average_precision_score
 
-from model.data_util import get_yeast5
+from model.data_util import get_yeast5, get_glass3
 
 if __name__ == "__main__":
     skf = StratifiedKFold(n_splits=5, shuffle=True)
-    dataset_name = "solar_flare_m0"
-    dataset = fetch_datasets()[dataset_name]
-    X, y = dataset['data'], dataset['target']
-    y = np.where(y == -1, 0, y)
-    # X, y, name = get_yeast5()
+    # dataset_name = "solar_flare_m0"
+    # dataset = fetch_datasets()[dataset_name]
+    # X, y = dataset['data'], dataset['target']
+    # y = np.where(y == -1, 0, y)
+    X, y, name = get_glass3()
     f1_macro_list = []
     auc_list = []
     aupr_list = []
